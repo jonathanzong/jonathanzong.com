@@ -1,0 +1,91 @@
+---
+active_section: projects
+---
+
+<style>
+.trace-wrapper h3{
+  margin-top: 0;
+}
+.trace-wrapper em{
+  font-style: italic;
+}
+.trace-wrapper img{
+  max-width: 100%;
+}
+.trace-wrapper h1{
+  margin-top: -1.5em;
+}
+</style>
+
+<div class="trace-wrapper">
+  <div class="row trace-header">
+    <img src="/images/projects/trace/IMG_20160426_202001.jpg" />
+  </div>
+  <h1 style="letter-spacing: 0.5px">TRACE</h1>
+  <br/>
+  <p>
+    <span style="letter-spacing: 0.5px">TRACE</span> is a (work in progress) collaborative dance performance between a human and a drawing robot. A human dancer encircles a robot tracing its motion on the ground with a brush marker. As he or she moves, the robot tracks the human’s positional data and interprets it with movement, modulating the path and stroke of its brush. The human continues interacting in real time, engaging with the machine not as tool but as co-creator. The process of dancing with the robot leaves an inscription in time, as an event or occurrence that exists within its own singular context, while the drawing left behind inscribes that event in space.
+  </p>
+
+  <blockquote>
+  <p>
+  "The conflict between algorithm and hermeneutics, between the power of formalization and the richness of the production of meaning is the rhythm of western history, and there can be no pacification or simplification—we live within this conflict."
+  </p>
+  <div>
+  &mdash;Gianni Barbacetto, <em>Design Interface</em>
+  </div>
+  </blockquote>
+
+  <p>
+    The machine is executing a procedural algorithm, but in the service of expressivity. The human is moving expressively, but necessarily conforms certain actions to the formalized constraints of the robot in order to imprint some intention onto its movement. The difference between movement for movement’s sake and movement for drawing’s sake is unclear. Because interaction is mediated by this feedback loop between the human and robot, they develop a hybridized system of movement that embraces the noise and difference of the two.
+  </p>
+
+  <p>
+    <img style="display:block;margin:0 auto" src="/images/projects/trace/drawing.gif" />
+  </p>
+
+  <p>
+  The physical, mechanical process of creating the drawing is compelling to me in ways that the simpler task of visualizing movement with pixels on a screen is not. I am drawn to the idea, as N. Katherine Hayles would articulate it in <em>Toward Embodied Virtuality</em>, that "for information to exist, it must be instantiated in a medium." Subjecting the drawing to the constraints of the physical world, from the friction of brush on paper to the movement affordances of the robot’s particular form questions the idea that the act of inscription is independent of material properties. Similarly, individual people move in different ways that are socially dependent; they differ in what Marcel Mauss calls “techniques of the body.” The body is an interface between self and other, interior and exterior&mdash;embodied interaction encourages an awareness of being present that grounds us in here and now.
+  </p>
+
+  <p>
+    <img src="/images/projects/trace/IMG_20160423_175720.jpg" />
+  </p>
+
+  <h3>Process</h3>
+
+      <p>
+        Using robotics and motion capture as components in a complex, networked system in service of the goal of subjecting the project to material influences developed interesting artistic and engineering challenges and learning experiences. For example, designing the robot’s marker attachment to achieve this goal required consideration of choice of marker, paper, and actuation mechanism. I used a copic marker because the ink is not totally opaque when it dries, allowing lines to clearly intersect and generate depth and continuity. A motor <a href="https://www.thingiverse.com/thing:688474" target="_blank">mounted on the robot</a> and fitted with a <a href="https://www.thingiverse.com/thing:701119" target="_blank">3d-printed rack and pinion</a>&mdash;modified to hold the marker&mdash; drives the marker linearly up and down in order to modulate pressure on the stroke of the brush. These choices visually distinguish the output from common drawing machine projects.
+      </p>
+
+    <p>
+      <a href="/images/projects/trace/IMG_20160420_150920.jpg" class="strip" data-strip-caption="Marker Actuator" target="_blank">
+        <img height="200" src="/images/projects/trace/IMG_20160420_150920.jpg"/>
+      </a>
+      <a href="/images/projects/trace/mocap.gif" class="strip" data-strip-caption="Motion Capture" target="_blank">
+        <img height="200" src="/images/projects/trace/mocap.gif"/>
+      </a>
+      <a href="/images/projects/trace/trace-prototype.png" class="strip" data-strip-caption="p5.js Prototype" target="_blank">
+        <img height="200" src="/images/projects/trace/trace-prototype.png"/>
+      </a>
+    </p>
+
+
+    <p>
+      The design challenges of defining the algorithmic procedure by which the robot would interpret the human’s motion data also required iterative exploration. My initial explorations were motivated by Laban Movement Analysis, a qualitative set of parameters that describe expressive properties of movement. I built an animated simulation as a prototype, which worked well on test data but did not produce easily evaluable results when connected to an actual recorded motion capture sequence. I eventually narrowed down three parameters to create an approximate translation model, but would like to explore this further in the future.
+    </p>
+  </div>
+
+  <h3>Future Work</h3>
+  <p>
+  Now that the technical components are in a good place, I'd really like to focus more on the conceptual / artistic components in the future. The algorithms interpreting movement data into drawing paths would benefit from more exploration. It is important to the project because it bridges the different components, and to develop it further would also involve deepening my understanding what makes the movement and visual components work from an artistic standpoint.
+  </p>
+
+  <p>
+    Created in Spring 2016 for STC209 Transformations in Engineering and the Arts.
+  </p>
+
+</div>
+
+<script src="/javascripts/strip.pkgd.min.js"></script>
+<link rel='stylesheet' href='/stylesheets/strip.css' />

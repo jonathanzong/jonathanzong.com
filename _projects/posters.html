@@ -1,0 +1,26 @@
+---
+active_section: projects
+---
+
+<h1>Print Posters</h1>
+<br/>
+<div class="gallery-items">
+  {% for poster in site.data.posters %}
+    <a href="{{poster.url}}" class="strip" {% if this.caption %}data-strip-caption="{{poster.caption}}"{% endif %} target="_blank">
+      <img height="150" src="{{poster.img}}"/>
+    </a>
+  {% endfor %}
+</div>
+<br/>
+
+<script src="/javascripts/strip.pkgd.min.js"></script>
+<link rel='stylesheet' href='/stylesheets/strip.css' />
+
+<style>
+  body {
+    background: #e3e3e3;
+  }
+  .nav-current {
+    color: #333 !important;
+  }
+</style>

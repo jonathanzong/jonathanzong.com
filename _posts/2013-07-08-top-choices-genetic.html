@@ -1,0 +1,179 @@
+---
+layout: post
+title: Optimizing Top Choices with Genetic Algorithm
+slug: optimizing-top-choices-with-genetic-algorithm
+---
+
+<p>
+Getting back to my room a little later than I usually do and thinking about goals for my codebase at work tomorrow, I was bothered by an interesting problem demanding my attention. I was talking to some friends I met earlier about optimizing a real life situation they had encountered in their summer program. There are something like 13 research topics to be assigned to 12 students. Each student makes a rank-ordered list of their best choices, and the idea is to <strong>distribute the choices</strong> to make the most people the happiest. Sounds like an NP class problem in need of some optimization.
+</p>
+
+<div style="max-width:550px;">
+<img src="/images/blog/welchiefire.jpg"/>
+<p class="small">We made s'mores. Unrelated to Genetic Algorithms.</p></div>
+
+<h2>Problem Formulation</h2>
+
+<p>
+Looking at the problem formally, if we call the number of choices \(n = 13\) and the number of students \(k = 12\), there are \(^nP_k\) possibilities in the solution set. I assume that makes a time complexity of \(O(n!)\).
+</p>
+
+<p>
+A valid solution is a unique assignment where each student gets assigned a different topic. What makes the problem NP complex is the fact that we can easily check whether or not a solution is valid; the difficulty is in generating an optimal solution.
+</p>
+
+<h2>Defining a Cost Function</h2>
+
+<p>
+The easiest representation of a cost function here would be to sum the indices of the choice assigned to a student in their rank ordered list. The cost function is at its minimum when the student gets their first choice (index 0) and at its maximum when they get their least favorite choice (index n-1). We want to <strong>minimize the score</strong> across all k students.
+</p>
+
+<p>For most problems, that would be enough, but since we're distributing happiness among people, we'll find qualitatively better solutions by introducing a concept of fairness. If we assume <a href="http://en.wikipedia.org/wiki/Without_loss_of_generality">WLOG</a> there are only 5 students, a solution (represented as indices of each student's assigned choice) that looks like {2, 2, 2, 2, 2} is much better than one that looks like {1, 1, 1, 1, 6}. They both sum and average to the same thing, but in the latter we have one significantly less happy person. To penalize unfairness, I tried adding standard deviation to the original cost function, but found that qualitatively better results were had just by adding the <strong>highest index in the solution as a penalty</strong>. After all, we're punishing high numbers, not necessarily a wide distribution.</p>
+
+<h2>Seeking a Solution</h2>
+
+<p>
+A few na&#239;ve approaches come to mind, like brute-force (sorry buddy, maybe next time) and randomly permuting and picking the best one out of all iterations; however, I'm sure we can do better. I've been reading about genetic algorithms a lot recently with application to optimization problems (and used one as an answer to a summer program to which I applied), and it's possible we could utilize GA fruitfully in our situation.
+</p>
+
+<p>
+Genetic Algorithm is a heuristic that converges on increasingly better solutions by <strong>iteratively improving upon candidates</strong> in a process modeling survival of the fittest. A set of solutions is first stochastically generated, then evaluated for "fitness" (an idea corresponding to the notion of minimizing a cost function). The <strong>best ones are kept and modified</strong> in some way to form a next iterative "generation" which is closer to an optimum. We keep the best of the old generation so we don't throw away a good solution once we find it, but we also only seek new solutions that originate from the best of the old generation. In terms of our problem, we want to randomly assign the positions at first, keep the top half of the assignments that make people sad the least, and then fill the other half with slightly modified versions of that good half to try again. An easy modification that maintains validity of the solution is to <strong>swap two assignments randomly</strong>, so we can treat that as our mutation function.
+</p>
+
+<p>
+The only problem with running GA like that is that there's a chance of converging to a <strong>local optimum</strong>. In other words, we can't get any better solutions from our generation's solution set, but we would if we started with another initial generation entirely. Because choice of initial seed is so important, we can mitigate the problem by running GA multiple times with different random initializations.
+</p>
+
+<pre>jonathan@jonathan-lmde ~/genetic-algorithm $ python topchoices.py
+Cost:  14
+Cost:  14
+Cost:  16
+Cost:  20
+Cost:  12
+Cost:  15
+Cost:  15
+Cost:  18
+Cost:  17
+Cost:  21
+Best solution:  {A: 'Choice 1', C: 'Choice 6', B: 'Choice 4', E: 'Choice 3', D: 'Choice 12', G: 'Choice 9', F: 'Choice 11', I: 'Choice 5', H: 'Choice 8', K: 'Choice 7', J: 'Choice 10', L: 'Choice 13'}
+Minimized Cost:  12
+A  got index  3
+C  got index  1
+B  got index  0
+E  got index  3
+D  got index  2
+G  got index  1
+F  got index  0
+I  got index  0
+H  got index  2
+K  got index  0
+J  got index  0
+L  got index  0
+</pre>
+
+<h2>Summary and Code</h2>
+
+<p>
+Genetic Algorithm is a decent, conceptually neat method to learn solutions to optimization problems. Assignments are randomly made, the best ones are kept, and new candidates are generated iteratively until an optimum is found. My code is below and on my (new!) <a href="https://github.com/jonathanzong/genetic-algorithm">github</a>.
+</p>
+
+<pre class='geshi' title='python'>import random, math
+from copy import deepcopy
+from sys import maxint
+
+class Student:
+  def __init__(self, name, choices):
+    self.name = name
+    self.choices = choices
+
+  def get_rank(self, choice):
+    return self.choices.index(choice)
+
+  def __hash__(self):
+    return hash(self.name)
+
+  def __eq__(self, other):
+    return self.name == other.name
+
+  def __repr__(self):
+    return self.name
+
+# configure
+n = 13
+k = 12
+
+choice_set = []
+student_set = []
+
+# populate choice_set with choice names
+for x in range(n):
+  choice_set.append('Choice '+str(x+1))
+
+# populate student_set with student names and a randomly permuted list of choices
+for x in range(k):
+  student_set.append(Student(chr(x+65), random.sample(choice_set,n)))
+
+# sum the indices of the choices assigned to a student
+# penalize additionally by highest index, for fairness
+def cost_function(assignments):
+  #cost = sum_indices(assignments)
+  cost = 0
+  max_index = 0
+  for student in student_set:
+    choice = assignments[student]
+    index = student.get_rank(choice)
+    cost += index
+    if index &gt; max_index:
+      max_index = index
+  return cost + max_index
+
+# ensure all choice assignments are unique
+# if we do it right, not really necessary to check
+# def valid_soln(assignment):
+# soln = set(assignment.values())
+# return len(soln) == k
+
+def seed_ga(g_size):
+  # randomly generate seed generation by shuffling
+  # choices and assigning them to students in order
+  generation = []
+  for x in range(g_size):
+    random.shuffle(choice_set)
+    assignment = {}
+    for i in range(k):
+      assignment[student_set[i]] = choice_set[i]
+    generation.append(assignment)
+  return generation
+
+def genetic_algo(generation, n_iter):
+  g_size = len(generation)
+  # iterate the GA n_iter number of times and return best solution
+  for x in range(n_iter):
+    # sort generation by ascending cost
+    generation.sort(key=lambda x: cost_function(x))
+    # keep the top half (best solutions move onto the next generation)
+    # mutate the best solutions by introducing random swaps in assignment
+    generation[g_size/2:] = deepcopy(generation[:g_size/2])
+    for candidate in generation[g_size/2 : g_size]:
+      swaps = random.sample(student_set,2)
+      temp = candidate[swaps[0]]
+      candidate[swaps[0]] = candidate[swaps[1]]
+      candidate[swaps[1]] = temp
+  return generation[0]
+
+# run GA multiple times to combat convergence to local optima
+best_score = maxint
+best_assignment = None
+for x in range(10):
+  generation = seed_ga(10)
+  res = genetic_algo(generation,100)
+  cost = cost_function(res)
+  print 'Cost: ', cost
+  if cost < best_score:
+    best_score = cost
+    best_assignment = res
+
+print 'Best solution: ', best_assignment
+print 'Minimized Cost: ', best_score
+for key in best_assignment:
+  print key, ' got index ', key.get_rank(best_assignment[key])</pre>

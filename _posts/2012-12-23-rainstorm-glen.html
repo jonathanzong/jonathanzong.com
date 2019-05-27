@@ -1,0 +1,90 @@
+---
+layout: post
+title: Reflections on Rainstorm Glen
+slug: reflections-on-rainstorm-glen
+---
+
+
+<p>On October 20th, the <a href="http://jonathanzong.com/projects/rainstormglen">Rainstorm Glen</a> high-altitude weather balloon project ascended to ~103,000ft in the atmosphere to take pictures and collect data with electronic sensors. The team began working on the project on August 27th and spent the next eight weeks researching the details and logistics of launching and safely recovering a balloon with an electronic payload.</p>
+<div style="max-width:400px;">
+<img src="/images/projects/rainstormglen/stills/GOPR5750.jpg"/>
+</div>
+<p>At the start of the project, we had a variety of problems to solve and difficulties to address. As project manager, I split the class into teams to handle the different aspects of refining our launch procedures. Gaps in our knowledge included FAA regulation of weather balloons, safe launch and recovery, design of the payload in terms of contents and integrity in extreme conditions, etc.</p>
+<h3>FAA Regulation</h3>
+<p>As we discovered in the <a href="http://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&rgn=div5&view=text&node=14:2.0.1.3.15&idno=14">Electronic Code of Federal Regulations</a>, regulations apply to unmanned free balloons that</p>
+<blockquote>
+<div>
+(i) Carries a payload package that weighs more than four pounds and has a weight/size ratio of more than three ounces per square inch on any surface of the package, determined by dividing the total weight in ounces of the payload package by the area in square inches of its smallest surface;
+</div>
+<div>
+(ii) Carries a payload package that weighs more than six pounds;
+</div>
+<div>
+(iii) Carries a payload, of two or more packages, that weighs more than 12 pounds; or
+</div>
+<div>
+(iv) Uses a rope or other device for suspension of the payload that requires an impact force of more than 50 pounds to separate the suspended payload from the balloon.
+</div>
+</blockquote>
+<p>
+Our final payload weighed 4 lbs, and the smallest surface of our payload was 78 square inches. Dividing 64 oz by 78 in&#178; gives a result much less than 3 oz/in&#178;, so we were covered there. Despite being unregulated, we called the FAA to give them a heads up a few days before our launch, and then again immediately before. They seemed pretty okay with everything.</p>
+<h3>Launch and Recovery</h3>
+<p>The tasks associated with launching the balloon and recovering it were generally divided into subtasks: finding suitable locations, designing the non-payload aspects of the balloon. We decided to find a safe landing area and calculate the launch position from that, to ensure that the balloon didn't end up on a roof or in the ocean. Using <a href="http://www.eoss.org/wbaltrak/index.html">Balloon Track</a> prediction software, we eventually settled on an open area to launch on the next clear weekend after project completion. By inputting the latitude and longitude of the desired landing location (courtesy of Google Earth), the program would use current weather conditions to project a flight path, giving us a general range of possible launch places.</p>
+<p>In ensuring the payload would descend at a reasonable velocity, we chose <a href="http://aeroconsystems.com/cart/all-parachutes/60-inch-pilot-parachute-green/white/">this parachute</a> for its tangle-free netting to reduce the risk of interference when it needed to open. The parachute came with a slit on the top center, which we cut to run a line through the parachute from the payload to the balloon. Its position in the center would mean that it would have slack with the support of the balloon on ascent, and then open to carry the load at burst. We fastened the payload to the balloon using <a href="http://www.amazon.com/Lehigh-Secure-MFP4100-Diamond-100-Foot/dp/B0009WG65M/">plenty of rope</a> and zipties for reinforcement. Finally, the balloon itself came from <a href="http://kaymontballoons.com/Weather_Forecasting.html">Kaymont</a>, who were very helpful over the phone with advice. We considered factors such as the burst radius and capacity.</p>
+<h3>Payload Design</h3>
+<p>For electronic sensors, we chose to use a combination of the <a href="http://www.seeedstudio.com/depot/seeeduino-v30-atmega-328p-p-669.html?cPath=132_133">Seeeduino v3</a> and an <a href="http://www.arduino.cc/en/Main/arduinoBoardUno">Arduino Uno R3</a>. To the Seeeduino, we mounted an <a href="http://www.seeedstudio.com/depot/sd-card-shield-p-492.html?cPath=132_134">SD card shield</a> so we could log sensor inputs to <a href="http://www.amazon.com/SanDisk-32GB-Flash-Memory-SDSDB-032G-B35/dp/B002G12OBO/ref=sr_1_2">persistent external storage</a>. Overall, programming for the Seeeduino wasn't amazing because the drivers were incompatible with Windows 7, forcing me to use XP. However, everything worked swimmingly in the final sketch, which fundamentally was the example sketches for each sensor combined - no wheel-reinventing here. Our sensor array included a <a href="https://www.sparkfun.com/products/11050">temperature sensor</a> with a range down to what could be expected at burst altitude and a <a href="https://www.sparkfun.com/products/11282">pressure/temperature sensor</a> for internal temperature and potential pressure to altitude conversions soldered to a perfboard and connected to the Seeeduino, and an amazing, self-sufficient <a href="http://adafruit.com/products/746">GPS sensor</a> connected to the Arduino Uno. The GPS sensor, with an external battery and storage, logged timestamps and latitude, longitude, and altitude.</p>
+<div style="max-width:400px;"><img src="/images/blog/payload.JPG"/></div>
+<p>Our remaining electronic apparatus was not self-assembled. The payload carried 2 <a href="http://gopro.com/cameras/hd-hero-naked-camera/">GoPro cameras</a> to take pictures and an iPhone 4 as the primary means of recovery by sending GPS position over cellular data (using <a href="http://www.instamapper.com/">Instamapper</a>).</p>
+<p>Our payload box was built with styrofoam cut from large sheets into our payload carrier design shape. The design split payload components into separate compartments to efficiently preserve heat with <a href="http://www.amazon.com/b?ie=UTF8&node=14329821">hand warmers</a> and distribute weight. We had a hole in each side at different angles measured to the size of the camera lens, and a small hole through which to run a temperature sensor. The styrofoam was assembled in multiple layers to insulate from the very low external temperatures and to help with any impact upon landing.</p>
+<h3>Launch Day</h3>
+<p>On the morning of the launch on October 20th, final assembly of the payload took place as we secured the contents of the box with tape, started the cameras, and connected the wiring of the sensors. We fastened the payload and the balloon with rope (taut-line hitch) and filled the balloon with helium from a local supplier. After we released the balloon, it was the last time we saw it for quite a while. The iPhone battery did not last the flight, and we received no landing location from it. Fortunately, it was recovered in an open field by a local farmer a few weeks after the launch.</p>
+<h3>Data Analysis</h3>
+<p>When we recovered the payload, the pertinent pieces of data we needed to retrieve were the log from the SD card, the internal storage of the GPS board, the location log from the iPhone, and pictures and video from each of the GoPros. Unfortunately, the camera batteries did not last the whole flight, which was unexpected; I suspect that the handwarmers took effect too soon, before the payload had escaped warm temperatures. Thankfully, the still shots continued up to burst altitude, and were successfully recovered. The GPS returned data in an XML-like format, providing amazingly useful timestamps, latitude and longitude, and altitude readings. The SD card log also functioned perfectly, storing 42MB of internal and external temperatures, pressure, and projected altitude. Although the SD card log was not timestamped, the loop was set to sleep for a second between each reading. The key to correlating the two datasets was the altitude commonality. Using the pressure reading from the barometric sensor, we obtained a projected altitude using a rearrangement of the equation</p>
+<pre>
+z = 44330.76 - 4946.54 * P<sup>0.1902632</sup>
+</pre>
+<p>where z is altitude in meters and P is pressure in pascals, the <a href="http://psas.pdx.edu/RocketScience/PressureAltitude_Derived.pdf">derivation</a> of which reflects a somewhat idealized calculation uncompensated at mean sea level, explaining why the <a href="http://jonathanzong.com/rainstormglen/plots#comparealts">projected altitude</a> is much lower than the experimental altitude. I then wrote a quick program in Java to process the sets and pick out the maximum height measurement (representing burst altitude), and then matched the datasets as vectors in GNU Octave. By linking the datasets, we could cross reference timestamps with temperature readings, altitudes with experimental pressures, etc., opening the potential for much more understanding, and enabling the creation of cross-dataset graphs.</p>
+<p>For the actual plotting of data, I used GNU Octave for its gnuplot capabilities. Most notably, I'd like to draw attention to the interactively rotatable <a href="http://www.jonathanzong.com/rainstormglen/graph">3-dimensional plot</a> of the flight path, using latitude and longitude for x and y and altitude for z as expected. This was created by printing 180 plots in Octave to file out with the azimuth varied by 2 degrees per image (seen below), and then chaining them together with the <a href="https://github.com/heartcode/360-Image-Slider">360 Image Slider</a> in JavaScript. From this graph, you can observe that the initial ascent was subject to the whims of the wind; the balloon did in fact start out traveling northward, and then turned to the south in accordance with our predictions. At a certain altitude (unscientifically, a little under 20,000 m on the graph), the wind direction <a href="http://aviationweather.gov/products/nws/winds/">begins to vary</a> more greatly at each interval of altitudes, creating a stratified stretch where the balloon is tossed about for a while. Finally, at burst, we assume that since the atmosphere is thinner, the payload freefell for a while before the parachute opened, explaining why on the descent, the path was much straighter at the previously tumultuous altitudes; the downward falling overpowers the lateral push.</p>
+<h3>Octave 3D Plot Function</h3>
+<pre class="geshi" title="octave">
+function graph3D()
+
+fid = fopen ("gpsoctave.txt","r");
+
+count = fscanf(fid,"%d",1);
+top = fscanf(fid,"%d",1);
+latup = fscanf(fid,"%f ",top);
+latdown = fscanf(fid,"%f ",count-top);
+longup = fscanf(fid,"%f ",top);
+longdown = fscanf(fid,"%f ",count-top);
+hgtup = fscanf(fid,"%f ",top);
+hgtdown = fscanf(fid,"%f ",count-top);
+
+fclose (fid);
+
+plot3(longup,latup,hgtup,"color",[0,.5,.5],"linewidth",2);
+hold on;
+plot3(longdown,latdown,hgtdown,"color",[.25,0,.5],"linewidth",2);
+hold off;
+
+legend("Ascent","Descent");
+
+title("Flight Path of Rainstorm Glen");
+xlabel("Longitude");
+ylabel("Latitude");
+zlabel("Height\n(m)");
+
+flag = 0;
+if(flag==1)
+  for i=1:180,
+    view(-37.5+(i*2), 30);
+    print(strcat("3dplot",int2str(i),".png"));
+  end;
+else
+  print("3dplot.png");
+end;
+
+end;
+</pre>
+<h3>Personal Thoughts</h3>
+<p>The Rainstorm Glen project was a fantastic learning experience. The team learned to work together and gained valuable experience working with electronics and soldering. Researching the project drew together interest in physics with real world application. Programming for Arduino was unique from a CS perspective because it involved much more of the EE aspect of considering circuits and microprocessors. Data processing with Octave was especially fun because of the varied possibilities in presenting information effectively. Projects of this nature are a rare opportunity, and we are fortunate to have been able to conduct it successfully. Final data analysis and photo gallery from the project can be found at the <a href="http://jonathanzong.com/projects/rainstormglen">Rainstorm Glen page</a>.</p>

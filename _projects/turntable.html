@@ -1,0 +1,78 @@
+---
+active_section: projects
+---
+
+<button id="clear" style="margin-right: 15px">Clear</button>
+<a class="turntable-volume" href="#"><i class="fa fa-volume-up"></i></a>
+<canvas id="canvas"></canvas>
+<style type="text/css">
+#canvas {
+  cursor: crosshair;
+}
+#rangeInput {
+  width: 90%;
+  display: inline-block;
+}
+#textInput {
+  width: 9%;
+}
+</style>
+<input type="text" id="textInput" min="0" max="100" value="25">
+<input type="range" id="rangeInput" min="0" max="100" value="25">
+
+<hr/>
+
+<h1>Turntable Paint</h1>
+
+<p>Turntable Paint is a spinning canvas that translates dots of color to tones of sound, much like a gramophone translates the notches on a vinyl into a song. Play with it!</p>
+
+<!--<h3>Motivation</h3>
+
+<p>With this project, I wanted to play with a few ideas that have been bouncing around in my head for a while.</p>
+
+<ul>
+  <li><strong>Mental Models</strong>: What can we learn from a clear spatial mapping of music (something primarily temporal) that is reinforced by understood metaphors? Turntable references an existing material representations of sound, and uses light/color as an analogy to sound. Does establishing these relationships communicate a more intuitive understanding of music?</li>
+  <li><strong>Cyclical Nature of Music</strong>: In a <a href="http://www.ted.com/talks/scott_rickard_the_beautiful_math_behind_the_ugliest_music" target="_blank">TED talk</a> about music mathematically designed to be unappealing, Scott Rickard suggested that humans seek to identify/impose patterns in music, and that those patterns are aesthetically pleasing. In what ways does the aspect of music that is cyclically recurrent in the time dimension, as repeated measures of rhythms within a meter, influence our enjoyment of that music?</li>
+  <li><strong>Translation/Geometry</strong>: How does the visual representation of music, a translation from sound to light and light to sound, expose underlying mathematical (particularly geometric, see above) properties of music?</li>
+</ul>
+
+<h3>Progression of Ideas</h3>
+
+<p>I've been thinking a lot recently about how computers used to be these intricate mechanical things that you crank with your hand. Now we have electricity to turn that metaphorical crank for us but it's still, in the literal definition, a machine, that somehow encodes information through physical process. I thought of this when I found a music box the other day -- the spinny cylinder encodes the song in little bumps and when you crank it you have the material representation of the music generating the music itself.</p>
+
+<p>A few months ago, I visited the Exploratorium in San Francisco. I saw this thing that was an image of a circle on a table, with a mechanical arm doing a 360 degree sweep across the circle like a clock with one hand. You could put these metal bells along the circle and the spacing between them would generate rhythm when the arm swept past and hit the bell. There were shapes inscribed in the circle that would visually indicate the common subdivisions, e.g. a square hits the circle at 4 equidistant points and signifies quarter notes, a triangle signifies triplets, etc.</p>
+
+<p>At this point, I was interested in exploring this idea of geometrically subdividing a circle -- representing temporal subdivisions spatially -- as a digital interface for music composition. I thought about how these circles could be layered, such that the cylinder created by all the circles composited would have a height axis representing pitch. I especially latched onto this idea from an interface perspective because I thought the spatial metaphor was so clear and didn't require one to be literate in complex musical notation.</p>
+
+<img src="/images/projects/musicinterface.png" alt="Music Interface" width="400"/>
+Something like this?<br/>
+
+<p>That style of interface imposed some important challenges. Because the geometric divisions of where the downbeat would fall was represented by the points where a shape touched the circle, the working area of the composing interface was just the line of the circle, not the surface enclosed by the circle. This is essentially a one dimensional interface, which is why pitch had to get kicked into an imaginary axis coming out of the screen.</p>
+
+<p>I explored some ideas layering concentric rings in order to express more pitches, but it diluted the visual clarity of the interface. But that put me an interesting direction that carried over into the above -- if time was mapped to angle, pitch could be mapped to radius, or distance from the center. Having these two mappings assigns meaning to the entire two dimensional space instead of just the one dimensional line around the circle.</p>
+
+<p>The decision to ditch the geometric shape markers was difficult because they were conceptually a big part of what drew me in the direction of this project to begin with. However, in doing so, the focus shifted away from mathematically precisely measuring out sounds, and more towards creative play and serendipitous exploration of sound. In essence, it introduced a fuzziness in interaction that encourages musical and spatial intuition over measurement.</p>
+
+<blockquote>
+  if you try to do quarter notes visually
+  it's hard to get right
+  but if you ignore where your cursor is
+  and just hear it, then you get it
+  <p class="small">Messages from a friend playing with Turntable</p>
+</blockquote>
+
+<p>Embracing this imprecision as a working principle was also liberating in that it aligned my thinking with another significant change. Originally, I had been thinking in the model of a clock hand turning and hitting bells like what I had seen in the Exploratorium. However, someone I met through <a href="http://designsummer.me/" target="_blank">Design Summer</a> showed me something called <a href="http://mrdoob.com/lab/javascript/spinpainter/" target="_blank">Spin Painter</a>, which inspired me and put me in a different headspace. Having the canvas rotate instead of the clock hand affords two significant ideas. 1) The current instant stands still -- the idea that the time is always now, and that music and sound is both fleeting, passing by and receding into the past, yet cyclical. 2) The spatial metaphor of a turntable.</p>
+
+<p>While it turns out to be challenging intentionally to coerce something prewritten into this interface because of the constant spinning, it affords a different style of composition. It's true especially of design that the things we create are inextricably tied to the tools we use -- whether print media, digital, or otherwise. I expect the same to hold for music.</p>
+
+<h3>Technical (Here Be Math)</h3>
+
+<p>The html5 canvas API allows you to rotate the drawing context by an angle. Effectively, this rotates the coordinate axis -- your points are the same, but they are now relative to a rotated x and y axis. In linear algebra, this is known as a change of basis.</p>
+
+<p>At every frame, the context rotates by an angle calculated from the tempo input such that tempo is equal to the effective frequency in rotations per minute. The points are stored in a queue, and they are painted each frame during the render step.</p>
+
+<p>But this poses a challenge: if the drawing context was rotated, the point returned by the mouse event handler no longer corresponds to the point in the canvas that was being clicked. To get around this, I transform each incoming mouse event into a point in the rotated basis. Effectively this means tracking the angle by which the axes had been rotated relative to the default basis, taking a 2D rotation matrix using the negative of that angle, and applying it to the mouse point in order to un-rotate the point. By inverse transforming the point from the default basis, the coordinate in the rotated basis would again correspond to where the canvas was actually clicked. The same idea is used to draw the stationary upright line in each frame.</p>
+
+<p>I also employed a few optimizations for space-efficiency. In earlier iterations, my computer would overheat when drawing many points because they were all stored in-memory and all n of them were accessed each frame. I added some set logic to deduplicate points (to prevent clicking and holding from storing a bunch of duplicates). I also implemented a pool for the oscillator and gain nodes used by the audio API to generate tones. To play multiple notes at the same time (i.e. polyphonically) requires multiple instances of these nodes. They are taken from a queue, used, and returned to the shared queue when the tone stops playing.</p>-->
+
+<script src="/javascripts/turntable.js"></script>

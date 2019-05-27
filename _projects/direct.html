@@ -1,0 +1,99 @@
+---
+active_section: projects
+---
+
+<style>
+ .row img {
+   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+   margin: 1em auto;
+ }
+ p {
+   margin: 1em auto;
+ }
+</style>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <img src="/images/projects/direct/direct-new.png" />
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      <strong>Direct</strong> is a tool for motion designers to visually provide clear, concise motion direction to engineers. In collaboration with the Material Design team at Google, I created new features, improved the interface, and helped launch the project as open-source to the public.
+    </p>
+    <p>
+      In the conventional collaboration process between designers and engineers, motion designers will export video from a design tool like After Effects and send it to the engineer. With only the video, the engineer does not know any of the properties or values needed to parameterize the motion in code. With Direct, designers can share videos along with a timeline and numerical specs, which can be viewed side by side. A scrubbable playhead allows engineers to inspect the motion at each frame.
+    </p>
+    <p>
+      The repository lives at <a href="https://github.com/material-motion/direct" target="_blank">https://github.com/material-motion/direct</a>, and a public instance is deployed to <a href="https://oss-direct.appspot.com/">https://oss-direct.appspot.com/</a>.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img src="/images/projects/direct/direct-scrubbing.gif" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      I added the scrubbable playhead and bottom player control interface which binds interaction on the timeline to actions on the video. Previously, the video was hidden in a popup modal and was completely independent of the timeline.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img src="/images/projects/direct/direct-drag.gif" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      I implemented UX improvements to the editor, including the ability to drag to reorder timeline rows. Previously, users needed to delete rows and re-add them in the correct order.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img src="/images/projects/direct/direct-multiselect.png" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <img src="/images/projects/direct/direct-multi-1.png" />
+  </div>
+  <div class="col-sm-6">
+    <img src="/images/projects/direct/direct-multi-2.png" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      I also implemented a tab interface to open multiple related specs at the same time, inspired by interactions in existing Material Design tools.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <img src="/images/projects/direct/direct-lottie.gif" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      To propose a direction for future work, I made a prototype of Direct integrated with Lottie. Lottie is an existing open-source tool that allows designers to export from After Effects into a json file that can be directly rendered on mobile and web. In Direct, parsing Lottie files would allow automatic import of timeline layers from After Effects, and Lottie-based rendering would allow direct manipulation of individual UI elements to a greater degree than video. Possible interactions include highlighting specific elements when hovering over the timeline row, or live editing and rerendering of properties from the timeline.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div id="navbar" class="meta-text">
+  <ul class="nav navbar-nav navbar-right">
+    <li><a {% if page.active_section == 'home' %}class="nav-current"{% endif %} {% unless page.active_section == 'home' %}href="{{ "/"  | prepend: site.baseurl }}"{% endunless %} title="Home">Home</a></li>
+    <li><a {% if page.active_section == 'bio' %}class="nav-current"{% endif %} {% unless page.active_section == 'bio' %}href="{{ "/bio"  | prepend: site.baseurl }}"{% endunless %} title="Bio">Bio</a></li>
+    <li><a {% if page.active_section == 'projects' %}class="nav-current"{% endif %} {% unless page.active_section == 'projects' %}href="{{ "/projects"  | prepend: site.baseurl }}"{% endunless %} {% if page.active_section == 'projects' %}{% unless page.url == '/projects.html' %}href="{{ "/projects"  | prepend: site.baseurl }}"{% endunless %}{% endif %} title="Projects">Projects</a></li>
+    <li><a {% if page.active_section == 'readings' %}class="nav-current"{% endif %} {% unless page.active_section == 'readings' %}href="{{ "/readings"  | prepend: site.baseurl }}"{% endunless %} title="Readings">Readings</a></li>
+    <li><a {% if page.active_section == 'blog' %}class="nav-current"{% endif %} {% unless page.active_section == 'blog' %}href="{{ "/blog"  | prepend: site.baseurl }}"{% endunless %} {% if page.active_section == 'blog' %}{% unless page.url == '/blog.html' %}href="{{ "/blog"  | prepend: site.baseurl }}"{% endunless %}{% endif %} title="Writings">Writings</a></li>
+  </ul>
+  <div class="clear"></div>
+</div>

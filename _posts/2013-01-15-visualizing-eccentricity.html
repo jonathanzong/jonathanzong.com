@@ -1,0 +1,99 @@
+---
+layout: post
+title: Visualizing Elliptical Eccentricity
+slug: visualizing-elliptical-eccentricity
+---
+
+<p>I wrote a quick javascript visualization to better understand the <a href="http://en.wikipedia.org/wiki/Eccentricity_(mathematics)">eccentricity</a> concept applied to ellipses. Eccentricity for ellipses is a ratio of the distance between the center and a focus to the distance between a covertex to a focus, or alternatively, focal width to the major axis length. For ellipses that arent circles, eccentricity takes on the interval (0, 1).</p>
+
+<canvas id = 'canvas1' style="margin:0 auto;display:block;" width="800" height="800"><p>Your browser does not support html5 canvas.</p></canvas>
+
+<p>For the implementation, I chose an arbitrary major axis size, w, and iterated the focal width from 0 to w-1. A focal width of w would be undefined because the foci cannot be on the ellipse itself (i.e. be vertices). The eccentricity is then calculated as the focal width over the major axis, and the ellipse is drawn by solving for the minor axis and then iterating from [0, 2&#960;) and graphing points in parametric form.</p>
+
+<pre class="geshi" title="jquery">
+//in this instance, canvas1 is an 800x800 canvas element
+var context = document.getElementById('canvas1').getContext('2d');
+
+context.font="25px Arial";
+// a + b = width
+var width = 200;
+var focal = 0;
+var timer = setInterval(function(){drawEllipse(400,400)},200);
+
+function drawEllipse(centerX, centerY) {
+  context.clearRect ( 0 , 0 , 800 , 800 );
+  var height = Math.sqrt((width*width)-(focal*focal));
+  var eccen = (focal)/(width);
+
+  context.fillText("Eccentricity = "+eccen,10,40);
+  context.fillText("Focal Width = "+focal,10,70);
+  context.fillText("Major Axis = "+width,10,100);
+  context.fillText("Minor Axis = "+height,10,130);
+  context.fillRect(centerX-(focal/2.0),centerY,2,2);
+  context.fillRect(centerX+(focal/2.0),centerY,2,2);
+  var a = width/2.0;
+  var b = height/2.0;
+  for(var t=0;t<360;t++){
+    var theta = t*Math.PI/180;
+    context.fillRect(centerX+a*Math.cos(theta),centerY+b*Math.sin(theta),2,2);
+  }
+  focal++;
+  if(focal &gt;= 200)
+    clearInterval(timer);
+}
+</pre>
+
+<p>Of course, eccentricity works differently for other conics, but relating the focal width of ellipses to their eccentricity is useful to see that as focal width approaches 0, i.e. as the foci get closer together, the eccentricity approaches 0 as well. Indeed, when the focal width is 0, forming a circle, eccentricity should be 0 as implied by the meaning of the word itself, to deviate from centricity, or circle-ness. As the focal width nears the major axis width, approaching non-ellipsehood, the eccentricity will approach 1 until this particular representation is no longer fruitful but the structure becomes parabolic.</p>
+
+<script type = "text/javascript">
+var winwidth;
+var winheight;
+var width;
+$(window).resize(function(){
+$("#canvas1").width("80%").height($("#canvas1").width());
+winwidth = $("#canvas1").width();
+winheight= $("#canvas1").height();
+width = winwidth/3;
+});
+$(window).load(function(){
+$("#canvas1").width("80%").height($("#canvas1").width());
+winwidth = $("#canvas1").width();
+winheight= $("#canvas1").height();
+width = winwidth/3;
+var context = document.getElementById('canvas1').getContext('2d');
+
+context.font="20px Arial";
+
+var focal = 0;
+var timer = setInterval(function(){drawEllipse(winwidth/2,winheight/2)},200);
+$("#canvas1").click(function(){
+  clearInterval(timer);
+  focal = 0;
+  timer = setInterval(function(){drawEllipse(winwidth/2,winheight/2)},200);
+});
+function drawEllipse(centerX, centerY) {
+  context.clearRect ( 0 , 0 , winwidth , winheight );
+  var height = Math.sqrt((width*width)-(focal*focal));
+  var eccen = (focal)/(width);
+
+  context.fillText("Eccentricity = "+eccen,10,40);
+  context.fillText("Focal Width = "+focal,10,60);
+  context.fillText("Major Axis = "+width,10,80);
+  context.fillText("Minor Axis = "+height,10,100);
+  context.fillRect(centerX-(focal/2.0),centerY,2,2);
+  context.fillRect(centerX+(focal/2.0),centerY,2,2);
+  var a = width/2.0;
+  var b = height/2.0;
+  for(var t=0;t < 360;t++){
+    var theta = t*Math.PI/180;
+    context.fillRect(centerX+a*Math.cos(theta),centerY+b*Math.sin(theta),2,2);
+  }
+  focal++;
+  if(focal >= width){
+    clearInterval(timer);
+context.fillText("Click to repeat",10,140);
+}
+}
+
+});
+</script>

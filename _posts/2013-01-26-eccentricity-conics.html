@@ -1,0 +1,255 @@
+---
+layout: post
+title: Eccentricity of Conics
+slug: eccentricity-of-conics
+---
+
+<p>After I made a visualization of elliptical eccentricity to help reinforce a concept from class, my teacher challenged me to make one that goes past an upper bound of 1 and encompasses all of our conic sections. It sounded fun, ergo, <a href="http://www.youtube.com/watch?v=Nepysk5rOf4">challenge accepted</a>.</p>
+
+<div style="margin: 1.25em 0;">
+<canvas id="canvas1" style="margin: 0px auto; display: block;" width="800" height="800"><p>Your browser does not support html5 canvas.</p></canvas>
+<button id="p" type="button">Pause/Go</button>
+<button id="b" type="button">Back</button>
+<button id="f" type="button">Forward</button>
+<button id="r" type="button">Restart</button>
+</div>
+
+<p>After browsing the internet for a mathematical basis, I came upon the perfect resource, a <a href="http://www.mathsisfun.com/geometry/conic-sections.html">page explaining eccentricity</a> in terms of its function as a ratio of distances from the essential parts of a conic, the directrix and the focus. More specifically, it is the ratio of the distance from the focus to a point (point to point) and the distance from that point to the directrix (point to line). Expressing it in a general form as such is much more insightful after completing our unit on conics, which when expressed in their respective standard forms instead of the general equation, may or may not use a directrix or single focus. Visualized in this way, it becomes clearer why eccentricity represents deviation from circle-hood. Especially interesting is that as eccentricity begins to approach infinity, the hyperbola comes closer and closer to becoming a line, representing the least circle-like form of a conic section.</p>
+
+<p>A quick aside: I've really been looking for an excuse to learn <a href="http://www.latex-project.org/">LaTeX</a>, a markup language widely used to display mathematics in academia. With my recent frequency of math-related posts, I figured I'd go for it and share my learning snippets here with <a href="http://www.mathjax.org/">MathJax</a>, a javascript engine which conveniently allows me to embed LaTeX into my site. Here's an equation! (Also serving as a proof of concept of MathJax's display and inline capabilities).</p>
+
+<p style="text-align:center;">
+$$e = {d_{focus} \over d_{directrix}} = {\sqrt{(x_{focus}-x_0)^2 + (y_{focus}-y_0)^2} \over {|ax_0 + by_0 + c| \over {\sqrt{a^2 + b^2}}}}$$
+where \( (x_0,y_0) \) is any given point in the locus and \(ax+by+c\) is the standard equation of the directrix.
+</p>
+
+<p>Regarding my javascript canvas implementation of this visual, it's actually much less efficient than the previous. With the ellipse, the drawing step was essentially <a href="http://en.wikipedia.org/wiki/Big_O_notation">O(1)</a> constant time complexity, taking a constant 360 iterations due to the drawing of points from &theta; = 0 to 359 through the expression of these points in <a href="http://en.wikipedia.org/wiki/Parametric_equation">parametric equation</a> form. In the interest of time, I opted instead to use a more na&iuml;ve but intuitively obvious implementation where I iterate through possible coordinate points, drawing the ones that fit the definition of the <a href="http://en.wikipedia.org/wiki/Locus_(mathematics)">locus of points</a> given in the aforementioned page. Because we iterate in 2 dimensions, the drawing step takes O(n&sup2;) quadratic time. As you may have noticed, I went back to my first conic eccentricity program and tweaked my actual live code to scale to the browser window size. I will not be doing that for this particular tool because of the poor runtime performance scaling.</p>
+
+<pre class="geshi" title="jquery">
+var context = document.getElementById('canvas1').getContext('2d');
+context.font="25px Arial";
+//
+var focusX = 300;
+var focusY = 400;
+var directrixX = 200;
+var width = 800;
+var height = 800;
+//
+var ecc = 0;
+var ispaused = false;
+
+var timer = setInterval(function(){
+  drawConics(focusX,focusY,directrixX,ecc);
+},200);
+
+function drawConics(fX, fY, dX, eccen) {
+  context.clearRect ( 0 , 0 , width , height );
+  context.fillText("Eccentricity = "+(eccen.toFixed(2)),width-325,40);
+  var conictype = "Conic type = ";
+  if(eccen < 1)
+    conictype+="Ellipse";
+  else if(eccen > 1.001)
+    conictype+="Hyperbola";
+  else
+    conictype+="Parabola";
+  context.fillText(conictype,width-325,65);
+
+  context.fillRect(fX,fY,3,3);
+
+  for(var i=0;i < 10;i++)
+    context.fillRect(dX,height*i/10,2,height/20);
+
+  for(var x=0;x < width;x+=0.25)
+    for(var y=0;y < height;y+=0.25)
+      if(Math.abs(focusDistance(x,y,fX,fY) - directrixDistance(x,dX)*eccen) <= 1){
+        context.fillRect(x,y,1,1);
+        if(Math.abs(x-fX) < 0.5 && y > fY){
+          context.beginPath();
+          context.strokeStyle="red";
+          context.lineWidth="1";
+          context.moveTo(fX,fY);
+          context.lineTo(x,y);
+          context.stroke();
+          context.moveTo(x,y);
+          context.lineTo(dX,y);
+          context.stroke();
+        }
+      }
+    if(!ispaused){
+      if(ecc < 2)
+        ecc+=0.01;
+      else if(ecc < 10)
+        ecc++;
+      else if(ecc < 50)
+        ecc+=2;
+      else ecc+=3;
+      if(ecc > 100)
+        clearInterval(timer);
+    }
+}
+function focusDistance(x,y,fX,fY){
+  return Math.sqrt((x-fX)*(x-fX)+(y-fX)*(y-fY));
+}
+function directrixDistance(x,dX){
+  return Math.abs(x-dX);
+}
+document.getElementById('p').onclick = function(){
+  if(ispaused){
+    timer = setInterval(function(){
+      drawConics(focusX,focusY,directrixX,ecc);
+    },200);
+    ispaused = false;
+  }
+  else{
+    clearInterval(timer);
+    ispaused = true;
+  }
+}
+document.getElementById('b').onclick = function(){
+  clearInterval(timer);
+  ispaused = true;
+  if(ecc < 2)
+    ecc-=0.01;
+  else if(ecc < 10)
+    ecc--;
+  else if(ecc < 50)
+    ecc-=2;
+  else ecc-=3;
+  if(ecc < 0) ecc = 0;
+  drawConics(focusX,focusY,directrixX,ecc);
+}
+document.getElementById('f').onclick = function(){
+  clearInterval(timer);
+  ispaused = true;
+  if(ecc < 2)
+    ecc+=0.01;
+  else if(ecc < 10)
+    ecc++;
+  else if(ecc < 50)
+    ecc+=2;
+  else ecc+=3;
+  drawConics(focusX,focusY,directrixX,ecc);
+}
+document.getElementById('r').onclick = function(){
+  clearInterval(timer);
+  ecc = 0;
+  timer = setInterval(function(){
+    drawConics(focusX,focusY,directrixX,ecc);
+  },200);
+  ispaused = false;
+}
+</pre>
+<script type = "text/javascript">
+var context = document.getElementById('canvas1').getContext('2d');
+context.font="25px Arial";
+//
+var focusX = 300;
+var focusY = 400;
+var directrixX = 200;
+var width = 800;
+var height = 800;
+//
+var ecc = 0.01;
+var ispaused = true;
+
+var timer;
+
+drawConics(focusX,focusY,directrixX,ecc);
+
+function drawConics(fX, fY, dX, eccen) {
+  context.clearRect ( 0 , 0 , width , height );
+  context.fillText("Eccentricity = "+(eccen.toFixed(2)),width-325,40);
+  var conictype = "Conic type = ";
+  if(eccen<1)
+    conictype+="Ellipse";
+  else if(eccen>1.001)
+    conictype+="Hyperbola";
+  else
+    conictype+="Parabola";
+  context.fillText(conictype,width-325,65);
+
+  context.fillRect(fX,fY,3,3);
+
+  for(var i=0;i<10;i++)
+    context.fillRect(dX,height*i/10,2,height/20);
+
+  for(var x=0;x<width;x+=0.25)
+    for(var y=0;y<height;y+=0.25)
+      if(Math.abs(focusDistance(x,y,fX,fY) - directrixDistance(x,dX)*eccen) <= 1){
+        context.fillRect(x,y,1,1);
+        if(Math.abs(x-fX) < 0.5 && y > fY){
+          context.beginPath();
+          context.strokeStyle="red";
+          context.lineWidth="1";
+          context.moveTo(fX,fY);
+          context.lineTo(x,y);
+          context.stroke();
+          context.moveTo(x,y);
+          context.lineTo(dX,y);
+          context.stroke();
+        }
+      }
+    if(!ispaused){
+      if(ecc<2)
+        ecc+=0.01;
+      else if(ecc<10)
+        ecc++;
+      else if(ecc<50)
+        ecc+=2;
+      else ecc+=3;
+      if(ecc > 100)
+        clearInterval(timer);
+    }
+}
+function focusDistance(x,y,fX,fY){
+  return Math.sqrt((x-fX)*(x-fX)+(y-fX)*(y-fY));
+}
+function directrixDistance(x,dX){
+  return Math.abs(x-dX);
+}
+document.getElementById('p').onclick = function(){
+  if(ispaused){
+    timer = setInterval(function(){
+      drawConics(focusX,focusY,directrixX,ecc);
+    },200);
+    ispaused = false;
+  }
+  else{
+    clearInterval(timer);
+    ispaused = true;
+  }
+}
+document.getElementById('b').onclick = function(){
+  clearInterval(timer);
+  ispaused = true;
+  if(ecc<2)
+    ecc-=0.01;
+  else if(ecc<10)
+    ecc--;
+  else if(ecc<50)
+    ecc-=2;
+  else ecc-=3;
+  if(ecc < 0) ecc = 0;
+  drawConics(focusX,focusY,directrixX,ecc);
+}
+document.getElementById('f').onclick = function(){
+  clearInterval(timer);
+  ispaused = true;
+  if(ecc<2)
+    ecc+=0.01;
+  else if(ecc<10)
+    ecc++;
+  else if(ecc<50)
+    ecc+=2;
+  else ecc+=3;
+  drawConics(focusX,focusY,directrixX,ecc);
+}
+document.getElementById('r').onclick = function(){
+  clearInterval(timer);
+  ecc = 0;
+  timer = setInterval(function(){
+    drawConics(focusX,focusY,directrixX,ecc);
+  },200);
+  ispaused = false;
+}
+</script>

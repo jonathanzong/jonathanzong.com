@@ -1,0 +1,59 @@
+---
+active_section: projects
+---
+
+<style>
+.heartbeat-wrapper .iframe-wrapper {
+  background: black;
+}
+.heartbeat-wrapper .iframe-wrapper iframe{
+  display: block;
+  margin: 0 auto;
+  width: 560;
+}
+.heartbeat-wrapper h3{
+  margin-top: 0;
+}
+.heartbeat-wrapper em {
+  font-style: italic;
+}
+.heartbeat-wrapper .strikethrough {
+  text-decoration: line-through;
+}
+</style>
+
+<div class="heartbeat-wrapper">
+  <div class="iframe-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ayWCFImuJ68?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <h1>Heartbeat</h1>
+  <h3>an interface for watchOS</h3>
+  <br/>
+  <p>
+    What should we call time? The current time is <em><script>document.write(new Date());</script></em>. You have had this page open for <em id="elapsed">0 seconds</em>. We overload the word "time" to refer to both <em>point</em> and <em>interval</em>. But then, we are only able to index points in time by their distance interval from a predefined epoch, an arbitrary point from which to start counting. Points are intervals fitted to a scale.
+  </p>
+
+  <p>
+    In a way, our heartbeats are our most personal connection to the movement of time&mdash;an embodied demarcation of interval by which we experience each moment. By interfacing with time as mediated by a heartbeat sensor placed at the surface of our body&mdash;itself an interface between our internal and sensory worlds&mdash;we understand time through the lens of our bodily experience.
+  </p>
+
+
+  <p>
+    <strong>Heartbeat</strong> calibrates to (what you believe to be) your resting heart rate on initialization. Then, the animated character dances to the beat of your heart; calm as you are calm, agitated as you are agitated. The watchOS time travel feature allows you to scroll back through your personal heart rate timeline, letting you understand your experiences by how you felt in the moment.
+  </p>
+
+  <p>
+    Created in Fall 2015 for VIS415 Advanced Graphic Design: Interface.
+  </p>
+</div>
+
+<script>
+var elem = document.getElementById("elapsed");
+var start = Date.now();
+setInterval(function() {
+  var elapsed = ((Date.now() - start) / 1000) | 0;
+  elem.innerHTML = elapsed + (elapsed === 1 ? " second" : " seconds");
+}, 1000);
+</script>
+
+<img hidden="true" src="/images/projects/heartbeat.png" />

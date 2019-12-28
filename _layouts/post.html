@@ -2,19 +2,6 @@
 layout: default
 ---
 
-
-<head>
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="{{page.title}}" />
-  <meta property="og:url" content="{{page.url}}" />
-  {% if page.img %}
-    <meta property="og:image" content="{{ page.img | prepend: site.baseurl | prepend: site.url }}" />
-  {% else %}
-    <meta property="og:image" content="http://jonathanzong.com/images/blog/placeholder.png" />
-  {% endif %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:creator" content="@ohnobackspace" />
-</head>
 <section class="blog-entry">
   <h1 class="blog-title">{{page.title}}</h1>
   <div class="blog-date meta-text">{{ page.date | date: '%B %d, %Y' }} - Jonathan Zong</div>

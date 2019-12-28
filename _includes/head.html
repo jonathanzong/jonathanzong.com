@@ -21,4 +21,17 @@
   <link rel="stylesheet" href="{{ "/stylesheets/style.css" | prepend: site.baseurl }}">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  {% if page.layout == 'post' %}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta property="og:url" content="{{page.url}}" />
+    {% if page.img %}
+      <meta property="og:image" content="{{ page.img | prepend: site.baseurl | prepend: site.url }}" />
+    {% else %}
+      <meta property="og:image" content="http://jonathanzong.com/images/blog/placeholder.png" />
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ohnobackspace" />
+  {% endif %}
 </head>

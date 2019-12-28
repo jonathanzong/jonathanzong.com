@@ -22,7 +22,7 @@ In *Rise*, Emperor Palpatine comes back from the dead to quote his own lines fro
 
 Remember this moment from that movie you liked? Here it is again! Remember how it made you feel the first time, when it made sense in the context of a larger narrative? Here it is, stripped of all life. In Carrie Fisher’s scene, totaling eight minutes, she speaks in one-sentence sayings that never quite seem to be in response to what was said to her. The camera cuts away from her face as audio clips play. She is back, yes, but displaced from time—speaking to someone who is already gone.
 
-Reanimating the dead by digitally recombining the past will yield images that appear to be new. But they refer to no real there-then, and won't fit into the here-now. The spontaneity of life, the making of decisions in the moment based on context and experience, is impossible to reproduce when there was no originary moment.
+Reanimating the dead by digitally recombining the past will yield images that appear to be new. But they refer to no real there-then, and won't fit into the here-now. The spontaneity of life, the making of decisions in the moment based on context and experience, is impossible to reproduce when there was no originary moment to begin with.
 
 In 2017, Lucasfilm president Kathleen Kennedy [told](https://www.vanityfair.com/hollywood/2017/12/star-wars-the-last-jedi-does-leia-die-carrie-fisher-in-episode-ix) *Vanity Fair*, “We don’t have any intention of beginning a trend of re-creating actors who are gone.” Not even archival footage: “Sadly, Carrie will not be in IX.” But corporations, like ghosts, cannot resist unfinished business.
 

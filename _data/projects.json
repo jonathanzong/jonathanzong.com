@@ -42,6 +42,13 @@
     "img": "/images/projects/grass/IMG_6993-2-resize.jpg",
   },
   {
+    "year": "2017",
+    "url": "/projects/iamjz",
+    "title": "i am jonathan zong by joe scanlan",
+    "description": "Performance and installation in collaboration with Drew Wallace ... and Joe Scanlan",
+    "img": "/images/projects/iamjz/iamjz.jpg",
+  },
+  {
     "year": "2015",
     "url": "https://github.com/jonathanzong/3d-print-letterpress/blob/master/README.md",
     "title": "3d-print-letterpress",

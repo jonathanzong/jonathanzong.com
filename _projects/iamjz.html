@@ -9,6 +9,26 @@ em {
 p {
   margin: 1em auto;
 }
+ol {
+  list-style-type: decimal;
+  margin-left: 1em;
+}
+.menard {
+  padding: 2em 1em;
+  border: 1px solid black;
+}
+.menard ol {
+  counter-reset: list;
+  margin-left: 1.05em;
+}
+.menard ol > li {
+  list-style: none;
+}
+.menard ol > li:before {
+  content: counter(list, lower-alpha) ") ";
+  counter-increment: list;
+  margin-left: -1.05em;
+}
 </style>
 
 <div class="row">
@@ -24,16 +44,160 @@ p {
 <div class="row">
   <div class="col-sm-6">
     <p>
-      <img src="/images/projects/iamjz/installation-1.jpg" />
+      <strong>i am jonathan zong by joe scanlan</strong> is a performance piece in collaboration with Drew Wallace in Spring 2017. A <a href="http://iam.jonathanzong.com">website</a> (above) and installation (right) accompanied the performance.
+    </p>
+    <p>
+      Joe Scanlan is one of my former professors from the Visual Arts Department at Princeton. At the time of this piece, he was also the director of the VIS program. Joe created a project in which he creates art under a fictional persona named Donelle Woolford, whom he hires actresses to portray in performances. Joe is a white man, and Donelle is a black woman. Donelle's inclusion in the Whitney Biennial in 2014 was extremely controversial. It sparked extensive <a href="https://www.latimes.com/entertainment/arts/miranda/la-et-cam-donelle-woolford-controversy-whitney-biennial-20140609-column.html">debate</a> and <a href="https://hyperallergic.com/131687/i-am-joe-scanlan/">criticism</a>.
+    </p>
+    <p>
+      I wasn't around for any of this in 2014, so I don't have anything to add to that conversation that hasn't already been said. But in 2017, I created my own project to accomplish three personal goals:
+    </p>
+    <ol>
+      <li>Fulfill my responsibility to the VIS department to create a body of work for the junior exhibition while I was studying abroad</li>
+      <li>Help my friend Drew access studio space and institutional resources at VIS</li>
+      <li>Make fun of Joe Scanlan</li>
+    </ol>
+    <p>
+      For a semester, Drew took my identity in the VIS department. Jonathan Zong's identity became a joint art practice shared by Drew and me. He used Jonathan Zong's studio, met with Jonathan Zong's advisor, created work as Jonathan Zong.
+    </p>
+    <p>
+      The website <a href="http://iam.jonathanzong.com">iam.jonathanzong.com</a> documents the divergent revision histories of Jonathan Zong's studios in Princeton and Oxford. At the end of the semester, we created an installation representing our work. Two lights were connected to timers. One represented Drew and one represented me. Each was on during the waking hours of the timezone we were in. The acrylic mounted in the middle was one-way mirror material, representing the uneven power dynamic between two collaborators. On the pedestal, we distributed copies of <em>Pierre Menard, Author of the Quixote</em>, pointing to our concern with questions of authorship.
+    </p>
+    <p>
+      Joe Scanlan called the installation "breezy".
     </p>
   </div>
-</div>
-
-
-<div class="row">
   <div class="col-sm-6">
+    <p>
+      <img src="/images/projects/iamjz/installation-1.jpg" />
+    </p>
     <p>
       <img src="/images/projects/iamjz/installation-2.jpg" />
     </p>
   </div>
 </div>
+
+<div class="row menard">
+  <div class="col-xs-12">
+    <strong>Pierre Menard, Author of the Quixote</strong>
+    <p>
+      The visible œuvre left by this novelist, Pierre Menard, can be easily and briefly enumerated; unpardonable, therefore, are the omissions and additions perpetrated by Mme. Henri Bachelier in a deceitful catalog that a certain newspaper, whose Protestant leanings are surely no secret, has been so inconsiderate as to inflict upen that newspaper’s deplorable readers—few and Calvinist (if not Masonic and circumcised) though they be. Menard’s true friends have greeted that catalog with alarm, and even with a degree of sadness. One might note that only yesterday were we gathered before his marmoreal place of rest, among the dreary cypresses, and already Error is attempting to tarnish his bright Memory…. Most decidedly, a brief rectification is imperative.
+    </p>
+
+    <p>
+      I am aware that it is easy enough to call my own scant authority into question. I hope, nonetheless, that I shall not be prohibited from mentioning two high testimonials. The baroness de Bacourt (at whose unforgettable vendredis I had the honor to meet the mourned-for poet) has been so kind as to approve the lines that follow. Likewise, the countess de Bagnoregio, one of the rarest and most cultured spirits of the principality of Monaco (now of Pittsburgh, Pennsylvania, following her recent marriage to the international philanthropist Simon Kautzsch)—a man, it grieves me to say, vilified and slandered by the victims of his disinterested operations), has sacrificed “to truth and to death” (as she herself has phrased it) the noble reserve that is the mark of her distinction, and in an open letter, published in the magazine Luxe, bestows upon me her blessing. Those commendations are sufficient, I should think.
+    </p>
+
+    <p>
+      I have said that the visible product of Menard’s pen is easily enumerated. Having examined his personal files with the greatest care, I have established that his body of work consists of the following pieces:
+    </p>
+    <ol>
+      <li>a symbolist sonnet that appeared twice (with variants) in the review La Conque (in the numbers for March and October, 1899);</li>
+      <li>a monograph on the possibility of constructing a poetic vocabulary from concepts that are neither synonyms nor periphrastic locutions for the concepts that inform common speech, “but are, rather, ideal objects created by convention essentially for the needs of poetry” (Nîmes, 1901);</li>
+      <li>a monograph on “certain connections or affinities” between the philosophies of Descartes, Leibniz, and John Wilkins (Nîmes, 1903);</li>
+      <li>a monograph on Leibniz’ Characteristica universalis (Nîmes, 1904);</li>
+      <li>a technical article on the possibility of enriching the game of chess by eliminating one of the rook’s pawns (Menard proposes, recommends, debates, and finally rejects this innovation);</li>
+      <li>a monograph on Ramon Lull’s Ars magna generalis (Nîmes, 1906);</li>
+      <li>a translation, with introduction and notes, of Ruy López de Segura’s Libro de la invención liberal y arte del juego del axedrez (Paris, 1907);</li>
+      <li>drafts of a monograph on George Boole’s symbolic logic;</li>
+      <li>a study of the essential metrical rules of French prose, illustrated with examples taken from Saint-Simon (Revue des langues romanes, Montpellier, October 1909);</li>
+      <li>a reply to Luc Durtain (who had countered that no such rules existed), illustrated with examples taken from Luc Durtain (Revue des langues romanes, Montpellier, December 1909);</li>
+      <li>a manuscript translation of Quevedo’s Aguja de navegar cultos, titled La boussole des précieux;</li>
+      <li>a foreword to the catalog of an exhibit of lithographs by Carolus Hourcade (Nîmes, 1914);</li>
+      <li>a work entitled Les problémes d’un probléme (Paris, 1917), which discusses in chronological order the solutions to the famous problem of Achilles and the tortoise (two editions of this work have so far appeared; the second bears an epigraph consisting of Leibniz’ advice “Ne craignez point, monsieur, la tortue,” and brings up to date the chapters devoted to Russell and Descartes);</li>
+      <li>a dogged analysis of the “syntactical habits” of Toulet (N.R.F., March 1921) (Menard, I recall, affirmed that censure and praise were sentimental operations that bore not the slightest resemblance to criticism);</li>
+      <li>a transposition into alexandrines of Paul Valéry’s Cimetiére marin (N.R.F., January 1928);</li>
+      <li>a diatribe against Paul Valéry, in Jacques Reboul’s Feuilles pour la suppression de la realité (which diatribe, I might add parenthetically, states the exact reverse of Menard’s true opinion of Valéry; Valéry understood this, and the two men’s friendship was never imperiled);</li>
+      <li>a “definition” of the countess de Bagnoregio, in the “triumphant volume” (the phrase is that of another contributor, Gabriele d’Annunzio) published each year by that lady to rectify the inevitable biases of the popular press and to present “to the world and all of Italy” a true picture of her person, which was so exposed (by reason of her beauty and her bearing) to erroneous and/or hasty interpretations;</li>
+      <li>a cycle of admirable sonnets dedicated to the baroness de Bacourt (1934);</li>
+      <li>a handwritten list of lines of poetry that owe their excellence to punctuation.^1 (Mme. Henrí Bachelier also lists a literal translation of Quevedo’s literal translation of St. Francis de Sales’s Introduction à la vie dévote. In Pierre Menard’s library there is no trace of such a work. This must be an instance of one of our friend’s droll jokes, misheard or misunderstood.)</li>
+    </ol>
+
+    <p>
+      This is the full extent (save for a few vague sonnets of occasion destined for Mme. Henri Bachelier’s hospitable, or greedy, album des souvenirs) of the visible lifework of Pierre Menard, in proper chronological order. I shall turn now to the other, the subterranean, the interminably heroic production—the óevre nonpareil, the óevre that must remain—for such are our human limitations!—unfinished. This work, perhaps the most significant writing of our time, consists of the ninth and thirty-eighth chapters of Part I of Don Quixote and a fragment of Chapter XXII. I know that such a claim is on the face of it absurd; justifying that “absurdity” shall be the primary object of this note.^2 (I did, I might say, have the secondary purpose of drawing a small sketch of the figure of Pierre Menard—but how dare I compete with th egilded pages I am told the baroness de Bacourt is even now preparing, or with the delicate sharp crayon of Carolus Hourcade?)
+    </p>
+
+    <p>
+      Two texts, of distinctly unequal value, inspired the undertaking. One was the philological fragment by Novalis - number 2005 in the Dresden edition, to be precise—which outlines the notion of total identification with a given author. The other was one of those parasitic books that set Christ on a boulevard, Hamlet on La Cannabiére, or don Quixote on Wall Street. Like every man of taste, Menard abominated those pointless travesties, which, Menard would say, were good for nothing but occasioning a plegian delight in anachronism or (worse yet) captivating us with the elementary notion that all times and places are the same, or are different. It might be more interesting, he thought, though of contradictory and superficial execution, to attempt what Daudet had so famously suggested: conjoin in a single figure (Tartarin, say) both the Ingenious Gentleman don Quixote and his squire….
+    </p>
+
+    <p>
+      Those who have insinuated that Menard devooted his life to writing a contemporary Quixote besmirch his illustrious memory. Pierre Menard did not want to compose another Quixote, which surely is easy enough—he wanted to compose the Quixote. Nor, surely, need one be obliged to note that his goal was never a mechanical transcription of the original; he had no intention of copying it. His admirable ambition was to produce a number of pages which coincided—word for word and line for line—with those of Miguel de Cervantes.
+    </p>
+
+    <p>
+      “My purpose is merely astonishing,” he wrote me on September 30, 1934, from Bayonne. “The final term of a theological or metaphysical proof—the world around us, or God, or chance, or universal Forms—is no more final, no more uncommon, than my revealed novel. The sole difference is that philosophers publish pleasant volumes containing the intermediate stages of their work, while I am resolved to suppress those stages of my own.” And indeed there is not a single draft to bear witness to that years-long labor.
+    </p>
+
+    <p>
+      Initially, Menard’s method was to be relatively simple: Learn Spanish, return to Catholicism, fight against the Moor or Turk, forget the history of Europe from 1602 to 1918—be Miguel de Cervantes. Pierre Menard weighed that course (I know he pretty thoroughly mastered seventeenth-century Castilian) but he discarded it as too easy. Too impossible, rather!, the reader will say. Quite so, but the undertaking was impossible from the outset, and of all the impossible ways of bringing it about, this was the least interesting. To be a popular novelist of the seventeenth century, this was the least interesting. To be a popular novelist of the seventeenth century in the twentieth seemed to Menard to be a diiminution. Being, somehow, Cervantes, and arriving thereby at the Quixote—that looked to Menard less challenging (and therefore less interesting) than continuing to be Pierre Menard and coming to the Quixote through the experiences of Pierre Menard. (It was that conviction, by the way, that obliged him to leave out the autobiographical foreward to Part II of the novel. Including the prologue would have meant creating another character—”Cervantes”—and also presenting Quixote through that character’s eyes, not Pierre Menard’s. Menard. of course, spurned that easy solution.) “The task I have undertaken is not in essence difficult,” I read at another place in that letter. “If I could just be immortal, I could do it.” Shall I confess that I often imagine that he did complete it, and that I read the Quixote—the entire Quixote—as if Menard had conceived it? A few nights ago, as I was leafing through Chapter XXVI (never attempted by Menard), I recognized our friend’s style, could almost hear his voice in this marvelous phrase: “the nymphs of the rivers, the moist and grieving Echo.” That wonderfully effective linking of one adjective of emotion with another of physical description brought to my mind a line from Shakespeare, which I recall we discussed on afternoon:
+    </p>
+    <p>
+      “Where a malignant and a turban’d Turk…”
+    </p>
+
+    <p>
+      Why the Quixote? my reader may ask. That choice, made by a Spaniard, would not have been incomprehensible, but it no doubt is so when made by a Symboliste from Nîmes, a devotee essentially of Poe—who begat Baudelaire, who begat Mallarmé, who begat Valéry, who begat M. Edmond Teste. The letter mentioned above throws some light on this point. “The Quixote,” explains Menard,
+    </p>
+
+    <p>
+      “deeply interestes me, but does not seem to me—comment dirai-je?—inevitable. I cannot imagine the universe without Poe’s ejaculation “Ah, bear in mind this garden was enchanted!” or the Bateau ivre or the Ancient Mariner, but I know myself able to imagine it with the Quixote. (I am speaking, of course, of my personal ability, not of the historical resonance of those works.) The Quixote is a contingent work; the Quixote is not necessary. I can premeditate committing it to writing, as it were—I can write it—without falling into a tautology. At the age of twelve or thirteen I read it—perhaps read it cover to cover, I cannot recall. Since then, I have carefully reread certain chapters, those which, at least for the moment, I shall not attempt. I have also glanced at the interludes, the comedies, the Galatea, the Exemplary Novels, the undoubtedly laborious Travails of Persiles and Sigismunda, and the poetic Voyage to Parnassus…. My general recollection of the Quixote, simplified by forgetfulness and indifference, might well be the equivalent of the vague foreshadowing of a yet unwritten book. Given that image (which no one can in good conscience deny me), my problem is, without the shadow of a doubt, much more difficult that Cervantes’. My obliging predecessor did not spurn the collaboration of chance; his method of composition for the immortal book was a bit à la diable, and he was often swept along by the inertiae of the language and the imagination. I have assumed the mysterious obligation to reconstruct, word for word, the novel that for him was spontaneous. This game of solitaire I play is governed by two polar rules: the first allows me to try out formal or psychological variants; the second forces me to sacrifice them to the “original” text and to come, by irrefutable arguments, to those eradications…. In addition to these first two artificial constraints there is another, inherent to the project. Composing the Quixote in the early seventeenth century was a reasonable, necessary, perhaps even inevitable undertaking; in the early twentieth, it is virtually impossible. Not for nothing have three hundred years elapsed, freighted with the most complex events. Among those events, to mention but one, is the Quixote itself.”
+    </p>
+
+    <p>
+      In spite of those three obstacles, Menard’s fragmentary Quixote is more subtle than Cervantes’. Cervantes crudely juxtaposes the humble provincial reality of his country against the fantasies of the romance, while Menard chooses as his “reality” the land of Carmen during the century that saw the Battle of Lepanto and the plays of Lope de Vega. What burlesque brushstrokes of local color that choice would have inspired in a Maurice Barrés or a Rodríguez Larreta! Yet Menard, with perfect naturalness, avoids them. In his work, there are no gypsy goings-on or conquistadors or mystics or Philip IIs or autos da fé. He ignores, overlooks—or banishes—local color. That disdain posits a new meaning for the “historical novel.” That disdain condemns Salammbó, with no possiblity of appeal.
+    </p>
+
+    <p>
+      No less amazement visits one when the chapters are considered in isolation. As an example, let us look at Part I, Chapter XXXVIII, “which treats of the curious discourse that Don Quixote made on the subject of arms and letters.” It is a matter of common knowledge tthat in that chapter, don Quixote (like Quevedo in the analogous, and later, passage in La hora de todos) comes down against letters and in favor of arms. Cervantes was an old soldier; from him, the verdict is understandable. But that Pierre Menard’s don Quixote—a contemporary of La trahison des clercs and Bertrand Russell—should repeat those cloudy sophistries! Mme. Bachelier sees in them an admirable (typical) subordination of the author to the psychology of the hero; others (lacking all perspicacity) see them as a transcription of the Quixote; the baroness de Bacourt, as influenced by Nietzsche. To that third interpretation (which I consider irrefutable), I am not certain I dare to add a fourth, though it agrees very well with the almost divine modesty of Pierre Menard: his resigned or ironic habit of putting forth ideas that were the exact opposite of those he actually held. (We should recall that diatribe against Paul Valéry in the ephemeral Surrealist journal edited by Jacques Reboul.) The Cervantes text and the Menard text are verbally identical, but the second is almost infinitely richer. (More ambiguous, his detractors will say—but ambiguity is richness.)
+    </p>
+
+    <p>
+      It is a revelation to compare the Don Quixote of Pierre Menard with that of Miguel de Cervantes. Cervantes, for example, wrote the following (Part I, Chapter IX):
+    </p>
+
+    <p>
+      “…truth, whose mother is history, rival of time, depository of deeds, witness of the past, exemplar and adviser to the present, and the future’s counselor.”
+    </p>
+
+    <p>
+      This catalog of attributes, written in the seventeenth century, and written by the “ingenious layman” Miguel de Cervantes, is mere rhetorical praise of history. Menard, on the other hand, writes:
+    </p>
+
+    <p>
+      “…truth, whose mother is history, rival of time, depository of deeds, witness of the past, exemplar and adviser to the present, and the future’s counselor.”
+    </p>
+
+    <p>
+      History, the mother of truth!—the idea is staggering. Menard, a contemporary of William James, defines history not as a delving into reality but as the very fount of reality. Historical truth, for Menard, is not “what happened”; it is what we believe happened. The final phrases—exemplar and adviser to the present, and the future’s counselor—are brazenly pragmatic.
+    </p>
+
+    <p>
+      The contrast in styles is equally striking. The archaic style of Menard—who is, in addition, not a native speaker of the language in which he writes—is somewhat affected. Not so the style of his precursor, who employs the Spanish of his time with complete naturalness.
+    </p>
+
+    <p>
+      There is no intellectual exercise that is not ultimately pointless. A philosophical doctrine is, at first, a plausible description of the universe; the years go by, and it is a mere chapter—if not a paragraph or proper noun—in the history of philosophy. In literature, that “falling by the wayside,” that loss of “relevance,” is even better known. The Quixote, Menard remarked, was first and foremost a pleasant book; it is now an occasion for patriotic toasts, grammatical arrogance, obscene de luxe editions. Fame is a form—perhaps the worst form—of incomprehension.
+    </p>
+
+    <p>
+      Those nihilistic observations were not new; what was remarkable was the decision that Pierre Menard derived from them. He resolved to anticipate the vanity that awaits all the labors of mankind; he undertook a task of infinite complexity, a task futile from the outset. He dedicated his scruples and his nights “lit by midnight oil” to reiterating in a foreign tongue a book that already existed. His drafts were endless; he stubbornly corrected, and he ripped up thousands of handwritten pages. He would allow no one to see them, and took care that they not survive him.^3 (I recall his square-ruled notebooks, his black crossings-out, his peculiar typegraphical symbols, and his insect-like handwriting. In the evening, he liked to go out for walks on the outskirts of Nîmes; he would often carry along a notebook and make a cheery bonfire.) In vain have I attempted to reconstruct them.
+    </p>
+
+    <p>
+      I have reflected that it is legitimate to see the “final” Quixote as a kind of palimpsest, in which the traces—faint but not undecipherable—of our friend’s “previous” text must shine through. Unfortunately, only a second Pierre Menard, reversing the labors of the first, would be able to exhume and revive those Troys….
+    </p>
+
+    <p>
+      “Thinking, meditating, imagining,” he also wrote me, “are not anomalous acts—they are the normal respiration of the intelligence. To glorify the occasional exercise of that function, to treasure beyond price ancient and foreign thoughts, to recall with incredulous awe what some doctor universalis thought, is to confess our own languor, or our own barbarie. Every man should be capable of all ideas, and I believe that in the future he shall be.”
+    </p>
+
+    <p>
+      Menard has (perhaps unwittingly) enriched the slow and rudimentary art of reading by means of a new technique—the technique of deliberate anachronism and fallacious attribution. That technique, requiring infinite patience and concentration, encourages us to read the Odyssey as though it came after the Aeneid, to read Mme. Henri Bachelier’s Le jardin du Centaure as though it were written by Mme. Henri Bachelier. This technique fills the calmest books with adventure. Attributing the Imitatio Christi to Louis Ferdinand Céline or James Joyce—is that not sufficient renovation of those faint spiritual admonitions?
+    </p>
+    <p>
+      Nîmes, 1939
+    </p>
+  </div>
+</div>
+

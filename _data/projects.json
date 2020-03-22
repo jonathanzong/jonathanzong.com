@@ -7,6 +7,13 @@
     "img": "/images/projects/politecho.png",
   },
   {
+    "year": "2018",
+    "url": "/projects/w-t-f",
+    "title": "w-t-f: a senior thesis exhibition",
+    "description": "An exhibition about identity, self-representation, and embodiment.",
+    "img": "/images/projects/w-t-f/orange-spoon.jpg",
+  },
+  {
     "year": "2017",
     "url": "/projects/wave-fanfare",
     "title": "Wave Fanfare",

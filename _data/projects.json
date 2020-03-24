@@ -7,11 +7,11 @@
     "img": "/images/projects/politecho.png",
   },
   {
-    "year": "2018",
-    "url": "/projects/w-t-f",
-    "title": "w-t-f: a senior thesis exhibition",
-    "description": "An exhibition about identity, self-representation, and embodiment.",
-    "img": "/images/projects/w-t-f/orange-spoon.jpg",
+    "year": "2020",
+    "url": "http://body-text.jonathanzong.com",
+    "title": "BODY TEXT",
+    "description": "An exhibition about how bodies and identites are representated in systems of data and surveillance.",
+    "img": "/images/projects/body-text-gallery.jpg",
   },
   {
     "year": "2017",
@@ -33,6 +33,13 @@
     "title": "You Have Agency",
     "description": "Understanding the exchange relations that tie consumers to Donald Trump.",
     "img": "/images/projects/youhaveagency/youhaveagency-screenshot.png",
+  },
+  {
+    "year": "2018",
+    "url": "/projects/w-t-f",
+    "title": "w-t-f: a senior thesis exhibition",
+    "description": "An exhibition about identity, self-representation, and embodiment.",
+    "img": "/images/projects/w-t-f/orange-spoon.jpg",
   },
   {
     "year": "2016",

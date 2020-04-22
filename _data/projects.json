@@ -35,6 +35,13 @@
     "img": "/images/projects/body-text-gallery.jpg",
   },
   {
+    "year": "2019",
+    "url": "/projects/public-display",
+    "title": "Public Display",
+    "description": "Typeface made from a surveillance dataset using the technique of erasure.",
+    "img": "/images/projects/public-display.png",
+  },
+  {
     "year": "2018",
     "url": "/projects/biometric-sans",
     "title": "Biometric Sans",

@@ -15,17 +15,17 @@
   },
   {
     "year": "2016",
-    "url": "/projects/youhaveagency",
-    "title": "You Have Agency",
-    "description": "Understanding the exchange relations that tie consumers to Donald Trump.",
-    "img": "/images/projects/youhaveagency/youhaveagency-screenshot.png",
-  },
-  {
-    "year": "2016",
     "url": "/projects/linotype",
     "title": "Found Linotype Poetry",
     "description": "Typographic presence and absence.",
     "img": "/images/projects/linotype/IMG_20160228_171310.jpg",
+  },
+  {
+    "year": "2016",
+    "url": "/projects/youhaveagency",
+    "title": "You Have Agency",
+    "description": "Understanding the exchange relations that tie consumers to Donald Trump.",
+    "img": "/images/projects/youhaveagency/youhaveagency-screenshot.png",
   },
   {
     "year": "2020",

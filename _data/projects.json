@@ -91,13 +91,6 @@
     "img": "/images/projects/everyone-should/everyone-book.jpg",
   },
   {
-    "year": "2017",
-    "url": "/projects/project-express",
-    "title": "Project Express",
-    "description": "Assistive human-robot symbiosis for creative expression and accessible production",
-    "img": "/images/projects/project-express/express-bot.png",
-  },
-  {
     "year": "2018",
     "url": "/projects/direct",
     "title": "Direct",
@@ -117,6 +110,13 @@
     "title": "Disembody",
     "description": "VR experience of out-of-body visual displacement",
     "img": "/images/projects/disembody/P1270034.jpg",
+  },
+  {
+    "year": "2015",
+    "url": "/projects/heartbeat",
+    "title": "Heartbeat",
+    "description": "Personal interface between the body and time.",
+    "img": "/images/projects/heartbeat.png",
   },
   {
     "year": "0000",
@@ -140,11 +140,11 @@
     "img": "/images/projects/posters/angie-keefer.jpg",
   },
   {
-    "year": "2015",
-    "url": "/projects/heartbeat",
-    "title": "Heartbeat",
-    "description": "Personal interface between the body and time.",
-    "img": "/images/projects/heartbeat.png",
+    "year": "2017",
+    "url": "/projects/project-express",
+    "title": "Project Express",
+    "description": "Assistive human-robot symbiosis for creative expression and accessible production",
+    "img": "/images/projects/project-express/express-bot.png",
   },
   {
     "year": "2014",

@@ -239,9 +239,9 @@
   },
   {
     "year": "2014",
-    "url": "http://gamecalc.herokuapp.com/",
+    "url": "/projects/gamecalc",
     "title": "GameCalc",
     "description": "Math education, gamified.",
-    "img": "/images/projects/gamecalc.jpg",
+    "img": "/images/projects/gamecalc/gamecalc.jpg",
   },
 ]

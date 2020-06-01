@@ -97,8 +97,8 @@ This is a reference card for Graffiti, the handwriting recognition system develo
 
 Where Graffiti was an attempt to formalize handwriting such that it was legible to a computer, Donald Knuth’s MetaFont attempted to increase digital type’s expressivity to the human eye. MetaFont is a parametric type system that generates a space of possible fonts using a set of numeric parameters. These parameters model a metaphorical pen—its slant, its curliness, its boldness, its superness, and so on. Each particular realization of a set of parameters instantiates a different font as if tracing over the same letterforms with a different pen.
 
-<p style="text-align: center;">
-  <img src="/images/blog/embodied-writing/letter-and-spirit.gif">
+<p style="text-align: center; background: black; margin-top: 3em">
+  <img style="margin: 0 auto" src="/images/blog/embodied-writing/letter-and-spirit.gif">
 </p>
 
 Dexter Sinister, which is the design collaboration of David Reinfurt and Stuart Bailey, would later adapt MetaFont to create a new typeface. Meta-The-Difference-Between-The-Two-Font, as it’s called, conceives of time as an additional parameter. Rather than being a typographic system like MetaFont that generates fonts which are instances of the system, Meta-The-Difference-Between-The-Two is understood as “a single typeface that’s simultaneously many typefaces and never stops moving.”

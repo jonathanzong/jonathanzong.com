@@ -2,6 +2,7 @@
 layout: post
 title: "Biometric Sans and Public Display: Embodied Writing in the Age of Data"
 slug: biometric-sans-and-public-display-embodied-writing-in-the-age-of-data
+img: "/images/blog/embodied-writing/embodied writing-page-051.jpg"
 ---
 
 <style>

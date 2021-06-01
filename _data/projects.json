@@ -28,6 +28,13 @@
     "img": "/images/projects/linotype/IMG_20160228_171310.jpg",
   },
   {
+    "year": "2017",
+    "url": "/projects/grass",
+    "title": "Please Keep Off the Grass",
+    "description": "Public installation poking fun at Oxford's devotion to grass—and our devotion to ephemeral beauty.",
+    "img": "/images/projects/grass/IMG_6993-2-resize.jpg",
+  },
+  {
     "year": "2016",
     "url": "/projects/youhaveagency",
     "title": "You Have Agency",
@@ -40,13 +47,6 @@
     "title": "PolitEcho",
     "description": "Visualizing political bias in Facebook's news feed.",
     "img": "/images/projects/politecho.png",
-  },
-  {
-    "year": "2017",
-    "url": "/projects/grass",
-    "title": "Please Keep Off the Grass",
-    "description": "Public installation poking fun at Oxford's devotion to grass—and our devotion to ephemeral beauty.",
-    "img": "/images/projects/grass/IMG_6993-2-resize.jpg",
   },
   {
     "year": "2020",

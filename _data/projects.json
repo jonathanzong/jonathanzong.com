@@ -49,6 +49,13 @@
     "img": "/images/projects/politecho.png",
   },
   {
+    "year": "2018",
+    "url": "/projects/w-t-f",
+    "title": "w-t-f: a senior thesis exhibition",
+    "description": "An exhibition about identity, self-representation, and embodiment.",
+    "img": "/images/projects/w-t-f/orange-spoon.jpg",
+  },
+  {
     "year": "2020",
     "url": "http://body-text.jonathanzong.com",
     "title": "BODY TEXT",
@@ -56,18 +63,25 @@
     "img": "/images/projects/body-text-gallery.jpg",
   },
   {
+    "year": "2016",
+    "url": "/projects/nap-poems",
+    "title": "Nap Poems",
+    "description": "Handmade poetry edition commissioned by award-winning authors.",
+    "img": "/images/projects/nap-poems/nap-poems-00-min.jpg",
+  },
+  {
+    "year": "2018",
+    "url": "/projects/jeff-bezineos",
+    "title": "jeff bezineo’s amazine dream",
+    "description": "a zine series about a strange man",
+    "img": "/images/projects/bezineos.jpg",
+  },
+  {
     "year": "2017",
     "url": "/projects/wave-fanfare",
     "title": "Wave Fanfare",
     "description": "Interactive theatrical lighting for a multi-stage music, lighting, and architectural performance.",
     "img": "/images/projects/wave-fanfare/22255030_10100921754773049_3041732818150079486_o.jpg",
-  },
-  {
-    "year": "2018",
-    "url": "/projects/w-t-f",
-    "title": "w-t-f: a senior thesis exhibition",
-    "description": "An exhibition about identity, self-representation, and embodiment.",
-    "img": "/images/projects/w-t-f/orange-spoon.jpg",
   },
   {
     "year": "2017",
@@ -89,13 +103,6 @@
     "title": "Material Design Interface Guidelines",
     "description": "Photo book exploring light and color across boundaries and surfaces.",
     "img": "/images/projects/material/book-1.jpg",
-  },
-  {
-    "year": "2016",
-    "url": "/projects/nap-poems",
-    "title": "Nap Poems",
-    "description": "Handmade poetry edition commissioned by award-winning authors.",
-    "img": "/images/projects/nap-poems/nap-poems-00-min.jpg",
   },
   {
     "year": "2018",

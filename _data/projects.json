@@ -36,6 +36,13 @@
   },
   {
     "year": "2016",
+    "url": "/projects/nap-poems",
+    "title": "Nap Poems",
+    "description": "Handmade poetry edition commissioned by award-winning authors.",
+    "img": "/images/projects/nap-poems/nap-poems-00-min.jpg",
+  },
+  {
+    "year": "2016",
     "url": "/projects/youhaveagency",
     "title": "You Have Agency",
     "description": "Understanding the exchange relations that tie consumers to Donald Trump.",
@@ -49,13 +56,6 @@
     "img": "/images/projects/politecho.png",
   },
   {
-    "year": "2018",
-    "url": "/projects/w-t-f",
-    "title": "w-t-f: a senior thesis exhibition",
-    "description": "An exhibition about identity, self-representation, and embodiment.",
-    "img": "/images/projects/w-t-f/orange-spoon.jpg",
-  },
-  {
     "year": "2020",
     "url": "http://body-text.jonathanzong.com",
     "title": "BODY TEXT",
@@ -63,11 +63,11 @@
     "img": "/images/projects/body-text-gallery.jpg",
   },
   {
-    "year": "2016",
-    "url": "/projects/nap-poems",
-    "title": "Nap Poems",
-    "description": "Handmade poetry edition commissioned by award-winning authors.",
-    "img": "/images/projects/nap-poems/nap-poems-00-min.jpg",
+    "year": "2018",
+    "url": "/projects/w-t-f",
+    "title": "w-t-f: a senior thesis exhibition",
+    "description": "An exhibition about identity, self-representation, and embodiment.",
+    "img": "/images/projects/w-t-f/orange-spoon.jpg",
   },
   {
     "year": "2018",

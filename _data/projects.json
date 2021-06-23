@@ -140,14 +140,12 @@
     "img": "/images/projects/span/viewing-kit-inline.width-960.jpg",
   },
   {
-    "year": "2014",
     "url": "/projects/posters",
     "title": "Print Posters",
     "description": "Designed for print circulation.",
     "img": "/images/projects/posters/angie-keefer.jpg",
   },
   {
-    "year": "0000",
     "url": "/projects/websites",
     "title": "Websites",
     "description": "Freelance design and programming for the web.",
@@ -160,20 +158,6 @@
     "description": "Assistive human-robot symbiosis for creative expression and accessible production",
     "img": "/images/projects/project-express/express-bot.png",
   },
-  // {
-  //   "year": "2016",
-  //   "url": "/projects/trace",
-  //   "title": "TRACE",
-  //   "description": "A collaborative performance between a human and a drawing robot.",
-  //   "img": "/images/projects/trace/IMG_20160426_202001.jpg",
-  // },
-  // {
-  //   "year": "2016",
-  //   "url": "https://github.com/jonathanzong/p5-webeditor/blob/gh-pages/README.md",
-  //   "title": "p5-webeditor",
-  //   "description": "Experimental live reloading for p5js.",
-  //   "img": "/images/projects/p5-webeditor.png",
-  // },
   {
     "year": "2016",
     "url": "/projects/linkedbyair",
@@ -181,20 +165,6 @@
     "description": "Working with a fantastic graphic design studio.",
     "img": "/images/projects/linkedbyair/gsapp-screenshot.png",
   },
-  // {
-  //   "year": "2015",
-  //   "url": "/projects/hermes",
-  //   "title": "Hermes Keyboard",
-  //   "description": "Assistive message-based intelligent agent.",
-  //   "img": "/images/projects/greylock.jpg",
-  // },
-  // {
-  //   "year": "2015",
-  //   "url": "/projects/design-summer",
-  //   "title": "Design Summer",
-  //   "description": "Building community for Bay Area students in design+tech.",
-  //   "img": "/images/projects/ds16.png",
-  // },
   {
     "year": "2015",
     "url": "http://jonathanzong.github.io/proposed-punctuation/",
@@ -223,20 +193,6 @@
     "description": "Write and run code on mobile devices.",
     "img": "/images/projects/deuteride.jpg",
   },
-  // {
-  //   "year": "2015",
-  //   "url": "/projects/vis215",
-  //   "title": "VIS 215 Typography",
-  //   "description": "Exercises in typographic communciation.",
-  //   "img": "/images/projects/vis215/jzong-bayer-tschichold.jpg",
-  // },
-  // {
-  //   "year": "2015",
-  //   "url": "/projects/turntable",
-  //   "title": "Turntable Paint",
-  //   "description": "A geometric interface for music.",
-  //   "img": "/images/projects/turntable.png",
-  // },
   {
     "year": "2012",
     "url": "/blog/2012/12/23/reflections-on-rainstorm-glen",
@@ -250,5 +206,5 @@
     "title": "GameCalc",
     "description": "Math education, gamified.",
     "img": "/images/projects/gamecalc/gamecalc.jpg",
-  },
+  }
 ]

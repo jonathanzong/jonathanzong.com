@@ -443,12 +443,15 @@ active_section: cv
           2020
         </div>
         <div class="col-print-10">
-          <h3><a href="https://tech-speculative.github.io/">AI, Justice, Imagination: Technology and Speculative Fiction</a></h3>
-          <div>Tufts University Experimental College</div>
-          <div class="meta-text">Adjunct Lecturer (co-instructor with Janet Zong York)</div>
+          {% for pub in site.data.cv.teaching.2020 %}
+            <div>{% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}</div>
+            <div>{{ pub.institution }}</div>
+            {% if pub.meta %}<div class="meta-text">{{ pub.meta }}</div>{% endif %}
+          {% endfor %}
         </div>
       </div>
     </div>
+
   </div>
 </section>
 

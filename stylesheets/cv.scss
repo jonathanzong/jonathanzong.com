@@ -74,6 +74,13 @@ em {
 
 @media print {
 
+  #cv-head {
+    display: flex;
+  }
+  #cv-contact {
+    text-align: right;
+  }
+
   #getpdf {
     display: none;
   }

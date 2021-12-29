@@ -1,0 +1,87 @@
+{
+  "pubs": [
+    {
+      "year": "2020",
+      "title": "Representing Real-Time Multi-User Collaboration in Visualizations",
+      "url": "/assets/papers/cursors-vis-2020.pdf",
+      "authors": "Rupayan Neogy, Jonathan Zong, Arvind Satyanarayan",
+      "venue": "IEEE Visualization Conference (VIS)"
+    },
+    {
+      "year": "2020",
+      "title": "Lyra 2: Designing Interactive Visualizations by Demonstration",
+      "url": "http://vis.csail.mit.edu/pubs/lyra2",
+      "authors": "Jonathan Zong, Dhiraj Barnwal, Rupayan Neogy, Arvind Satyanarayan",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics (IEEE VIS)"
+    },
+    {
+      "year": "2019",
+      "title": "Unruly Cyborgs: The Relational Set Designs of Isamu Noguchi",
+      "url": "http://liminalities.net/15-1/unruly.pdf",
+      "authors": "Jonathan Zong",
+      "venue": "Liminalities: A Journal of Performance Studies"
+    }
+  ],
+  "magazines": [
+    {
+      "year": "2020",
+      "url": "/assets/papers/xrds-refusal-2020.pdf",
+      "title": "From Individual Consent to Collective Refusal",
+      "authors": "Jonathan Zong",
+      "venue": "ACM XRDS (Crossroads)"
+    }
+  ],
+  "wopodemo": [
+    {
+      "year": "2021",
+      "url": null,
+      "title": "Design Spaces of Domain-Specific Languages: Comparing and Contrasting Approaches in PL and HCI",
+      "authors": "Jonathan Zong*, Josh Pollock*, Dylan Wootton, Arvind Satyanarayan",
+      "venue": "PLATEAU Workshop on the Intersection of HCI and PL"
+    },
+    {
+      "year": "2021",
+      "url": "/static/complicatingthecomputermouse.net/cmc-article-1.html",
+      "title": "Pointing, Mutual Intelligibility, and the Seeing Subject in HCI",
+      "authors": "Jonathan Zong",
+      "venue": "Computer Mouse Conference"
+    },
+    {
+      "year": "2020",
+      "url": "https://psyarxiv.com/r5yun/",
+      "title": "The (Minimal) Persuasive Advantage of Political Video over Text",
+      "authors": "Chloe Wittenberg, Adam Berinsky, Jonathan Zong, David Rand",
+      "venue": "International Conference on Computational Social Science"
+    },
+    {
+      "year": "2020",
+      "url": "/assets/papers/lyra-cj-2020.pdf",
+      "title": "Lyra: An Interface for Designing Interactive Visualizations",
+      "authors": "Jonathan Zong, Dhiraj Barnwal, Rupayan Neogy, Arvind Satyanarayan",
+      "venue": "Computation + Journalism Symposium"
+    },
+    {
+      "year": "2020",
+      "url": null,
+      "title": "Collective Refusal and the Limits of Informed Consent for Data Protection",
+      "authors": "Jonathan Zong, J. Nathan Matias",
+      "venue": "Data & Society Contested Data Workshop"
+    },
+    {
+      "year": "2018",
+      "url": "/assets/papers/automated-debriefing-cscw-2018.pdf",
+      "title": "Automated Debriefing: Interface for Large-Scale Research Ethics",
+      "authors": "Jonathan Zong, J. Nathan Matias",
+      "venue": "Companion of the 2018 ACM Conference on Computer Supported Cooperative Work and Social Computing. (Best Demo Award)"
+    }
+  ],
+  "thesis": [
+    {
+      "year": "2018",
+      "url": "/assets/papers/jzong-bse-thesis-2018.pdf",
+      "title": "Empirically Studying Research Ethics with Interface Designs for Debriefing Online Field Experiments",
+      "authors": null,
+      "venue": "B.S.E. Thesis, Princeton University"
+    }
+  ]
+}

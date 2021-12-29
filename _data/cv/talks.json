@@ -1,0 +1,43 @@
+{
+  "invited": [
+    {
+      "year": "2020",
+      "url": null,
+      "title": "Designing Systems to Theorize Collective Power",
+      "venue": "Digital Theory Lab, NYU Media, Culture, and Communication"
+    },
+    {
+      "year": "2020",
+      "url": null,
+      "title": "Layered Abstractions for Interactive Visualization Design",
+      "venue": "Digital Structures Group, MIT Department of Architecture"
+    },
+    {
+      "year": "2019",
+      "url": "/blog/2019/11/18/the-most-liberal-of-arts",
+      "title": "“The Most Liberal of Arts”",
+      "venue": "Lewis Center for the Arts, Princeton University"
+    },
+    {
+      "year": "2018",
+      "url": "http://opentranscripts.org/transcript/public-accountability-research-ethics/",
+      "title": "Public Accountability in Research Ethics",
+      "venue": "CivilServant Research Summit, MIT Media Lab"
+    }
+  ],
+
+  "conference": [
+    {
+      "year": "2020",
+      "url": "http://jonathanzong.com/blog/2020/05/31/biometric-sans-and-public-display-embodied-writing-in-the-age-of-data",
+      "title": "Public Display and Biometric Sans: Embodied Writing in the Age of Data",
+      "venue": "Before and Beyond Typography, Stanford University Department of History"
+    },
+    {
+      "year": "2019",
+      "url": "http://jonathanzong.com/blog/2019/04/13/in-our-own-image-the-autonomy-of-artificial-bodies-in-synthetic-porn",
+      "title": "In Our Own Image: The Autonomy of Artificial Bodies in Synthetic Porn",
+      "venue": "Panel: Internet Connection · Theorizing the Web"
+    }
+  ]
+}

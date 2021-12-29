@@ -74,6 +74,10 @@ em {
 
 @media print {
 
+  .break-before {
+    page-break-before: always;
+  }
+
   #getpdf {
     display: none;
   }

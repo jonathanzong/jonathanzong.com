@@ -57,6 +57,10 @@ em {
 
 @media print {
 
+  #getpdf {
+    display: none;
+  }
+
   body {
     margin: 0;
     background-color: #fff;

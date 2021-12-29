@@ -55,6 +55,19 @@ em {
   text-decoration: underline;
 }
 
+#cv-contact {
+  text-align: right;
+}
+
+@media (max-width: 576px) {
+  #cv-head {
+    display: block;
+  }
+  #cv-contact {
+    text-align: left;
+  }
+}
+
 @media print {
 
   #getpdf {

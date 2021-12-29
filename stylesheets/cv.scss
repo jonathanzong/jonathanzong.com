@@ -63,7 +63,7 @@ em {
   text-align: right;
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   #cv-head {
     display: block;
   }
@@ -73,13 +73,6 @@ em {
 }
 
 @media print {
-
-  #cv-head {
-    display: flex;
-  }
-  #cv-contact {
-    text-align: right;
-  }
 
   #getpdf {
     display: none;

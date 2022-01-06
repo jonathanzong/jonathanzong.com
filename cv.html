@@ -585,49 +585,32 @@ title: CV
   </div>
   <div class="col-print-9">
     <h2>M.Eng. Students</h2>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2020–21
-        </div>
-        <div class="col-print-10">
-          <div>EJ Sefah, Katie Bacher</div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2019–20
-        </div>
-        <div class="col-print-10">
-          <div>Rupayan Neogy</div>
+    {% for pub in site.data.cv.mentorship.meng %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{pub.year}}
+          </div>
+          <div class="col-print-10">
+            <div>{{pub.names}}</div>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
 
     <h2>Undergraduate Students</h2>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          Summer 2021
-        </div>
-        <div class="col-print-10">
-          <div>Joon Jang</div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          Fall 2020
-        </div>
-        <div class="col-print-10">
-          <div>Anna Arpaci-Dusseau, Katherine Huang, Mateo Monterde, Ethan Nevidomsky, Tanya Yang, Anna Meurer, Soomin Chun</div>
+    {% for pub in site.data.cv.mentorship.undergrad %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{pub.year}}
+          </div>
+          <div class="col-print-10">
+            <div>{{pub.names}}</div>
+          </div>
         </div>
       </div>
-    </div>
-
+    {% endfor %}
   </div>
 </section>
 

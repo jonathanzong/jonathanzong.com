@@ -1,19 +1,23 @@
 @import url(bootstrap.min.css);
 *{
     cursor:url(/images/cursor/cursor.svg) 16 16,auto;
-    cursor:-webkit-image-set(url(/images/cursor/cursor.svg) 1x, url(/images/cursor/cursor@2x.svg) 2x) 32 32,auto
+    cursor:url(/images/cursor/cursor.svg) 1x 16 16, auto;
+    cursor:url(/images/cursor/cursor@2x.svg) 2x 32 32,auto;
 }
 *:active{
     cursor:url(/images/cursor/cursor-active.svg) 16 16,auto;
-    cursor:-webkit-image-set(url(/images/cursor/cursor-active.svg) 1x, url(/images/cursor/cursor-active@2x.svg) 2x) 32 32,auto
+    cursor:url(/images/cursor/cursor-active.svg) 1x 16 16, auto;
+    cursor:url(/images/cursor/cursor-active@2x.svg) 2x 32 32,auto;
 }
 a[href]:hover{
     cursor:url(/images/cursor/cursor-hover.svg) 16 16,auto;
-    cursor:-webkit-image-set(url(/images/cursor/cursor-hover.svg) 1x, url(/images/cursor/cursor-hover@2x.svg) 2x) 32 32,auto
+    cursor:url(/images/cursor/cursor-hover.svg) 1x 16 16, auto;
+    cursor:url(/images/cursor/cursor-hover@2x.svg) 2x 32 32,auto;
 }
 a[href]:active{
     cursor:url(/images/cursor/cursor-active.svg) 16 16,auto;
-    cursor:-webkit-image-set(url(/images/cursor/cursor-active.svg) 1x, url(/images/cursor/cursor-active@2x.svg) 2x) 32 32,auto
+    cursor:url(/images/cursor/cursor-active.svg) 1x 16 16, auto;
+    cursor:url(/images/cursor/cursor-active@2x.svg) 2x 32 32,auto;
 }
 body,html{
     font-family:"Lato", Helvetica, Arial, sans-serif;

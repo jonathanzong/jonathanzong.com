@@ -1,6 +1,13 @@
 {
   "pubs": [
     {
+      "year": "2022 (forthcoming)",
+      "title": "Bartleby: Procedural and Substantive Ethics in the Design of Research Ethics Systems",
+      "url": "/assets/papers/bartleby-sms-2022.pdf",
+      "authors": "Jonathan Zong, J. Nathan Matias",
+      "venue": "Social Media + Society"
+    },
+    {
       "year": "2020",
       "title": "Representing Real-Time Multi-User Collaboration in Visualizations",
       "url": "/assets/papers/cursors-vis-2020.pdf",

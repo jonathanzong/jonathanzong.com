@@ -95,3 +95,11 @@ title: Publications
     {% endfor %}
   </div>
 </section>
+
+<script>
+  $(document).ready(function() {
+    $('.paper-authors').html(function() {
+      return $(this).html().replace('Jonathan Zong', '<span class="paper-my-name">Jonathan Zong</span>')
+    })
+  })
+</script>

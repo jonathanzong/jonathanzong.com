@@ -16,7 +16,7 @@ active_section: projects
 <div>
   {% for poster in site.data.posters %}
   <p id="{{poster.img}}">
-    <img class="poster" src="{{poster.img}}"/>
+    <img alt="{{poster.caption}}" class="poster" src="{{poster.img}}"/>
   </p>
   <br/>
   {% endfor %}

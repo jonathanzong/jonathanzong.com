@@ -7,20 +7,26 @@ active_section: projects
 <div class="gallery-items">
   {% for poster in site.data.posters %}
     <a href="{{poster.url}}" class="strip" {% if this.caption %}data-strip-caption="{{poster.caption}}"{% endif %} target="_blank">
-      <img height="150" src="{{poster.img}}"/>
+      <img class="poster" style="margin: 0 8px 6px 0" height="150" src="{{poster.img}}"/>
     </a>
   {% endfor %}
 </div>
 <br/>
+<br/>
+<div>
+  {% for poster in site.data.posters %}
+  <p>
+    <img class="poster" src="{{poster.img}}"/>
+  </p>
+  <br/>
+  {% endfor %}
+</div>
 
 <script src="/javascripts/strip.pkgd.min.js"></script>
 <link rel='stylesheet' href='/stylesheets/strip.css' />
 
 <style>
-  body {
-    background: #e3e3e3;
-  }
-  .nav-current {
-    color: #333 !important;
+  .poster {
+    box-shadow:0px 3px 10px 0px rgba(0,0,0,0.3)
   }
 </style>

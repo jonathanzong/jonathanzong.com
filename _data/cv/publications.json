@@ -41,7 +41,7 @@
   "wopodemo": [
     {
       "year": "2021",
-      "url": null,
+      "url": "/assets/papers/dsl-plateau-2021.pdf",
       "title": "Design Spaces of Domain-Specific Languages: Comparing and Contrasting Approaches in PL and HCI",
       "authors": "Jonathan Zong*, Josh Pollock*, Dylan Wootton, Arvind Satyanarayan",
       "venue": "PLATEAU Workshop on the Intersection of HCI and PL"

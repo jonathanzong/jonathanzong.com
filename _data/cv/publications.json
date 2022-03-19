@@ -1,13 +1,5 @@
 {
   "pubs": [
-    // {
-    //   "year": "2022 (forthcoming)",
-    //   "title": "Rich Screen Reader Experiences for Accessible Data Visualization",
-    //   // "url": "/assets/papers/bartleby-sms-2022.pdf",
-    //   "authors": "Jonathan Zong*, Crystal Lee*, Alan Lundgard*, JiWoong Jang, Daniel Hajas, Arvind Satyanarayan",
-    //   "venue": "Computer Graphics Forum (EuroVis)",
-    //   "tag": "access"
-    // },
     {
       "year": "2022",
       "title": "Bartleby: Procedural and Substantive Ethics in the Design of Research Ethics Systems",

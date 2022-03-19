@@ -10,7 +10,8 @@
       "year": "2020",
       "url": null,
       "title": "Layered Abstractions for Interactive Visualization Design",
-      "venue": "Digital Structures Group, MIT Department of Architecture"
+      "venue": "Digital Structures Group, MIT Department of Architecture",
+      "tag": "interaction"
     },
     {
       "year": "2019",
@@ -22,7 +23,8 @@
       "year": "2018",
       "url": "http://opentranscripts.org/transcript/public-accountability-research-ethics/",
       "title": "Public Accountability in Research Ethics",
-      "venue": "CivilServant Research Summit, MIT Media Lab"
+      "venue": "CivilServant Research Summit, MIT Media Lab",
+      "tag": "refusal"
     }
   ],
 
@@ -31,13 +33,15 @@
       "year": "2020",
       "url": "http://jonathanzong.com/blog/2020/05/31/biometric-sans-and-public-display-embodied-writing-in-the-age-of-data",
       "title": "Public Display and Biometric Sans: Embodied Writing in the Age of Data",
-      "venue": "Before and Beyond Typography, Stanford University Department of History"
+      "venue": "Before and Beyond Typography, Stanford University Department of History",
+      "tag": "art"
     },
     {
       "year": "2019",
       "url": "http://jonathanzong.com/blog/2019/04/13/in-our-own-image-the-autonomy-of-artificial-bodies-in-synthetic-porn",
       "title": "In Our Own Image: The Autonomy of Artificial Bodies in Synthetic Porn",
-      "venue": "Panel: Internet Connection · Theorizing the Web"
+      "venue": "Panel: Internet Connection · Theorizing the Web",
+      "tag": "refusal"
     }
   ]
 }

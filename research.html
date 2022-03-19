@@ -1,0 +1,650 @@
+---
+active_section: research
+title: Research
+---
+
+<link rel="stylesheet" href="{{ "/stylesheets/cv.css" | prepend: site.baseurl }}">
+
+<section style="display: block">
+  <p><a href="/cv">CV</a></p>
+  <p><a href="https://scholar.google.com/citations?user=_RbMCQ0AAAAJ&hl=en">Google Scholar</a></p>
+</section>
+
+<style>
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+</style>
+
+<h1>Accessible Data Visualization</h1>
+
+{% assign access_pubs = site.data.cv.publications.pubs | where: "tag", "access" %}
+{% assign access_mags = site.data.cv.publications.magazines | where: "tag", "access" %}
+{% assign access_wopodemo = site.data.cv.publications.wopodemo | where: "tag", "access" %}
+{% assign access_thesis = site.data.cv.publications.thesis | where: "tag", "access" %}
+
+{% if access_pubs.size > 0 or access_mags.size > 0 or access_wopodemo.size > 0 or access_thesis.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Publications</h2>
+  </div>
+  <div class="col-print-9">
+    {% if access_pubs.size > 0 %}
+      <h2>Peer-Reviewed Publications</h2>
+      {% for pub in access_pubs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if access_mags.size > 0 %}
+      <h2>Magazine Articles</h2>
+      {% for pub in access_mags %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if access_wopodemo.size > 0 %}
+      <h2>Workshops, Conferences, Posters, and Demos</h2>
+      {% for pub in access_wopodemo %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if access_thesis.size > 0 %}
+      <h2>Theses</h2>
+      {% for pub in access_thesis %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign access_talks = site.data.cv.talks.invited | where: "tag", "access" %}
+{% assign access_confs = site.data.cv.talks.conference | where: "tag", "access" %}
+
+{% if access_talks.size > 0 or access_confs.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Talks & Presentations</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if access_talks.size > 0 %}
+      <h2>Invited Talks</h2>
+      {% for pub in access_talks %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if access_confs.size > 0 %}
+      <h2>Conference Talks</h2>
+      {% for pub in access_confs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign access_opeds = site.data.cv.public_scholarship.opeds | where: "tag", "access" %}
+{% assign access_convos = site.data.cv.public_scholarship.conversations | where: "tag", "access" %}
+{% assign access_datajourn = site.data.cv.public_scholarship.datajourn | where: "tag", "access" %}
+
+{% if access_opeds.size > 0 or access_convos.size > 0 or access_datajourn.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Public Scholarship</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if access_opeds.size > 0 %}
+      <h2>Op-Eds</h2>
+      {% for pub in access_opeds %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if access_convos.size > 0 %}
+      <h2>Conversations</h2>
+      {% for pub in access_convos %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if access_datajourn.size > 0 %}
+      <h2>Data Journalism</h2>
+      {% for pub in access_datajourn %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<h1>Interactive Visualization Tools and Abstractions</h1>
+
+
+{% assign interaction_pubs = site.data.cv.publications.pubs | where: "tag", "interaction" %}
+{% assign interaction_mags = site.data.cv.publications.magazines | where: "tag", "interaction" %}
+{% assign interaction_wopodemo = site.data.cv.publications.wopodemo | where: "tag", "interaction" %}
+{% assign interaction_thesis = site.data.cv.publications.thesis | where: "tag", "interaction" %}
+
+{% if interaction_pubs.size > 0 or interaction_mags.size > 0 or interaction_wopodemo.size > 0 or interaction_thesis.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Publications</h2>
+  </div>
+  <div class="col-print-9">
+    {% if interaction_pubs.size > 0 %}
+      <h2>Peer-Reviewed Publications</h2>
+      {% for pub in interaction_pubs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if interaction_mags.size > 0 %}
+      <h2>Magazine Articles</h2>
+      {% for pub in interaction_mags %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if interaction_wopodemo.size > 0 %}
+      <h2>Workshops, Conferences, Posters, and Demos</h2>
+      {% for pub in interaction_wopodemo %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if interaction_thesis.size > 0 %}
+      <h2>Theses</h2>
+      {% for pub in interaction_thesis %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign interaction_talks = site.data.cv.talks.invited | where: "tag", "interaction" %}
+{% assign interaction_confs = site.data.cv.talks.conference | where: "tag", "interaction" %}
+
+{% if interaction_talks.size > 0 or interaction_confs.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Talks & Presentations</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if interaction_talks.size > 0 %}
+      <h2>Invited Talks</h2>
+      {% for pub in interaction_talks %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if interaction_confs.size > 0 %}
+      <h2>Conference Talks</h2>
+      {% for pub in interaction_confs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign interaction_opeds = site.data.cv.public_scholarship.opeds | where: "tag", "interaction" %}
+{% assign interaction_convos = site.data.cv.public_scholarship.conversations | where: "tag", "interaction" %}
+{% assign interaction_datajourn = site.data.cv.public_scholarship.datajourn | where: "tag", "interaction" %}
+
+{% if interaction_opeds.size > 0 or interaction_convos.size > 0 or interaction_datajourn.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Public Scholarship</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if interaction_opeds.size > 0 %}
+      <h2>Op-Eds</h2>
+      {% for pub in interaction_opeds %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if interaction_convos.size > 0 %}
+      <h2>Conversations</h2>
+      {% for pub in interaction_convos %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if interaction_datajourn.size > 0 %}
+      <h2>Data Journalism</h2>
+      {% for pub in interaction_datajourn %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+  <h1>Systems and Frameworks for Data Consent and Refusal</h1>
+
+
+{% assign refusal_pubs = site.data.cv.publications.pubs | where: "tag", "refusal" %}
+{% assign refusal_mags = site.data.cv.publications.magazines | where: "tag", "refusal" %}
+{% assign refusal_wopodemo = site.data.cv.publications.wopodemo | where: "tag", "refusal" %}
+{% assign refusal_thesis = site.data.cv.publications.thesis | where: "tag", "refusal" %}
+
+{% if refusal_pubs.size > 0 or refusal_mags.size > 0 or refusal_wopodemo.size > 0 or refusal_thesis.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Publications</h2>
+  </div>
+  <div class="col-print-9">
+    {% if refusal_pubs.size > 0 %}
+      <h2>Peer-Reviewed Publications</h2>
+      {% for pub in refusal_pubs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if refusal_mags.size > 0 %}
+      <h2>Magazine Articles</h2>
+      {% for pub in refusal_mags %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if refusal_wopodemo.size > 0 %}
+      <h2>Workshops, Conferences, Posters, and Demos</h2>
+      {% for pub in refusal_wopodemo %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if refusal_thesis.size > 0 %}
+      <h2>Theses</h2>
+      {% for pub in refusal_thesis %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign refusal_talks = site.data.cv.talks.invited | where: "tag", "refusal" %}
+{% assign refusal_confs = site.data.cv.talks.conference | where: "tag", "refusal" %}
+
+{% if refusal_talks.size > 0 or refusal_confs.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Talks & Presentations</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if refusal_talks.size > 0 %}
+      <h2>Invited Talks</h2>
+      {% for pub in refusal_talks %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if refusal_confs.size > 0 %}
+      <h2>Conference Talks</h2>
+      {% for pub in refusal_confs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign refusal_opeds = site.data.cv.public_scholarship.opeds | where: "tag", "refusal" %}
+{% assign refusal_convos = site.data.cv.public_scholarship.conversations | where: "tag", "refusal" %}
+{% assign refusal_datajourn = site.data.cv.public_scholarship.datajourn | where: "tag", "refusal" %}
+
+{% if refusal_opeds.size > 0 or refusal_convos.size > 0 or refusal_datajourn.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Public Scholarship</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if refusal_opeds.size > 0 %}
+      <h2>Op-Eds</h2>
+      {% for pub in refusal_opeds %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if refusal_convos.size > 0 %}
+      <h2>Conversations</h2>
+      {% for pub in refusal_convos %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if refusal_datajourn.size > 0 %}
+      <h2>Data Journalism</h2>
+      {% for pub in refusal_datajourn %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+  <h1>Visual Art on Algorithm Visibility and Embodiment</h1>
+
+
+  {% assign art_pubs = site.data.cv.publications.pubs | where: "tag", "art" %}
+  {% assign art_mags = site.data.cv.publications.magazines | where: "tag", "art" %}
+  {% assign art_wopodemo = site.data.cv.publications.wopodemo | where: "tag", "art" %}
+  {% assign art_thesis = site.data.cv.publications.thesis | where: "tag", "art" %}
+
+  {% if art_pubs.size > 0 or art_mags.size > 0 or art_wopodemo.size > 0 or art_thesis.size > 0 %}
+  <section>
+    <div class="col-print-3">
+      <h2>Publications</h2>
+    </div>
+    <div class="col-print-9">
+      {% if art_pubs.size > 0 %}
+        <h2>Peer-Reviewed Publications</h2>
+        {% for pub in art_pubs %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if art_mags.size > 0 %}
+        <h2>Magazine Articles</h2>
+        {% for pub in art_mags %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if art_wopodemo.size > 0 %}
+        <h2>Workshops, Conferences, Posters, and Demos</h2>
+        {% for pub in art_wopodemo %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if art_thesis.size > 0 %}
+        <h2>Theses</h2>
+        {% for pub in art_thesis %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% assign art_talks = site.data.cv.talks.invited | where: "tag", "art" %}
+  {% assign art_confs = site.data.cv.talks.conference | where: "tag", "art" %}
+
+  {% if art_talks.size > 0 or art_confs.size > 0 %}
+  <section>
+    <div class="col-print-3">
+      <h2>Talks & Presentations</h2>
+    </div>
+    <div class="col-print-9">
+
+      {% if art_talks.size > 0 %}
+        <h2>Invited Talks</h2>
+        {% for pub in art_talks %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if art_confs.size > 0 %}
+        <h2>Conference Talks</h2>
+        {% for pub in art_confs %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% assign art_opeds = site.data.cv.public_scholarship.opeds | where: "tag", "art" %}
+  {% assign art_convos = site.data.cv.public_scholarship.conversations | where: "tag", "art" %}
+  {% assign art_datajourn = site.data.cv.public_scholarship.datajourn | where: "tag", "art" %}
+
+  {% if art_opeds.size > 0 or art_convos.size > 0 or art_datajourn.size > 0 %}
+  <section>
+    <div class="col-print-3">
+      <h2>Public Scholarship</h2>
+    </div>
+    <div class="col-print-9">
+
+      {% if art_opeds.size > 0 %}
+        <h2>Op-Eds</h2>
+        {% for pub in art_opeds %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if art_convos.size > 0 %}
+        <h2>Conversations</h2>
+        {% for pub in art_convos %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+
+      {% if art_datajourn.size > 0 %}
+        <h2>Data Journalism</h2>
+        {% for pub in art_datajourn %}
+          <div class="entry">
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+<!-- <h1>Resists Current Categorization Attempt</h1>
+
+{% assign other_pubs = site.data.cv.publications.pubs | where_exp:"item", "item.tag == undefined" %}
+{% assign other_mags = site.data.cv.publications.magazines | where_exp:"item", "item.tag == undefined" %}
+{% assign other_wopodemo = site.data.cv.publications.wopodemo | where_exp:"item", "item.tag == undefined" %}
+{% assign other_thesis = site.data.cv.publications.thesis | where_exp:"item", "item.tag == undefined" %}
+
+{% if other_pubs.size > 0 or other_mags.size > 0 or other_wopodemo.size > 0 or other_thesis.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Publications</h2>
+  </div>
+  <div class="col-print-9">
+    {% if other_pubs.size > 0 %}
+      <h2>Peer-Reviewed Publications</h2>
+      {% for pub in other_pubs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if other_mags.size > 0 %}
+      <h2>Magazine Articles</h2>
+      {% for pub in other_mags %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if other_wopodemo.size > 0 %}
+      <h2>Workshops, Conferences, Posters, and Demos</h2>
+      {% for pub in other_wopodemo %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>. {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if other_thesis.size > 0 %}
+      <h2>Theses</h2>
+      {% for pub in other_thesis %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign other_talks = site.data.cv.talks.invited | where_exp:"item", "item.tag == undefined" %}
+{% assign other_confs = site.data.cv.talks.conference | where_exp:"item", "item.tag == undefined" %}
+
+{% if other_talks.size > 0 or other_confs.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Talks & Presentations</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if other_talks.size > 0 %}
+      <h2>Invited Talks</h2>
+      {% for pub in other_talks %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if other_confs.size > 0 %}
+      <h2>Conference Talks</h2>
+      {% for pub in other_confs %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% assign other_opeds = site.data.cv.public_scholarship.opeds | where_exp:"item", "item.tag == undefined" %}
+{% assign other_convos = site.data.cv.public_scholarship.conversations | where_exp:"item", "item.tag == undefined" %}
+{% assign other_datajourn = site.data.cv.public_scholarship.datajourn | where_exp:"item", "item.tag == undefined" %}
+
+{% if other_opeds.size > 0 or other_convos.size > 0 or other_datajourn.size > 0 %}
+<section>
+  <div class="col-print-3">
+    <h2>Public Scholarship</h2>
+  </div>
+  <div class="col-print-9">
+
+    {% if other_opeds.size > 0 %}
+      <h2>Op-Eds</h2>
+      {% for pub in other_opeds %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if other_convos.size > 0 %}
+      <h2>Conversations</h2>
+      {% for pub in other_convos %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    {% if other_datajourn.size > 0 %}
+      <h2>Data Journalism</h2>
+      {% for pub in other_datajourn %}
+        <div class="entry">
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. <span class="paper-venue">{{pub.venue}}</span>.
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %} -->
+
+<script>
+  $(document).ready(function() {
+    $('.paper-authors').html(function() {
+      return $(this).html().replace('Jonathan Zong', '<span class="paper-my-name">Jonathan Zong</span>')
+    })
+  })
+</script>

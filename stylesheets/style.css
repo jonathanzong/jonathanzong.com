@@ -11,6 +11,9 @@ a[href]:hover{
 a[href]:active{
     cursor:url(/images/cursor/cursor-active.svg) 16 16,auto;
 }
+html {
+    min-height: 100vh;
+}
 body,html{
     font-family:"Lato", Helvetica, Arial, sans-serif;
     font-size:16px;

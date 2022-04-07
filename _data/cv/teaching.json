@@ -1,11 +1,18 @@
 {
   "2020": [
     {
+      "year": "2022",
+      "url": "https://cst.princeton.edu/teaching-learning/stc209",
+      "title": "Transformations in Engineering and the Arts",
+      "institution": "Princeton University",
+      "meta": "Guest Lecture"
+    },
+    {
       "year": "2020",
       "url": "https://tech-speculative.github.io/",
       "title": "AI, Justice, Imagination: Technology and Speculative Fiction",
       "institution": "Tufts University Experimental College",
-      "meta": "Adjunct Lecturer (co-instructor with Janet Zong York)"
+      "meta": "Visting Lecturer (Adjunct) (co-instructor with Janet Zong York)"
     }
   ]
 }

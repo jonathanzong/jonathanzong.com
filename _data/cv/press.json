@@ -33,6 +33,12 @@
   ],
   "featured": [
     {
+      "year": "2022",
+      "url": "https://news.mit.edu/2022/3-questions-jonathan-zong-designing-software-research-ethics-0426",
+      "title": "3 Questions: Designing software for research ethics",
+      "venue": "MIT News"
+    },
+    {
       "year": "2021",
       "url": "https://www.csail.mit.edu/news/helping-data-journalists-create-interactive-graphics",
       "title": "Helping data journalists create interactive graphics",

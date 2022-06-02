@@ -34,6 +34,12 @@
   "featured": [
     {
       "year": "2022",
+      "url": "https://news.mit.edu/2022/data-visualization-accessible-blind-0602",
+      "title": "Making data visualization more accessible for blind and low-vision individuals",
+      "venue": "MIT News"
+    },
+    {
+      "year": "2022",
       "url": "https://news.mit.edu/2022/3-questions-jonathan-zong-designing-software-research-ethics-0426",
       "title": "3 Questions: Designing software for research ethics",
       "venue": "MIT News"
@@ -57,18 +63,6 @@
       "venue": "Arts at MIT"
     },
     {
-      "year": "2020",
-      "url": "https://thetech.com/2020/03/05/body-text-review",
-      "title": "Bezos, Bodies, and Backprop",
-      "venue": "The Tech (MIT)"
-    },
-    {
-      "year": "2018",
-      "url": "https://shop.frontier.is/products/frontier-magazine-issue-03-darkness",
-      "title": "PolitEcho: A Mirror for the “Daily Me”",
-      "venue": "Frontier Magazine"
-    },
-    {
       "year": "2017",
       "url": "https://www.nytimes.com/2017/03/03/arts/the-battle-over-your-political-bubble.html",
       "title": "How to Escape Your Political Bubble for a Clearer View",
@@ -79,30 +73,6 @@
       "url": "http://www.avclub.com/article/browser-extension-shows-how-biased-your-social-med-246743",
       "title": "This browser extension shows how biased your social media feed is",
       "venue": "A.V. Club"
-    },
-    {
-      "year": "2016",
-      "url": "https://mashable.com/2016/12/02/chrome-extension-echo-chamber/",
-      "title": "Find out just how biased your Facebook feed is with this Chrome extension",
-      "venue": "Mashable"
-    },
-    {
-      "year": "2016",
-      "url": "https://nymag.com/intelligencer/2016/11/a-browser-extension-that-shows-you-your-filter-bubble.html",
-      "title": "A Browser Extension That Shows You Your Filter Bubble",
-      "venue": "New York Magazine"
-    },
-    {
-      "year": "2016",
-      "url": "https://www.princeton.edu/news/2016/07/18/transformations-students-find-creativity-intersection-art-and-engineering",
-      "title": "Transformations: Students find creativity at intersection of art and engineering",
-      "venue": "Princeton University News"
-    },
-    {
-      "year": "2013",
-      "url": "https://xconomy.com/texas/2013/05/20/houstons-hackers-gather-to-help-city-solve-problems/",
-      "title": "Houston’s Hackers Gather to Help City Solve Problems",
-      "venue": "Xconomy"
     }
   ]
 }

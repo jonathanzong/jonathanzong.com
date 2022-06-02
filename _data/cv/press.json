@@ -34,6 +34,12 @@
   "featured": [
     {
       "year": "2022",
+      "url": "https://news.mit.edu/2022/data-visualization-accessible-blind-0602",
+      "title": "Making data visualization more accessible for blind and low-vision individuals",
+      "venue": "MIT News"
+    },
+    {
+      "year": "2022",
       "url": "https://news.mit.edu/2022/3-questions-jonathan-zong-designing-software-research-ethics-0426",
       "title": "3 Questions: Designing software for research ethics",
       "venue": "MIT News"

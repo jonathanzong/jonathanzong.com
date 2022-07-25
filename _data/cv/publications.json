@@ -62,6 +62,14 @@
   ],
   "wopodemo": [
     {
+      "year": "2022 (forthcoming)",
+      "url": null,
+      "title": "Olli: An Extensible Visualization Library for Screen Reader Accessibility",
+      "authors": "Matt Blanco, Jonathan Zong, Arvind Satyanarayan",
+      "venue": "IEEE VIS Posters",
+      "tag": "access"
+    },
+    {
       "year": "2021",
       "url": "/assets/papers/dsl-plateau-2021.pdf",
       "title": "Design Spaces of Domain-Specific Languages: Comparing and Contrasting Approaches in PL and HCI",

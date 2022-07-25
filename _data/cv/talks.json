@@ -2,16 +2,9 @@
   "invited": [
     {
       "year": "2022",
-      "url": null,
+      "url": "https://www.youtube.com/watch?v=oc4GQNM7tUw",
       "title": "Rich Screen Reader Experiences for Accessible Data Visualization",
-      "venue": "Design for Assistive Technology, MIT Beaver Works Summer Institute",
-      "tag": "access"
-    },
-    {
-      "year": "2022",
-      "url": null,
-      "title": "Rich Screen Reader Experiences for Accessible Data Visualization",
-      "venue": "HackNY Fellowship Speaker Series",
+      "venues": ["HackNY Fellowship Speaker Series", "Design for Assistive Technology, MIT Beaver Works Summer Institute"],
       "tag": "access"
     },
     {

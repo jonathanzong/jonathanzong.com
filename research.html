@@ -77,7 +77,7 @@ title: Research
       <h2>Theses</h2>
       {% for pub in access_thesis %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -99,7 +99,7 @@ title: Research
       <h2>Invited Talks</h2>
       {% for pub in access_talks %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}{% unless pub.venues %}.{% endunless %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
           {% if pub.venues %}
             {% for venue in pub.venues %}
               <div class="paper-venue paper-venue--list">{{venue}}</div>
@@ -113,7 +113,7 @@ title: Research
       <h2>Conference Talks</h2>
       {% for pub in access_confs %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
           {% if pub.venues %}
             {% for venue in pub.venues %}
               <div class="paper-venue paper-venue--list">{{venue}}</div>
@@ -150,7 +150,7 @@ title: Research
       <h2>Conversations</h2>
       {% for pub in access_convos %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -216,7 +216,7 @@ title: Research
       <h2>Theses</h2>
       {% for pub in interaction_thesis %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -238,7 +238,12 @@ title: Research
       <h2>Invited Talks</h2>
       {% for pub in interaction_talks %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}{% unless pub.venues %}.{% endunless %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
+          {% if pub.venues %}
+            {% for venue in pub.venues %}
+              <div class="paper-venue paper-venue--list">{{venue}}</div>
+            {% endfor %}
+          {% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -247,7 +252,7 @@ title: Research
       <h2>Conference Talks</h2>
       {% for pub in interaction_confs %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -279,7 +284,7 @@ title: Research
       <h2>Conversations</h2>
       {% for pub in interaction_convos %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -345,7 +350,7 @@ title: Research
       <h2>Theses</h2>
       {% for pub in refusal_thesis %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -367,7 +372,12 @@ title: Research
       <h2>Invited Talks</h2>
       {% for pub in refusal_talks %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}{% unless pub.venues %}.{% endunless %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
+          {% if pub.venues %}
+            {% for venue in pub.venues %}
+              <div class="paper-venue paper-venue--list">{{venue}}</div>
+            {% endfor %}
+          {% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -376,7 +386,7 @@ title: Research
       <h2>Conference Talks</h2>
       {% for pub in refusal_confs %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -408,7 +418,7 @@ title: Research
       <h2>Conversations</h2>
       {% for pub in refusal_convos %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -474,7 +484,7 @@ title: Research
         <h2>Theses</h2>
         {% for pub in art_thesis %}
           <div class="entry">
-            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
           </div>
         {% endfor %}
       {% endif %}
@@ -496,7 +506,12 @@ title: Research
         <h2>Invited Talks</h2>
         {% for pub in art_talks %}
           <div class="entry">
-            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}{% unless pub.venues %}.{% endunless %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
+            {% if pub.venues %}
+              {% for venue in pub.venues %}
+                <div class="paper-venue paper-venue--list">{{venue}}</div>
+              {% endfor %}
+            {% endif %}
           </div>
         {% endfor %}
       {% endif %}
@@ -505,7 +520,7 @@ title: Research
         <h2>Conference Talks</h2>
         {% for pub in art_confs %}
           <div class="entry">
-            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
           </div>
         {% endfor %}
       {% endif %}
@@ -537,7 +552,7 @@ title: Research
         <h2>Conversations</h2>
         {% for pub in art_convos %}
           <div class="entry">
-            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+            {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
           </div>
         {% endfor %}
       {% endif %}
@@ -598,7 +613,7 @@ title: Research
       <h2>Theses</h2>
       {% for pub in other_thesis %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -620,7 +635,7 @@ title: Research
       <h2>Invited Talks</h2>
       {% for pub in other_talks %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -629,7 +644,7 @@ title: Research
       <h2>Conference Talks</h2>
       {% for pub in other_confs %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}
@@ -661,7 +676,7 @@ title: Research
       <h2>Conversations</h2>
       {% for pub in other_convos %}
         <div class="entry">
-          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} <span class="paper-venue">{{pub.venue}}</span>.
+          {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
         </div>
       {% endfor %}
     {% endif %}

@@ -19,9 +19,21 @@ title: Research
   h1:not(:first-of-type) {
     margin-top: 48px;
   }
+  .research-description {
+    margin: 1em auto;
+  }
 </style>
 
+<p class="research-description">
+  Trained as a computer scientist and visual artist, I use design to create artifacts that empower marginalized individuals and communities while advancing scholarly conversations about the technical and ethical aspects of building interactive systems.
+</p>
+
 <h1>Accessible Data Visualization</h1>
+
+<p class="research-description">
+  I partner with blind collaborators and study participants to co-design novel interfaces for non-visual data exploration.
+  These interfaces support the autonomy and agency of blind users to conduct self-guided data analysis and help them establish common ground with sighted users with shared spatial data metaphors.
+</p>
 
 {% assign access_pubs = site.data.cv.publications.pubs | where: "tag", "access" %}
 {% assign access_mags = site.data.cv.publications.magazines | where: "tag", "access" %}
@@ -157,6 +169,10 @@ title: Research
 
 <h1>Interactive Visualization Tools and Abstractions</h1>
 
+<p class="research-description">
+  Rapid prototyping is a key part of the visualization workflow, as data analysts search for appropriate visual representations to help them make sense of complex data.
+  I design languages and interfaces that allow users to move between static, interactive, and animated representations, and engage in real-time collaboration.
+</p>
 
 {% assign interaction_pubs = site.data.cv.publications.pubs | where: "tag", "interaction" %}
 {% assign interaction_mags = site.data.cv.publications.magazines | where: "tag", "interaction" %}
@@ -282,6 +298,10 @@ title: Research
 
   <h1>Systems and Frameworks for Data Consent and Refusal</h1>
 
+  <p class="research-description">
+    I design software that protects the autonomy of research participants online, and develop frameworks to support designers and activists in refusing large-scale data collection by powerful actors.
+    Bringing together methods from design, empirical social science, and feminist moral philosophy, I develop ideas about consent and refusal by putting theory in conversation with practices that matter to people’s lives.
+  </p>
 
 {% assign refusal_pubs = site.data.cv.publications.pubs | where: "tag", "refusal" %}
 {% assign refusal_mags = site.data.cv.publications.magazines | where: "tag", "refusal" %}
@@ -407,6 +427,10 @@ title: Research
 
   <h1>Visual Art on Algorithm Visibility and Embodiment</h1>
 
+  <p class="research-description">
+    As a visual artist and critical computing scholar-practitioner, I explore the possibility of combining art and computation to open up space for contingency, embodied knowledge, and exploring speculation as a mode of intervention.
+    My work often starts from the body as a contested site of control, exploring the way people are asked to conform their bodies to oppressive systems.
+  </p>
 
   {% assign art_pubs = site.data.cv.publications.pubs | where: "tag", "art" %}
   {% assign art_mags = site.data.cv.publications.magazines | where: "tag", "art" %}

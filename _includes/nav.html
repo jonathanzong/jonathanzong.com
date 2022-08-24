@@ -1,4 +1,4 @@
-<div id="navbar" class="meta-text">
+<nav id="navbar" class="meta-text">
   <ul class="nav navbar-nav navbar-right">
     <li><a {% if page.active_section == 'home' %}class="nav-current"{% endif %} {% unless page.active_section == 'home' %}href="{{ "/"  | prepend: site.baseurl }}"{% endunless %} title="Home">Home</a></li>
     <li><a {% if page.active_section == 'research' %}class="nav-current"{% endif %} {% unless page.active_section == 'research' %}href="{{ "/research"  | prepend: site.baseurl }}"{% endunless %} title="Research">Research</a></li>
@@ -7,5 +7,5 @@
     <li><a {% if page.active_section == 'projects' %}class="nav-current"{% endif %} {% unless page.active_section == 'projects' %}href="{{ "/projects"  | prepend: site.baseurl }}"{% endunless %} {% if page.active_section == 'projects' %}{% unless page.url == '/projects.html' %}href="{{ "/projects"  | prepend: site.baseurl }}"{% endunless %}{% endif %} title="Projects">Projects</a></li>
     <li><a {% if page.active_section == 'blog' %}class="nav-current"{% endif %} {% unless page.active_section == 'blog' %}href="{{ "/blog"  | prepend: site.baseurl }}"{% endunless %} {% if page.active_section == 'blog' %}{% unless page.url == '/blog.html' %}href="{{ "/blog"  | prepend: site.baseurl }}"{% endunless %}{% endif %} title="Blog">Blog</a></li>
   </ul>
-  <div class="clear"></div>
-</div>
+  <div class="clear"></nav>
+</nav>

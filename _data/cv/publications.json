@@ -1,9 +1,9 @@
 {
   "pubs": [
     {
-      "year": "2022 (forthcoming)",
+      "year": "2022",
       "title": "Animated Vega-Lite: Unifying Animation with a Grammar of Interactive Graphics",
-      "url": null,
+      "url": "http://vis.csail.mit.edu/pubs/animated-vega-lite/",
       "authors": "Jonathan Zong*, Josh Pollock*, Dylan Wootton, Arvind Satyanarayan",
       "venue": "IEEE Transactions on Visualization and Computer Graphics (IEEE VIS)",
       "tag": "interaction"

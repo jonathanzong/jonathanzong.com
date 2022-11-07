@@ -58,6 +58,13 @@
 
   "conference": [
     {
+      "year": "2022",
+      "url": "/assets/papers/consent-cscw-2022.pdf",
+      "title": "Consent: A Research and Design Lens for Human-Computer Interaction (Panel)",
+      "venue": "CSCW 2022",
+      "tag": "refusal"
+    },
+    {
       "year": "2020",
       "url": "http://jonathanzong.com/blog/2020/05/31/biometric-sans-and-public-display-embodied-writing-in-the-age-of-data",
       "title": "Public Display and Biometric Sans: Embodied Writing in the Age of Data",

@@ -62,8 +62,8 @@
   ],
   "wopodemo": [
     {
-      "year": "2022 (forthcoming)",
-      "url": null,
+      "year": "2022",
+      "url": "/assets/papers/olli-vis-2022.pdf",
       "title": "Olli: An Extensible Visualization Library for Screen Reader Accessibility",
       "authors": "Matt Blanco, Jonathan Zong, Arvind Satyanarayan",
       "venue": "IEEE VIS Posters",

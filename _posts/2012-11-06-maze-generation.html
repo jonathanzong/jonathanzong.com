@@ -4,19 +4,47 @@ title: "Maze Generation with Prim's Algorithm"
 slug: maze-generation-with-prims-algorithm
 ---
 
+<p><em>Edit Feb 2023: I realized that there's somehow a lot of links floating around to this old post, so I've come back and edited the explanation to be clearer. Enjoy Prim's Algorithm!</em></p>
+
 <p>As it's been a while since I've written a technical post (because we all know how much everyone loves those), I'd like to take a moment to introduce my good friend <a href="http://en.wikipedia.org/wiki/Prim's_algorithm">Prim's Algorithm</a>. Time to get excited about graph theory!
 </p>
 <div class="frame">
   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oeijEhw7aRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <p>
-I rediscovered a Java implementation of Prim's that I had made about a year ago to generate mazes for contest problems. With that purpose in mind, randomized Prim's algorithm represents the maze as a graph and connects the vertices in a <a href="http://en.wikipedia.org/wiki/Minimum_spanning_tree">minimum spanning tree</a>. I created my implementation using the pseudocode on <a href="http://en.wikipedia.org/wiki/Maze_generation_algorithm">wikipedia</a>. The algorithm works by filling in a grid with "wall" tiles and opening one starting cell at random. This starting cell basically becomes a root node from which paths begin to branch. For each surrounding wall of the open cell which comprise the "frontier", the algorithm makes the decision to, if the tile on the other side of the wall has not been explored and is not part of the maze, knock down the wall and essentially open that tile as well as the tile where the wall was, connecting the two nodes. The walls of this new node then become part of the frontier. Intuitively, the random selection from the frontier at each iteration provides branching, and the removal from the frontier only when the cell cannot be operated on because the opposite cell has already been explored ensures sufficient backtracking to explore the entire maze. The above video shows visually what the process of the algorithm is. The implementation is my java code ported to Android, drawn to a <a href="https://play.google.com/store/apps/details?id=com.didactic.PrimDijkstraMaze">live wallpaper</a> using Canvas. (Gingerbread is starting to show its age.)
+I rediscovered a Java implementation of Prim's that I had made about a year ago to generate mazes for contest problems.
+With that purpose in mind, randomized Prim's algorithm represents the maze as a graph and connects the vertices in a <a href="http://en.wikipedia.org/wiki/Minimum_spanning_tree">minimum spanning tree</a>.
+I created my implementation using the pseudocode on <a href="http://en.wikipedia.org/wiki/Maze_generation_algorithm">wikipedia</a>.
 </p>
 <p>
-The maze in the app is actually generated with an added heuristic such that the beginning and end points will be far enough apart that the end result will be visually interesting. This is because the second part of that video, after the maze completes generation, shows a visualization of <a href="http://en.wikipedia.org/wiki/Dijkstra's_algorithm">Dijkstra's shortest path algorithm</a> solving the maze that has just been generated. Incidentally, Dijkstra is cited as a rediscoverer of Prim's algorithm. Dijkstra's is a favorite shortest path algorithm, and we use an implementation of it often in computer science contests.
+The algorithm works by filling in a grid with "wall" tiles and opening one starting cell at random.
+This starting cell becomes a root node from which paths begin to branch.
+The surrounding walls of the open cell comprise the "frontier", or the set of potential next cells to process.
+</p>
+<p>
+We begin by randomly selecting a wall cell from the frontier.
+If the cell on the other side of the selected wall has not been explored (is not connected to the maze), we knock down the wall.
+In other words, we mark the wall and the opposite tile as open, connecting them to the maze.
+In graph terms, the starting cell and the cell on the other side of the wall are nodes, and we've connected them with an edge by creating a path through the wall.
+The walls touching this new open cell then become part of the frontier.
+</p>
+<p>
+We repeat this process, randomly selecting from the frontier at each iteration.
+Random selection provides branching, so that we're not always opening paths in a straight line.
+We remove wall cells from the frontier only when the cell cannot be operated on because the opposite cell has already been explored.
+This ensures sufficient backtracking to explore the entire maze.
+</p>
+<p>
+  The above video shows visually what the process of the algorithm is. The implementation is my Java code ported to Android, drawn to a <a href="https://play.google.com/store/apps/details?id=com.didactic.PrimDijkstraMaze">live wallpaper</a> using Canvas. (Gingerbread is starting to show its age.)
+</p>
+<p>
+  The maze in the app is actually generated with an added heuristic such that the beginning and end points will be far enough apart that the end result will be visually interesting.
+  This is because the second part of that video, after the maze completes generation, shows a visualization of <a href="http://en.wikipedia.org/wiki/Dijkstra's_algorithm">Dijkstra's shortest path algorithm</a> solving the maze that has just been generated.
+  Incidentally, Dijkstra is <a href="https://en.wikipedia.org/wiki/Prim%27s_algorithm">cited</a> as a rediscoverer of Prim's algorithm.
+  Dijkstra's is a favorite shortest path algorithm, and we use an implementation of it often in computer science contests.
 </p>
 <h3>My implementation of Prim's Algorithm</h3>
-<pre class="pre-scrollable">
+<pre>
 import java.util.*;
 
 public class Prim {

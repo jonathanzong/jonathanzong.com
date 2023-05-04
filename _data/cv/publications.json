@@ -52,6 +52,14 @@
   ],
   "magazines": [
     {
+      "year": "2023",
+      "url": "https://journals.ub.uni-heidelberg.de/index.php/ic/article/view/93413",
+      "title": "Pointing, Mutual Intelligibility, and the Seeing Subject in HCI",
+      "authors": "Jonathan Zong",
+      "venue": "Interface Critique",
+      "tag": "art"
+    },
+    {
       "year": "2020",
       "url": "/assets/papers/xrds-refusal-2020.pdf",
       "title": "From Individual Consent to Collective Refusal",

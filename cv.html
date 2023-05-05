@@ -398,7 +398,7 @@ title: CV
       </div>
     {% endfor %}
 
-    <h2>Magazine Articles</h2>
+    <h2>Edited Publications</h2>
     {% for pub in site.data.cv.publications.magazines %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}

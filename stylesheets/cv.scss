@@ -87,6 +87,14 @@ span.paper-title {
 
 @media print {
 
+  #cv-head {
+    page-break-after: avoid;
+  }
+
+  .entry {
+    page-break-inside: avoid;
+  }
+
   .break-before {
     page-break-before: always;
   }

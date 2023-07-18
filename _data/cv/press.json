@@ -34,6 +34,12 @@
   "featured": [
     {
       "year": "2023",
+      "url": "https://design.mit.edu/news/mit-mad-fellow-improves-accessibility-of-online-graphics-for-blind-users",
+      "title": "MIT MAD Fellow Improves Accessibility of Online Graphics for Blind Users",
+      "venue": "Nature Technology Features"
+    },
+    {
+      "year": "2023",
       "url": "https://www.nature.com/articles/d41586-023-00645-6",
       "title": "These tools help visually impaired scientists read data and journals",
       "venue": "Nature Technology Features"

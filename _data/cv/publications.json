@@ -1,6 +1,14 @@
 {
   "pubs": [
     {
+      "year": "2023",
+      "title": "Data Refusal From Below: A Framework for Understanding, Evaluating, and Envisioning Refusal as Design",
+      "url": "/assets/papers/refusal-jrc-2023.pdf",
+      "authors": "Jonathan Zong, J. Nathan Matias",
+      "venue": "ACM Journal on Responsible Computing",
+      "tag": "refusal"
+    },
+    {
       "year": "2022",
       "title": "Animated Vega-Lite: Unifying Animation with a Grammar of Interactive Graphics",
       "url": "http://vis.csail.mit.edu/pubs/animated-vega-lite/",

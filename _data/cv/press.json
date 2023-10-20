@@ -34,6 +34,12 @@
   "featured": [
     {
       "year": "2023",
+      "url": "https://news.mit.edu/2023/improving-accessibility-online-graphics-blind-users-jonathan-zong-1002",
+      "title": "Improving accessibility of online graphics for blind users",
+      "venue": "MIT News"
+    },
+    {
+      "year": "2023",
       "url": "https://cap.csail.mit.edu/engage/spotlights/jonathan-zong",
       "title": "Student Spotlight: Jonathan Zong",
       "venue": "MIT CSAIL"

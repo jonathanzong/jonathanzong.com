@@ -2,6 +2,13 @@
   "invited": [
     {
       "year": "2023",
+      "url": null,
+      "title": "Participation and Power in Data Collection and Analysis",
+      "venue": "Penn HCI Group, University of Pennsylvania",
+      "tag": "access"
+    },
+    {
+      "year": "2023",
       "url": "https://www.youtube.com/watch?v=lNvPY8-FrvY",
       "title": "Accessible Data Visualization for Blind and Low Vision Users",
       "venue": "MIT Morningside Academy for Design",
@@ -64,6 +71,13 @@
   ],
 
   "conference": [
+    {
+      "year": "2023",
+      "url": null,
+      "title": "Data Refusal From Below: A Framework for Understanding, Evaluating, and Envisioning Refusal as Design",
+      "venue": "Panel: Resistance · AoIR 2023",
+      "tag": "refusal"
+    },
     {
       "year": "2022",
       "url": "/assets/papers/consent-cscw-2022.pdf",

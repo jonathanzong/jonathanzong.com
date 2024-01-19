@@ -1,6 +1,30 @@
 {
   "pubs": [
     {
+      "year": "2024",
+      "title": "Umwelt: Accessible Structured Editing of Multi-Modal Data Representations",
+      "url": null,
+      "authors": "Jonathan Zong, Isabella Pedraza Pineros, Mengzhu (Katie) Chen, Daniel Hajas, Arvind Satyanarayan",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "tag": "access"
+    },
+    {
+      "year": "2024",
+      "title": "“Customization is Key”: Reconfigurable Textual Tokens for Accessible Data Visualizations",
+      "url": null,
+      "authors": "Shuli Jones, Isabella Pedraza Pineros, Daniel Hajas, Jonathan Zong, Arvind Satyanarayan",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "tag": "access"
+    },
+    {
+      "year": "2024",
+      "title": "Beyond Dark Patterns: A Concept-Based Framework for Ethical Software Design",
+      "url": null,
+      "authors": "Evan Caragay, Katherine Xiong, Jonathan Zong, Daniel Jackson",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "tag": "refusal"
+    },
+    {
       "year": "2023",
       "title": "Data Refusal From Below: A Framework for Understanding, Evaluating, and Envisioning Refusal as Design",
       "url": "https://dl.acm.org/doi/10.1145/3630107",

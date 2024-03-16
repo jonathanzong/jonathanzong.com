@@ -3,7 +3,7 @@
     {
       "year": "2024",
       "title": "Umwelt: Accessible Structured Editing of Multi-Modal Data Representations",
-      "url": null,
+      "url": "/assets/papers/umwelt-chi-2024.pdf",
       "authors": "Jonathan Zong, Isabella Pedraza Pineros, Mengzhu (Katie) Chen, Daniel Hajas, Arvind Satyanarayan",
       "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
       "tag": "access"
@@ -11,7 +11,7 @@
     {
       "year": "2024",
       "title": "“Customization is Key”: Reconfigurable Textual Tokens for Accessible Data Visualizations",
-      "url": null,
+      "url": "/assets/papers/customization-chi-2024.pdf",
       "authors": "Shuli Jones, Isabella Pedraza Pineros, Daniel Hajas, Jonathan Zong, Arvind Satyanarayan",
       "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
       "tag": "access"
@@ -19,7 +19,7 @@
     {
       "year": "2024",
       "title": "Beyond Dark Patterns: A Concept-Based Framework for Ethical Software Design",
-      "url": null,
+      "url": "/assets/papers/concept-catalog-chi-2024.pdf",
       "authors": "Evan Caragay, Katherine Xiong, Jonathan Zong, Daniel Jackson",
       "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
       "tag": "refusal"

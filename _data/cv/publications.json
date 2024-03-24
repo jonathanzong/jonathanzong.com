@@ -25,7 +25,7 @@
       "tag": "refusal"
     },
     {
-      "year": "2023",
+      "year": "2024",
       "title": "Data Refusal From Below: A Framework for Understanding, Evaluating, and Envisioning Refusal as Design",
       "url": "https://dl.acm.org/doi/10.1145/3630107",
       "authors": "Jonathan Zong, J. Nathan Matias",
@@ -33,7 +33,7 @@
       "tag": "refusal"
     },
     {
-      "year": "2022",
+      "year": "2023",
       "title": "Animated Vega-Lite: Unifying Animation with a Grammar of Interactive Graphics",
       "url": "http://vis.csail.mit.edu/pubs/animated-vega-lite/",
       "authors": "Jonathan Zong*, Josh Pollock*, Dylan Wootton, Arvind Satyanarayan",
@@ -58,19 +58,19 @@
       "tag": "refusal"
     },
     {
+      "year": "2021",
+      "title": "Lyra 2: Designing Interactive Visualizations by Demonstration",
+      "url": "http://vis.csail.mit.edu/pubs/lyra2",
+      "authors": "Jonathan Zong, Dhiraj Barnwal, Rupayan Neogy, Arvind Satyanarayan",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics (IEEE VIS)",
+      "tag": "interaction"
+    },
+    {
       "year": "2020",
       "title": "Representing Real-Time Multi-User Collaboration in Visualizations",
       "url": "/assets/papers/cursors-vis-2020.pdf",
       "authors": "Rupayan Neogy, Jonathan Zong, Arvind Satyanarayan",
       "venue": "IEEE Visualization Conference (VIS)",
-      "tag": "interaction"
-    },
-    {
-      "year": "2020",
-      "title": "Lyra 2: Designing Interactive Visualizations by Demonstration",
-      "url": "http://vis.csail.mit.edu/pubs/lyra2",
-      "authors": "Jonathan Zong, Dhiraj Barnwal, Rupayan Neogy, Arvind Satyanarayan",
-      "venue": "IEEE Transactions on Visualization and Computer Graphics (IEEE VIS)",
       "tag": "interaction"
     },
     {

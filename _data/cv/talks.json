@@ -3,6 +3,13 @@
     {
       "year": "2024",
       "url": null,
+      "title": "Accessible Data Representations for Screen Reader Users",
+      "venue": "Quantitative and Digital Humanities Speaker Series, Emory University",
+      "tag": "access"
+    },
+    {
+      "year": "2024",
+      "url": null,
       "title": "Participation and Power in Data Collection and Analysis",
       "venues": ["Information Science Seminar, University of Colorado Boulder", "Ethical Tech Working Group, Berkman Klein Center for Internet and Society"],
       "tag": null

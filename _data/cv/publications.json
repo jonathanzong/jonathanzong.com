@@ -160,6 +160,13 @@
   ],
   "thesis": [
     {
+      "year": "2024",
+      "url": "/assets/papers/jzong-phd-thesis-2024.pdf",
+      "title": "Designing for Participation and Power in Data Collection and Analysis",
+      "authors": null,
+      "venue": "Ph.D. Thesis, Massachusetts Institute of Technology"
+    },
+    {
       "year": "2018",
       "url": "/assets/papers/jzong-bse-thesis-2018.pdf",
       "title": "Empirically Studying Research Ethics with Interface Designs for Debriefing Online Field Experiments",

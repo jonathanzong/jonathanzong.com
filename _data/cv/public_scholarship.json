@@ -63,6 +63,15 @@
       "title": "The Data Visualizations Behind COVID-19 Skepticism",
       "authors": "Crystal Lee, Jonathan Zong, Anna Arpaci-Dusseau, Katherine Huang, Mateo Monterde, Ethan Nevidomsky, Tanya Yang, Anna Meurer, Soomin Chun, Arvind Satyanarayan",
       "venue": "MIT Visualization Group"
-    },
+    }
+  ],
+  "policy": [
+    {
+      "year": "2024",
+      "url": "https://www.access-board.gov/news/2024/07/09/u-s-access-board-holds-hearings-on-artificial-intelligence-ai-for-disability-community-and-ai-practitioners/",
+      "title": "Respecting blind/low-vision user agency when generating AI descriptions",
+      "authors": "Jonathan Zong, Arvind Satyanarayan",
+      "venue": "Public comment to U.S. Access Board"
+    }
   ]
 }

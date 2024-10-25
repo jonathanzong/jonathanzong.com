@@ -1,5 +1,5 @@
 ---
 layout: post
-title: "Designing and Evaluating Research Ethics Systems"
-external_url: "https://citizensandtech.org/2022/02/designing-and-evaluating-research-ethics-systems/"
+title: 'Building a Community-Focused Laboratory, with Max Liboiron'
+external_url: 'https://citizensandtech.org/2022/02/building-a-community-lab/'
 ---

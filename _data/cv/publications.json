@@ -1,11 +1,19 @@
 {
   "pubs": [
     {
+      "year": "2025",
+      "title": "Tactile Vega-Lite: Rapidly Prototyping Tactile Charts with Smart Defaults",
+      "url": "/assets/papers/tvl-chi-2025.pdf",
+      "authors": "Mengzhu (Katie) Chen, Isabella Pedraza Pineros, Arvind Satyanarayan, Jonathan Zong",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "tag": "access"
+    },
+    {
       "year": "2024",
       "title": "Umwelt: Accessible Structured Editing of Multi-Modal Data Representations",
       "url": "/assets/papers/umwelt-chi-2024.pdf",
       "authors": "Jonathan Zong, Isabella Pedraza Pineros, Mengzhu (Katie) Chen, Daniel Hajas, Arvind Satyanarayan",
-      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI)",
       "tag": "access"
     },
     {
@@ -13,7 +21,7 @@
       "title": "“Customization is Key”: Reconfigurable Textual Tokens for Accessible Data Visualizations",
       "url": "/assets/papers/customization-chi-2024.pdf",
       "authors": "Shuli Jones, Isabella Pedraza Pineros, Daniel Hajas, Jonathan Zong, Arvind Satyanarayan",
-      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI)",
       "tag": "access"
     },
     {
@@ -21,7 +29,7 @@
       "title": "Beyond Dark Patterns: A Concept-Based Framework for Ethical Software Design",
       "url": "/assets/papers/concept-catalog-chi-2024.pdf",
       "authors": "Evan Caragay, Katherine Xiong, Jonathan Zong, Daniel Jackson",
-      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI)",
       "tag": "refusal"
     },
     {

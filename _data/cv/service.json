@@ -1,0 +1,70 @@
+{
+  "peer_reviewing": [
+    {
+      "year": "2025",
+      "venues": [
+        "ACM CHI",
+        "Eurovis",
+      ]
+    },
+    {
+      "year": "2024",
+      "venues": [
+        "ACM CHI",
+        "Research Ethics (SAGE Journal)",
+        "ACM DIS",
+        "Data by Design (community review for MIT Press book)",
+        "Journal of Visualization and Interaction",
+        "Assistive Technology (T&F Journal)"
+      ]
+    },
+    {
+      "year": "2023",
+      "venues": [
+        "ACM CHI",
+        "IEEE VIS",
+        "IEEE TVCG",
+        "ACM SIGGRAPH",
+        "PacificVis Visual Data Storytelling Contest"
+      ]
+    },
+    {
+      "year": "2022",
+      "venues": [
+        {"name": "ACM CHI", "award": "Special Recognition for Outstanding Review"},
+        "IEEE VIS",
+        "Journal of Empirical Research on Human Research Ethics"
+      ]
+    },
+    {
+      "year": "2021",
+      "venues": ["IEEE VIS"]
+    }
+  ],
+  "academic": [
+    {
+      "year": "2024",
+      "activities": ["Selection Committee, MIT Student Art Awards"]
+    }
+  ],
+  "event_organizing": [
+    {
+      "year": "2022",
+      "events": ["Princeton University Workshop on Ethics of Field Experiments"]
+    }
+  ],
+  "community": [
+    {
+      "year": "2020–2022",
+      "organizations": ["MIT Graduate Student Union, Organizer"]
+    },
+    {
+      "year": "2020–2021",
+      "organizations": ["MIT Human-Computer Interaction, Social Committee"]
+    },
+    {
+      "year": "2019–20",
+      "organizations": ["MIT Students Against War"]
+    }
+  ]
+}

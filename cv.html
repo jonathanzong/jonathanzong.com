@@ -525,99 +525,68 @@ title: CV
   </div>
   <div class="col-print-9">
     <h2>Peer Reviewing</h2>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2024
-        </div>
-        <div class="col-print-10">
-          <div>ACM CHI, Research Ethics (SAGE Journal), ACM DIS, Data by Design (community review for MIT Press book), Journal of Visualization and Interaction, Assistive Technology (T&F Journal)</div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2023
-        </div>
-        <div class="col-print-10">
-          <div>ACM CHI, IEEE VIS, IEEE TVCG, ACM SIGGRAPH, PacificVis Visual Data Storytelling Contest</div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2022
-        </div>
-        <div class="col-print-10">
-          <div>ACM CHI (<span class="paper-award">Special Recognition for Outstanding Review</span>), IEEE VIS, Journal of Empirical Research on Human Research Ethics</div>
+    {% for item in site.data.cv.service.peer_reviewing %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{ item.year }}
+          </div>
+          <div class="col-print-10">
+            <div>
+              {% for venue in item.venues %}
+                {% if venue.name %}
+                  {{ venue.name }}{% if venue.award %} (<span class="paper-award">{{ venue.award }}</span>){% endif %}{% unless forloop.last %}, {% endunless %}
+                {% else %}
+                  {{ venue }}{% unless forloop.last %}, {% endunless %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2021
-        </div>
-        <div class="col-print-10">
-          <div>IEEE VIS</div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
+
     <h2>Other Academic Service</h2>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2024
-        </div>
-        <div class="col-print-10">
-          <div>Selection Committee, MIT Student Art Awards</div>
+    {% for item in site.data.cv.service.academic %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{ item.year }}
+          </div>
+          <div class="col-print-10">
+            <div>{{ item.activities | join: ", " }}</div>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
+
     <h2>Event Organizing</h2>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2022
-        </div>
-        <div class="col-print-10">
-          <div>Princeton University Workshop on Ethics of Field Experiments</div>
+    {% for item in site.data.cv.service.event_organizing %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{ item.year }}
+          </div>
+          <div class="col-print-10">
+            <div>{{ item.events | join: ", " }}</div>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
+
     <h2>Community Building & Activism</h2>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2020–2022
-        </div>
-        <div class="col-print-10">
-          <div>MIT Graduate Student Union, Organizer</div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2020–2021
-        </div>
-        <div class="col-print-10">
-          <div>MIT Human-Computer Interaction, Social Committee</div>
+    {% for item in site.data.cv.service.community %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{ item.year }}
+          </div>
+          <div class="col-print-10">
+            <div>{{ item.organizations | join: ", " }}</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2019–20
-        </div>
-        <div class="col-print-10">
-          <div>MIT Students Against War</div>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 

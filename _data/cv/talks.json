@@ -1,123 +1,225 @@
 {
+  "seminar": [
+    {
+      "title": "What You Hear is What You See? Integrating Sonification and Visualization",
+      "url": "https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25072",
+      "instances": [
+        {
+          "year": "2025",
+          "venue": "Schloss Dagstuhl – Leibniz Center for Informatics"
+        }
+      ]
+    }
+  ],
   "invited": [
     {
-      "year": "2024",
+      "title": "Data Refusal in Conversation with <em>List Projects 31: Kite</em>",
       "url": null,
-      "title": "Accessible Data Representations for Screen Reader Users",
-      "venues": ["Quantitative and Digital Humanities Speaker Series, Emory University", "Fathom Information Design"],
-      "tag": "access"
-    },
-    {
-      "year": "2024",
-      "url": null,
-      "title": "Participation and Power in Data Collection and Analysis",
-      "venues": ["Information Science Seminar, University of Colorado Boulder", "Ethical Tech Working Group, Berkman Klein Center for Internet and Society", "Computer Science Seminar, Brandeis University"],
-      "tag": null
-    },
-    {
-      "year": "2023",
-      "url": null,
-      "title": "Participation and Power in Data Collection and Analysis",
-      "venue": "Penn HCI Group, University of Pennsylvania",
-      "tag": "access"
-    },
-    {
-      "year": "2023",
-      "url": "https://www.youtube.com/watch?v=lNvPY8-FrvY",
-      "title": "Accessible Data Visualization for Blind and Low Vision Users",
-      "venue": "MIT Morningside Academy for Design",
-      "tag": "access"
-    },
-    {
-      "year": "2022",
-      "url": null,
-      "title": "Designing Data Representations for Embodiment and Refusal",
-      "venue": "Information Science Seminar, Cornell University",
-      "tag": "access"
-    },
-    {
-      "year": "2022",
-      "url": "https://www.youtube.com/watch?v=oc4GQNM7tUw",
-      "title": "Rich Screen Reader Experiences for Accessible Data Visualization",
-      "venues": ["HackNY Fellowship Speaker Series", "Design for Assistive Technology, MIT Beaver Works Summer Institute", "DiverseAbilities Employee Resource Group, New York Department of Transportation"],
-      "tag": "access"
-    },
-    {
-      "year": "2022",
-      "url": null,
-      "title": "Designing Research Ethics Systems",
-      "venue": "Accountable Algorithms Reading Group, Northeastern University",
+      "instances": [
+        {
+          "year": "2025",
+          "venue": "MIT List Visual Arts Center"
+        }
+      ],
       "tag": "refusal"
     },
     {
-      "year": "2022",
+      "title": "Accessible Data Representations for Screen Reader Users",
       "url": null,
+      "instances": [
+        {
+          "year": "2024",
+          "venue": "Fathom Information Design"
+        },
+        {
+          "year": "2024",
+          "venue": "Quantitative and Digital Humanities Speaker Series, Emory University"
+        }
+      ],
+      "tag": "access"
+    },
+    {
+      "title": "Participation and Power in Data Collection and Analysis",
+      "url": null,
+      "instances": [
+        {
+          "year": "2024",
+          "venue": "Computer Science Seminar, Brandeis University"
+        },
+        {
+          "year": "2024",
+          "venue": "Information Science Seminar, University of Colorado Boulder"
+        },
+        {
+          "year": "2024",
+          "venue": "Ethical Tech Working Group, Berkman Klein Center for Internet and Society"
+        },
+        {
+          "year": "2023",
+          "venue": "Penn HCI Group, University of Pennsylvania"
+        }
+      ]
+    },
+    {
+      "title": "Accessible Data Visualization for Blind and Low Vision Users",
+      "url": "https://www.youtube.com/watch?v=lNvPY8-FrvY",
+      "instances": [
+        {
+          "year": "2023",
+          "venue": "MIT Morningside Academy for Design"
+        }
+      ],
+      "tag": "access"
+    },
+    {
+      "title": "Designing Data Representations for Embodiment and Refusal",
+      "url": null,
+      "instances": [
+        {
+          "year": "2022",
+          "venue": "Information Science Seminar, Cornell University"
+        }
+      ],
+      "tag": "access"
+    },
+    {
+      "title": "Rich Screen Reader Experiences for Accessible Data Visualization",
+      "url": "https://www.youtube.com/watch?v=oc4GQNM7tUw",
+      "instances": [
+        {
+          "year": "2022",
+          "venue": "HackNY Fellowship Speaker Series"
+        },
+        {
+          "year": "2022",
+          "venue": "Design for Assistive Technology, MIT Beaver Works Summer Institute"
+        },
+        {
+          "year": "2022",
+          "venue": "DiverseAbilities Employee Resource Group, New York Department of Transportation"
+        }
+      ],
+      "tag": "access"
+    },
+    {
+      "title": "Designing Research Ethics Systems",
+      "url": null,
+      "instances": [
+        {
+          "year": "2022",
+          "venue": "Accountable Algorithms Reading Group, Northeastern University"
+        }
+      ],
+      "tag": "refusal"
+    },
+    {
       "title": "Art, Concepts, Visualizations",
-      "venue": "Interact Fellowship Symposium",
+      "url": null,
+      "instances": [
+        {
+          "year": "2022",
+          "venue": "Interact Fellowship Symposium"
+        }
+      ],
       "tag": "art"
     },
     {
-      "year": "2020",
-      "url": null,
       "title": "Designing Systems to Theorize Collective Power",
-      "venue": "Digital Theory Lab, NYU Media, Culture, and Communication"
+      "url": null,
+      "instances": [
+        {
+          "year": "2020",
+          "venue": "Digital Theory Lab, NYU Media, Culture, and Communication"
+        }
+      ]
     },
     {
-      "year": "2020",
-      "url": null,
       "title": "Layered Abstractions for Interactive Visualization Design",
-      "venue": "Digital Structures Group, MIT Department of Architecture",
+      "url": null,
+      "instances": [
+        {
+          "year": "2020",
+          "venue": "Digital Structures Group, MIT Department of Architecture"
+        }
+      ],
       "tag": "interaction"
     },
     {
-      "year": "2019",
-      "url": "/blog/2019/11/18/the-most-liberal-of-arts",
       "title": "“The Most Liberal of Arts”",
-      "venue": "Lewis Center for the Arts, Princeton University"
+      "url": "/blog/2019/11/18/the-most-liberal-of-arts",
+      "instances": [
+        {
+          "year": "2019",
+          "venue": "Lewis Center for the Arts, Princeton University"
+        }
+      ]
     },
     {
-      "year": "2018",
-      "url": "http://opentranscripts.org/transcript/public-accountability-research-ethics/",
       "title": "Public Accountability in Research Ethics",
-      "venue": "CivilServant Research Summit, MIT Media Lab",
+      "url": "http://opentranscripts.org/transcript/public-accountability-research-ethics/",
+      "instances": [
+        {
+          "year": "2018",
+          "venue": "CivilServant Research Summit, MIT Media Lab"
+        }
+      ],
       "tag": "refusal"
     }
   ],
-
   "conference": [
     {
-      "year": "2023",
-      "url": null,
       "title": "Olli: Accessible Data Representations for Screen Reader Users",
-      "venue": "Information+ Conference",
+      "url": null,
+      "instances": [
+        {
+          "year": "2023",
+          "venue": "Information+ Conference"
+        }
+      ],
       "tag": "access"
     },
     {
-      "year": "2023",
-      "url": null,
       "title": "Data Refusal From Below: A Framework for Understanding, Evaluating, and Envisioning Refusal as Design",
-      "venue": "Panel: Resistance · AoIR 2023",
+      "url": null,
+      "instances": [
+        {
+          "year": "2023",
+          "venue": "Panel: Resistance · AoIR 2023"
+        }
+      ],
       "tag": "refusal"
     },
     {
-      "year": "2022",
-      "url": "/assets/papers/consent-cscw-2022.pdf",
       "title": "Consent: A Research and Design Lens for Human-Computer Interaction (Panel)",
-      "venue": "CSCW 2022",
+      "url": "/assets/papers/consent-cscw-2022.pdf",
+      "instances": [
+        {
+          "year": "2022",
+          "venue": "CSCW 2022"
+        }
+      ],
       "tag": "refusal"
     },
     {
-      "year": "2020",
-      "url": "http://jonathanzong.com/blog/2020/05/31/biometric-sans-and-public-display-embodied-writing-in-the-age-of-data",
       "title": "Public Display and Biometric Sans: Embodied Writing in the Age of Data",
-      "venue": "Before and Beyond Typography, Stanford University Department of History",
+      "url": "http://jonathanzong.com/blog/2020/05/31/biometric-sans-and-public-display-embodied-writing-in-the-age-of-data",
+      "instances": [
+        {
+          "year": "2020",
+          "venue": "Before and Beyond Typography, Stanford University Department of History"
+        }
+      ],
       "tag": "art"
     },
     {
-      "year": "2019",
-      "url": "http://jonathanzong.com/blog/2019/04/13/in-our-own-image-the-autonomy-of-artificial-bodies-in-synthetic-porn",
       "title": "In Our Own Image: The Autonomy of Artificial Bodies in Synthetic Porn",
-      "venue": "Panel: Internet Connection · Theorizing the Web",
+      "url": "http://jonathanzong.com/blog/2019/04/13/in-our-own-image-the-autonomy-of-artificial-bodies-in-synthetic-porn",
+      "instances": [
+        {
+          "year": "2019",
+          "venue": "Panel: Internet Connection · Theorizing the Web"
+        }
+      ],
       "tag": "refusal"
     }
   ]

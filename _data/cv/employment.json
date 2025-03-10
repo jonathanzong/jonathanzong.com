@@ -1,0 +1,97 @@
+[
+  {
+    "institution": "University of Colorado Boulder",
+    "department": "Department of Information Science",
+    "positions": [
+      {
+        "title": "Assistant Professor",
+        "period": "Fall 2025–",
+        "hidden": true
+      }
+    ]
+  },
+  {
+    "institution": "Harvard University",
+    "department": "Berkman Klein Center for Internet and Society",
+    "positions": [
+      {
+        "title": "Fellow",
+        "period": "2024–2025"
+      }
+    ]
+  },
+  {
+    "institution": "Massachusetts Institute of Technology",
+    "department": "MIT Visualization Group",
+    "positions": [
+      {
+        "title": "Postdoctoral Associate",
+        "period": "2024–2025"
+      },
+      {
+        "title": "Graduate Researcher",
+        "period": "2018–2024"
+      }
+    ]
+  },
+  {
+    "institution": "Cornell University",
+    "department": "Citizens and Technology Lab",
+    "positions": [
+      {
+        "title": "Graduate Research Fellow",
+        "period": "Summer 2020"
+      }
+    ]
+  },
+  {
+    "institution": "Google",
+    "department": "AI UX Team",
+    "positions": [
+      {
+        "title": "UX Engineering Intern",
+        "period": "Summer 2018"
+      }
+    ]
+  },
+  {
+    "institution": "Google",
+    "department": "Material UX Team",
+    "positions": [
+      {
+        "title": "UX Engineering Intern",
+        "period": "Summer 2017"
+      }
+    ]
+  },
+  {
+    "institution": "Linked by Air",
+    "department": null,
+    "positions": [
+      {
+        "title": "Software and Design Intern",
+        "period": "Summer 2016"
+      }
+    ]
+  },
+  {
+    "institution": "Square",
+    "department": null,
+    "positions": [
+      {
+        "title": "Software Engineering Intern",
+        "period": "Summer 2015"
+      }
+    ]
+  },
+  {
+    "institution": "Coursera",
+    "department": null,
+    "positions": [
+      {
+        "title": "Software Engineering Intern (KPCB Engineering Fellow)",
+        "period": "Summer 2014"
+      }
+    ]
+  }
+]

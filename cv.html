@@ -86,136 +86,27 @@ title: CV
     <h2>Employment</h2>
   </div>
   <div class="col-print-9">
-    <!-- <div class="entry">
-      <h3>University of Colorado Boudler, Department of Information Science</h3>
+    {% for job in site.data.cv.employment %}
+      {% unless job.positions[0].hidden %}
+      <div class="entry">
+        <h3>{{ job.institution }}{% if job.department %}, {{ job.department }}{% endif %}</h3>
 
-      <div style="display:flex">
-        <div class="col-print-3">
-          Fall 2025–
-        </div>
-        <div class="col-print-9">
-          <div>Assistant Professor</div>
-        </div>
+        {% for position in job.positions %}
+          {% unless position.hidden %}
+          <div style="display:flex">
+            <div class="col-print-3">
+              {{ position.period }}
+            </div>
+            <div class="col-print-9">
+              <div>{{ position.title }}</div>
+            </div>
+          </div>
+          {% endunless %}
+        {% endfor %}
       </div>
-    </div> -->
-
-    <!-- <div class="entry">
-      <h3>Harvard University, Berkman Klein Center for Internet and Society</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          2024–2025
-        </div>
-        <div class="col-print-9">
-          <div>Fellow</div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="entry">
-      <h3>Massachusetts Institute of Technology, MIT Visualization Group</h3>
-
-      <!-- <div style="display:flex">
-        <div class="col-print-3">
-          2024–2025
-        </div>
-        <div class="col-print-9">
-          <div>Postdoctoral Associate</div>
-        </div>
-      </div> -->
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          2018–2024
-        </div>
-        <div class="col-print-9">
-          <div>Graduate Researcher</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <h3>Cornell University, Citizens and Technology Lab</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          Summer 2020
-        </div>
-        <div class="col-print-9">
-          <div>Graduate Research Fellow</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <h3>Google, AI UX Team</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          Summer 2018
-        </div>
-        <div class="col-print-9">
-          <div>UX Engineering Intern</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <h3>Google, Material UX Team</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          Summer 2017
-        </div>
-        <div class="col-print-9">
-          <div>UX Engineering Intern</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <h3>Linked by Air</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          Summer 2016
-        </div>
-        <div class="col-print-9">
-          <div>Software and Design Intern</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="entry">
-      <h3>Square</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          Summer 2015
-        </div>
-        <div class="col-print-9">
-          <div>Software Engineering Intern</div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="entry">
-      <h3>Coursera</h3>
-
-      <div style="display:flex">
-        <div class="col-print-3">
-          Summer 2014
-        </div>
-        <div class="col-print-9">
-          <div>Software Engineering Intern (KPCB Engineering Fellow)</div>
-        </div>
-      </div>
-    </div>
-
+      {% endunless %}
+    {% endfor %}
   </div>
-
 </section>
 
 
@@ -392,33 +283,34 @@ title: CV
   </div>
   <div class="col-print-9">
     <h2>Invited Talks</h2>
-    {% for pub in site.data.cv.talks.invited %}
+    {% for talk in site.data.cv.talks.invited %}
       <div class="entry">
-        {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}{% unless pub.venues %}.{% endunless %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
-        {% if pub.venues %}
-          {% for venue in pub.venues %}
-          <div class="paper-venue paper-venue--list">{{venue}}</div>
-          {% endfor %}
-        {% endif %}
+        {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
+        {% for instance in talk.instances %}
+          <div class="paper-venue--list">{{instance.year}}. {{instance.venue}}</div>
+        {% endfor %}
       </div>
     {% endfor %}
 
     <h2>Conference Talks and Panels</h2>
-    {% for pub in site.data.cv.talks.conference %}
+    {% for talk in site.data.cv.talks.conference %}
       <div class="entry">
-        {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
-        {% if pub.venues %}
-          {% for venue in pub.venues %}
-            <div class="paper-venue paper-venue--list">{{venue}}</div>
-          {% endfor %}
-        {% endif %}
+        {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
+        {% for instance in talk.instances %}
+          <div class="paper-venue--list">{{instance.year}}. {{instance.venue}}</div>
+        {% endfor %}
       </div>
     {% endfor %}
 
     <h2>Invited Seminar Participation</h2>
-    <div class="entry">
-      2025. <a class="paper-title" href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25072">What You Hear is What You See? Integrating Sonification and Visualization</a>. <span class="paper-venue">Schloss Dagstuhl – Leibniz Center for Informatics</span>.
-    </div>
+    {% for talk in site.data.cv.talks.seminar %}
+      <div class="entry">
+        {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
+        {% for instance in talk.instances %}
+          <div class="paper-venue--list">{{instance.year}}. {{instance.venue}}</div>
+        {% endfor %}
+      </div>
+    {% endfor %}
   </div>
 </section>
 

@@ -10,6 +10,12 @@
   ],
   "guest": [
     {
+      "year": "2025",
+      "url": "https://cs.brown.edu/courses/info/csci1302/",
+      "title": "Intro to Sociotechnical Systems and HCI",
+      "institution": "Brown University"
+    },
+    {
       "year": "2023",
       "url": "https://docs.google.com/document/d/1uwGh7IFuUKWnAnsvlx9LHuhmM2IZXaA9wdmVsVvfY7U/edit#heading=h.zbuciswd0rbx",
       "title": "Crowd Sourced City: Data Activism Edition",

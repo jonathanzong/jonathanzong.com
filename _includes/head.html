@@ -35,4 +35,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@ohnobackspace" />
   <meta name="twitter:title" content="{{page.title}}" />
+
+  {% if page.noindex %}
+    <meta name="robots" content="noindex">
+  {% endif %}
 </head>

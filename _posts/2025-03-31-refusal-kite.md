@@ -4,7 +4,7 @@ title: 'Data Refusal in Conversation with List Projects 31: Kite'
 img: '/images/blog/kite.jpg'
 ---
 
-_On March 5, 2025, I gave a talk at the MIT List Visual Arts Center as part of a public engagement talk series that pairs researchers with ongoing exhibitions at the List. Below is a video and transcript of that talk._
+_On March 5, 2025, I gave a [talk at the MIT List Visual Arts Center](https://listart.mit.edu/calendar/graduate-student-talk-jonathan-zong) as part of a public engagement talk series that pairs researchers with ongoing exhibitions at the List. Below is a video and transcript of that talk._
 
 <style>
 .video-container {
@@ -53,7 +53,7 @@ At the end, we'll have a Q&A, where you'll have a chance to ask any questions yo
 
 Thank you so much, Cassidy, for that introduction. And thank you to you and the List for having me here tonight.
 
-So the goal of my talk today is to introduce some of my work on the idea of data refusal and put it in conversation with the work that you see here by the artist Kite, who is a Lakȟóta artist and scholar, multi-talented visual artist, performer, composer, also a professor at Bard College. And it's my hope that hearing about some of my work will help you see some of these works in a new way and have interesting conversations around them.
+So the goal of my talk today is to introduce some of my work on the idea of data refusal and put it in conversation with the work that you see here by the artist [Kite](https://www.kitekitekitekite.com/), who is a Lakȟóta artist and scholar, multi-talented visual artist, performer, composer, also a professor at Bard College. And it's my hope that hearing about some of my work will help you see some of these works in a new way and have interesting conversations around them.
 
 So my work engages with the idea of data refusal, and I'll break this talk apart into maybe like three parts.
 

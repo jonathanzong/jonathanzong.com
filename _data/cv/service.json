@@ -2,39 +2,19 @@
   "peer_reviewing": [
     {
       "year": "2025",
-      "venues": [
-        "ACM CHI",
-        "Eurovis"
-      ]
+      "venues": ["ACM CHI", "Eurovis", "IEEE TVCG"]
     },
     {
       "year": "2024",
-      "venues": [
-        "ACM CHI",
-        "Research Ethics (SAGE Journal)",
-        "ACM DIS",
-        "Data by Design (community review for MIT Press book)",
-        "Journal of Visualization and Interaction",
-        "Assistive Technology (T&F Journal)"
-      ]
+      "venues": ["ACM CHI", "Research Ethics (SAGE Journal)", "ACM DIS", "Data by Design (community review for MIT Press book)", "Journal of Visualization and Interaction", "Assistive Technology (T&F Journal)"]
     },
     {
       "year": "2023",
-      "venues": [
-        "ACM CHI",
-        "IEEE VIS",
-        "IEEE TVCG",
-        "ACM SIGGRAPH",
-        "PacificVis Visual Data Storytelling Contest"
-      ]
+      "venues": ["ACM CHI", "IEEE VIS", "IEEE TVCG", "ACM SIGGRAPH", "PacificVis Visual Data Storytelling Contest"]
     },
     {
       "year": "2022",
-      "venues": [
-        {"name": "ACM CHI", "award": "Special Recognition for Outstanding Review"},
-        "IEEE VIS",
-        "Journal of Empirical Research on Human Research Ethics"
-      ]
+      "venues": [{ "name": "ACM CHI", "award": "Special Recognition for Outstanding Review" }, "IEEE VIS", "Journal of Empirical Research on Human Research Ethics"]
     },
     {
       "year": "2021",

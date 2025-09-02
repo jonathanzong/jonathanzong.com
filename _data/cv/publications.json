@@ -10,14 +10,6 @@
     },
     {
       "year": "2025",
-      "title": "Benthic: Perceptually Congruent Structures for Accessible Charts and Diagrams",
-      "url": "https://data-and-design.org/publications/benthic.pdf",
-      "authors": "Catherine Mei*, Josh Pollock*, Daniel Hajas, Jonathan Zong, Arvind Satyanarayan",
-      "venue": "ACM SIGACCESS Conference on Computers and Accessibility (ACM ASSETS)",
-      "tag": "access"
-    },
-    {
-      "year": "2025",
       "title": "Tactile Vega-Lite: Rapidly Prototyping Tactile Charts with Smart Defaults",
       "url": "/assets/papers/tvl-chi-2025.pdf",
       "authors": "Mengzhu (Katie) Chen, Isabella Pedraza Pineros, Arvind Satyanarayan, Jonathan Zong",

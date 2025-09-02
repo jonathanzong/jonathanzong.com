@@ -486,7 +486,19 @@ title: CV
 
 <section>
   <div class="col-print-3">
-    <h2>Student Mentorship</h2>
+    <h2>Advisees</h2>
+  </div>
+  <div class="col-print-9">
+    <h2>M.S. Students</h2>
+    {% for pub in site.data.cv.advisees.ms %}
+      <div>{{pub.names}}</div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <div class="col-print-3">
+    <h2>Mentoring as a PhD student</h2>
   </div>
   <div class="col-print-9">
     <h2>M.Eng. Students</h2>

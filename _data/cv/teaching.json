@@ -1,6 +1,11 @@
 {
   "instructor": [
     {
+      "year": "2025",
+      "title": "User-Centered Design",
+      "institution": "University of Colorado Boulder"
+    },
+    {
       "year": "2020",
       "url": "https://tech-speculative.github.io/",
       "title": "AI, Justice, Imagination: Technology and Speculative Fiction",

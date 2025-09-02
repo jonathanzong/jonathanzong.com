@@ -2,10 +2,26 @@
   "pubs": [
     {
       "year": "2025",
+      "title": "Benthic: Perceptually Congruent Structures for Accessible Charts and Diagrams",
+      "url": "https://data-and-design.org/publications/benthic.pdf",
+      "authors": "Catherine Mei*, Josh Pollock*, Daniel Hajas, Jonathan Zong, Arvind Satyanarayan",
+      "venue": "ACM SIGACCESS Conference on Computers and Accessibility (ACM ASSETS)",
+      "tag": "access"
+    },
+    {
+      "year": "2025",
+      "title": "Benthic: Perceptually Congruent Structures for Accessible Charts and Diagrams",
+      "url": "https://data-and-design.org/publications/benthic.pdf",
+      "authors": "Catherine Mei*, Josh Pollock*, Daniel Hajas, Jonathan Zong, Arvind Satyanarayan",
+      "venue": "ACM SIGACCESS Conference on Computers and Accessibility (ACM ASSETS)",
+      "tag": "access"
+    },
+    {
+      "year": "2025",
       "title": "Tactile Vega-Lite: Rapidly Prototyping Tactile Charts with Smart Defaults",
       "url": "/assets/papers/tvl-chi-2025.pdf",
       "authors": "Mengzhu (Katie) Chen, Isabella Pedraza Pineros, Arvind Satyanarayan, Jonathan Zong",
-      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI) (Forthcoming)",
+      "venue": "ACM Conference on Human Factors in Computing Systems (ACM CHI)",
       "tag": "access"
     },
     {
@@ -109,6 +125,14 @@
     }
   ],
   "wopodemo": [
+    {
+      "year": "2025",
+      "url": "https://data-and-design.org/publications/access-citational-justice.pdf",
+      "title": "Using Real Names of Disabled Participant-Contributors to Practice Citational Justice in Accessibility",
+      "authors": "Jonathan Zong",
+      "venue": "IEEE VIS Accessibility Workshop",
+      "tag": "access"
+    },
     {
       "year": "2022",
       "url": "/assets/papers/olli-vis-2022.pdf",

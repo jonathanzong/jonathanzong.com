@@ -172,6 +172,17 @@
   ],
   "conference": [
     {
+      "title": "Decentering Vision in Accessible Visualization",
+      "url": "https://informationplusconference.com/2025/talks/",
+      "instances": [
+        {
+          "year": "2025",
+          "venue": "Information Plus Conference"
+        }
+      ],
+      "tag": "access"
+    },
+    {
       "title": "Accessible Data Visualization for Screen Reader Users",
       "url": "https://www.youtube.com/watch?v=JBxxvZ6bfkY&list=PLn7dsvRdQEfFTeoA8kZcsASPbYi2rf4C0",
       "instances": [

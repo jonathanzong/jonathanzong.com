@@ -1,6 +1,12 @@
 {
   "instructor": [
     {
+      "year": "2026",
+      "title": "Design for Accessibility",
+      "url": "https://data-and-design.org/classes/4871/",
+      "institution": "University of Colorado Boulder"
+    },
+    {
       "year": "2025",
       "title": "User-Centered Design",
       "institution": "University of Colorado Boulder"

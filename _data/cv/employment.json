@@ -1,10 +1,10 @@
 [
   {
     "institution": "University of Colorado Boulder",
-    "department": "Department of Information Science",
     "positions": [
       {
         "title": "Assistant Professor",
+        "subtitle": ["Department of Information Science", "Department of Computer Science (Courtesy)"],
         "period": "2025–"
       }
     ]
@@ -25,7 +25,7 @@
   },
   {
     "institution": "Massachusetts Institute of Technology",
-    "department": "MIT Visualization Group",
+    "department": "Computer Science and Artificial Intelligence Laboratory (CSAIL)",
     "positions": [
       {
         "title": "Postdoctoral Associate",

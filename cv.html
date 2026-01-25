@@ -99,6 +99,11 @@ title: CV
             </div>
             <div class="col-print-9">
               <div>{{ position.title }}</div>
+              {% if position.subtitle %}
+                {% for sub in position.subtitle %}
+                  <div class="meta-text">{{ sub }}</div>
+                {% endfor %}
+              {% endif %}
             </div>
           </div>
           {% endunless %}

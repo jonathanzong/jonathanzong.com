@@ -490,8 +490,20 @@ title: CV
   </div>
   <div class="col-print-9">
     <h2>M.S. Students</h2>
-    {% for pub in site.data.cv.advisees.ms %}
-      <div>{{pub.names}}</div>
+    {% for name in site.data.cv.mentorship.advisees.ms %}
+      <div>{{name}}</div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <div class="col-print-3">
+    <h2>Committees</h2>
+  </div>
+  <div class="col-print-9">
+    <h2>Ph.D. Student Preliminary Exam & Proposal Committees</h2>
+    {% for name in site.data.cv.mentorship.committees.prelimOrProposal %}
+      <div>{{name}}</div>
     {% endfor %}
   </div>
 </section>
@@ -502,7 +514,7 @@ title: CV
   </div>
   <div class="col-print-9">
     <h2>M.Eng. Students</h2>
-    {% for pub in site.data.cv.mentorship.meng %}
+    {% for pub in site.data.cv.mentorship.asPhdStudent.meng %}
       <div class="entry">
         <div style="display:flex">
           <div class="col-print-2">
@@ -516,7 +528,7 @@ title: CV
     {% endfor %}
 
     <h2>Undergraduate Students</h2>
-    {% for pub in site.data.cv.mentorship.undergrad %}
+    {% for pub in site.data.cv.mentorship.asPhdStudent.undergrad %}
       <div class="entry">
         <div style="display:flex">
           <div class="col-print-2">
@@ -536,6 +548,20 @@ title: CV
     <h2>Service</h2>
   </div>
   <div class="col-print-9">
+    <h2>University Service</h2>
+    {% for item in site.data.cv.service.university %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-2">
+            {{ item.years }}
+          </div>
+          <div class="col-print-10">
+            <div>{{ item.activity }}</div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
     <h2>Peer Reviewing</h2>
     {% for item in site.data.cv.service.peer_reviewing %}
       <div class="entry">

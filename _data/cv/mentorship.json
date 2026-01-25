@@ -1,46 +1,50 @@
 {
-  "meng": [
-    {
-      "year": "2023–24",
-      "names": "Isabella Pedraza Pineros, Katie Chen"
-    },
-    {
-      "year": "Summer 2023",
-      "names": "Evan Caragay (<strong>Charles & Jennifer Johnson MEng Thesis Award</strong>), Katherine Xiong"
-    },
-    {
-      "year": "2022–23",
-      "names": "Shuli Jones (<strong>David Adler MEng Thesis Award</strong>)"
-    },
-    {
-      "year": "2020–21",
-      "names": "EJ Sefah, Katie Bacher"
-    },
-    {
-      "year": "2019–20",
-      "names": "Rupayan Neogy"
-    }
-  ],
-  "undergrad": [
-    {
-      "year": "Spring 2023",
-      "names": "Isabella Pedraza Pineros"
-    },
-    {
-      "year": "Fall 2022",
-      "names": "Mufaro Makiwa"
-    },
-    {
-      "year": "Spring/Summer 2022",
-      "names": "Matt Blanco (Northeastern)"
-    },
-    {
-      "year": "Summer 2021",
-      "names": "JiWoong Jang (CMU)"
-    },
-    {
-      "year": "Fall 2020",
-      "names": "Anna Arpaci-Dusseau, Katherine Huang, Mateo Monterde, Ethan Nevidomsky, Tanya Yang, Anna Meurer, Soomin Chun"
-    }
-  ]
+  "advisees": {
+    "ms": ["Matt Nesselrodt"]
+  },
+  "committees": {
+    "prelimOrProposal": ["Blakeley H. Payne", "Everley Tseng (CS)"]
+  },
+  "asPhdStudent": {
+    "meng": [
+      {
+        "year": "2023–24",
+        "names": "Isabella Pedraza Pineros, Katie Chen"
+      },
+      {
+        "year": "Summer 2023",
+        "names": "Evan Caragay (<strong>Charles & Jennifer Johnson MEng Thesis Award</strong>), Katherine Xiong"
+      },
+      {
+        "year": "2022–23",
+        "names": "Shuli Jones (<strong>David Adler MEng Thesis Award</strong>)"
+      },
+      {
+        "year": "2020–21",
+        "names": "EJ Sefah, Katie Bacher"
+      },
+      {
+        "year": "2019–20",
+        "names": "Rupayan Neogy"
+      }
+    ],
+    "undergrad": [
+      {
+        "year": "Spring 2023",
+        "names": "Isabella Pedraza Pineros"
+      },
+      {
+        "year": "Spring/Summer 2022",
+        "names": "Matt Blanco (Northeastern)"
+      },
+      {
+        "year": "Summer 2021",
+        "names": "JiWoong Jang (CMU)"
+      },
+      {
+        "year": "Fall 2020",
+        "names": "Anna Arpaci-Dusseau, Katherine Huang, Mateo Monterde, Ethan Nevidomsky, Tanya Yang, Anna Meurer, Soomin Chun"
+      }
+    ]
+  }
 }

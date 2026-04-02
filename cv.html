@@ -506,6 +506,11 @@ title: CV
     <h2>Committees</h2>
   </div>
   <div class="col-print-9">
+    <h2>Ph.D. Student Dissertation Committees</h2>
+    {% for name in site.data.cv.mentorship.committees.prelimOrProposal %}
+      <div>{{name}}</div>
+    {% endfor %}
+
     <h2>Ph.D. Student Preliminary Exam & Proposal Committees</h2>
     {% for name in site.data.cv.mentorship.committees.prelimOrProposal %}
       <div>{{name}}</div>

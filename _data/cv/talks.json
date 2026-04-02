@@ -28,6 +28,10 @@
       "url": null,
       "instances": [
         {
+          "year": "2026",
+          "venue": "UCLA CS"
+        },
+        {
           "year": "2024",
           "venue": "Fathom Information Design"
         },
@@ -42,6 +46,10 @@
       "title": "Participation and Power in Data Collection and Analysis",
       "url": null,
       "instances": [
+        {
+          "year": "2026",
+          "venue": "VIS Seminar, University of Utah"
+        },
         {
           "year": "2025",
           "venue": "HCI Seminar, Columbia University"

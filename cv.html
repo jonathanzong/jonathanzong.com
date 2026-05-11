@@ -120,126 +120,21 @@ title: CV
     <h2>Awards & Honors</h2>
   </div>
   <div class="col-print-9">
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2023
-        </div>
-        <div class="col-print-9">
-          <h3>Forbes 30 Under 30 (Science)</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2022
-        </div>
-        <div class="col-print-9">
-          <h3>MIT Morningside Academy for Design Fellowship</h3>
-          <h3>MIT Prize for Open Data Honorable Mention</h3>
-          <h3>Fast Company Innovation By Design Awards Finalist</h3>
+    {% for entry in site.data.cv.awards %}
+      {% assign year = entry[0] %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-3">
+            {{year}}
+          </div>
+          <div class="col-print-9">
+            {% for award in site.data.cv.awards[year] %}
+              <h3>{{award.title}}</h3>
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2020
-        </div>
-        <div class="col-print-9">
-          <h3>Schnitzer Prize in the Visual Arts, MIT</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2019
-        </div>
-        <div class="col-print-9">
-          <h3>Paul and Daisy Soros Fellowship for New Americans</h3>
-          <h3>NSF Graduate Research Fellowship</h3>
-          <h3>Hertz Foundation Fellowship Finalist</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2018
-        </div>
-        <div class="col-print-9">
-          <h3>Lucas Award in Visual Arts, Princeton University</h3>
-          <h3>NSF Graduate Research Fellowship Honorable Mention</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2017
-        </div>
-        <div class="col-print-9">
-          <h3>Santos-Dumont Prize for Innovation, Princeton University</h3>
-          <h3>Tau Beta Pi Scholarship</h3>
-          <h3>Students All to Chaumont 3rd Place, Centre National du Graphisme</h3>
-          <h3>Peter B. Lewis Summer Fund for the Arts</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2016
-        </div>
-        <div class="col-print-9">
-          <h3>Facebook Global Hackathon Finals Honorable Mention</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2015
-        </div>
-        <div class="col-print-9">
-          <h3>Greylock Partners Hackfest, 1st Place</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2014
-        </div>
-        <div class="col-print-9">
-          <h3>HackRice, 1st Place, Rice University</h3>
-          <h3>KPCB Engineering Fellowship</h3>
-          <h3>MIT THINK Scholars</h3>
-          <h3>Interact Fellowship</h3>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-3">
-          2012
-        </div>
-        <div class="col-print-9">
-          <h3>Eagle Scout</h3>
-        </div>
-      </div>
-    </div>
-
+    {% endfor %}
   </div>
 
 </section>

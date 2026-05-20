@@ -1,6 +1,14 @@
 {
   "opeds": [
     {
+      "year": "2026",
+      "url": "https://www.techpolicy.press/the-web-is-being-made-accessible-for-ai-not-people/",
+      "title": "The Web Is Being Made Accessible for AI, Not People",
+      "authors": "Jonathan Zong, Frank Elavsky",
+      "venue": "Tech Policy Press",
+      "tag": "access"
+    },
+    {
       "year": "2019",
       "url": "https://thetech.com/2019/10/23/struggle-democratize-mit",
       "title": "The Struggle to Democratize MIT",

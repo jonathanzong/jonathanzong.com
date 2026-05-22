@@ -118,6 +118,14 @@
   ],
   "wopodemo": [
     {
+      "year": "2026",
+      "url": "https://data-and-design.org/publications/semantic-scaffolding.pdf",
+      "title": "Semantic Scaffolding: Augmenting Textual Structures with Domain-Specific Groupings for Accessible Data Exploration",
+      "authors": "Jonathan Zong*, Isabella Pedraza Pineros*, Mengzhu (Katie) Chen, Daniel Hajas, Arvind Satyanarayan",
+      "venue": "Symposium on AI and Cognitive Sciences in Education",
+      "tag": "access"
+    },
+    {
       "year": "2025",
       "url": "https://data-and-design.org/publications/access-citational-justice.pdf",
       "title": "Using Real Names of Disabled Participant-Contributors to Practice Citational Justice in Accessibility",

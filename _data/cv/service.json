@@ -7,6 +7,10 @@
   ],
   "peer_reviewing": [
     {
+      "year": "2026",
+      "venues": ["IEEE VIS", "ACM ASSETS"]
+    },
+    {
       "year": "2025",
       "venues": ["ACM CHI", "Eurovis", "IEEE TVCG", "IEEE VIS", "Journal of Visualization and Interaction"]
     },

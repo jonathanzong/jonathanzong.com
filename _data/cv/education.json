@@ -1,0 +1,46 @@
+[
+  {
+    "institution": "Massachusetts Institute of Technology",
+    "entries": [
+      {
+        "period": "2018–2024",
+        "items": [
+          { "text": "Ph.D. Electrical Engineering & Computer Science" },
+          { "text": "Minor in Science, Technology, and Society" },
+          { "text": "Advisor: Arvind Satyanarayan", "meta": true }
+        ]
+      },
+      {
+        "period": "2018–2020",
+        "items": [
+          { "text": "S.M. Electrical Engineering & Computer Science" }
+        ]
+      }
+    ]
+  },
+  {
+    "institution": "Princeton University",
+    "entries": [
+      {
+        "period": "2014–2018",
+        "items": [
+          { "text": "B.S.E. Computer Science" },
+          { "text": "Advisor: J. Nathan Matias", "meta": true },
+          { "text": "Certificate in Visual Arts" },
+          { "text": "Advisor: David Reinfurt", "meta": true }
+        ]
+      }
+    ]
+  },
+  {
+    "institution": "University of Oxford",
+    "entries": [
+      {
+        "period": "Spring 2017",
+        "items": [
+          { "text": "Visiting Student" }
+        ]
+      }
+    ]
+  }
+]

@@ -38,6 +38,10 @@ h2 {
 h3 {
   font-size: inherit;
   line-height: inherit;
+
+  &:not(:first-child) {
+    margin-top: 1em;
+  }
 }
 
 em {

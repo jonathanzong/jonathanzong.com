@@ -5,7 +5,7 @@ title: CV
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="{{ "/stylesheets/cv.css" | prepend: site.baseurl }}">
 
-<section id="getpdf"><a href="/assets/jzong_cv.pdf">Click here for a PDF.</a></section>
+<section id="getpdf"><a href="/assets/jzong_cv.pdf">Download CV (PDF)</a></section>
 
 <section id="cv-head">
     <div class="col-print-9">
@@ -22,60 +22,24 @@ title: CV
       <h2>Education</h2>
     </div>
     <div class="col-print-9">
+      {% for school in site.data.cv.education %}
       <div class="entry">
-        <h3>Massachusetts Institute of Technology</h3>
+        <h3>{{ school.institution }}</h3>
 
+        {% for entry in school.entries %}
         <div style="display:flex">
           <div class="col-print-3">
-            2018–2024
+            {{ entry.period }}
           </div>
           <div class="col-print-9">
-            <div>Ph.D. Electrical Engineering & Computer Science</div>
-            <div>Minor in Science, Technology, and Society</div>
-            <div class="meta-text">Advisor: Arvind Satyanarayan</div>
+            {% for item in entry.items %}
+              <div{% if item.meta %} class="meta-text"{% endif %}>{{ item.text }}</div>
+            {% endfor %}
           </div>
         </div>
-
-        <div style="display:flex">
-          <div class="col-print-3">
-            2018–2020
-          </div>
-          <div class="col-print-9">
-            S.M. Electrical Engineering & Computer Science
-          </div>
-        </div>
+        {% endfor %}
       </div>
-
-
-      <div class="entry">
-        <h3>Princeton University</h3>
-
-        <div style="display:flex">
-          <div class="col-print-3">
-            2014–2018
-          </div>
-          <div class="col-print-9">
-            <div>B.S.E. Computer Science</div>
-            <div class="meta-text">Advisor: J. Nathan Matias</div>
-            <div>Certificate in Visual Arts</div>
-            <div class="meta-text">Advisor: David Reinfurt</div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="entry">
-        <h3>University of Oxford</h3>
-
-        <div style="display:flex">
-          <div class="col-print-3">
-            Spring 2017
-          </div>
-          <div class="col-print-9">
-            <div>Visiting Student</div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 </section>
 
@@ -129,7 +93,7 @@ title: CV
           </div>
           <div class="col-print-9">
             {% for award in site.data.cv.awards[year] %}
-              <h3>{{award.title}}</h3>
+              <div>{{award.title}}</div>
             {% endfor %}
           </div>
         </div>
@@ -146,28 +110,28 @@ title: CV
     <h2>Publications</h2>
   </div>
   <div class="col-print-9">
-    <h2>Peer-Reviewed Publications</h2>
+    <h3>Peer-Reviewed Publications</h3>
     {% for pub in site.data.cv.publications.pubs %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %} {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Edited Publications</h2>
+    <h3>Edited Publications</h3>
     {% for pub in site.data.cv.publications.magazines %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Workshops, Conferences, Posters, and Demos</h2>
+    <h3>Workshops, Conferences, Posters, and Demos</h3>
     {% for pub in site.data.cv.publications.wopodemo %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %} {% if pub.award %}<span class="paper-award">{{pub.award}}</span>{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Theses</h2>
+    <h3>Theses</h3>
     {% for pub in site.data.cv.publications.thesis %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
@@ -182,7 +146,7 @@ title: CV
     <h2>Talks & Presentations</h2>
   </div>
   <div class="col-print-9">
-    <h2>Invited Talks</h2>
+    <h3>Invited Talks</h3>
     {% for talk in site.data.cv.talks.invited %}
       <div class="entry">
         {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
@@ -192,7 +156,7 @@ title: CV
       </div>
     {% endfor %}
 
-    <h2>Conference Talks and Panels</h2>
+    <h3>Conference Talks and Panels</h3>
     {% for talk in site.data.cv.talks.conference %}
       <div class="entry">
         {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
@@ -202,7 +166,7 @@ title: CV
       </div>
     {% endfor %}
 
-    <h2>Invited Seminar Participation</h2>
+    <h3>Invited Seminar Participation</h3>
     {% for talk in site.data.cv.talks.seminar %}
       <div class="entry">
         {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
@@ -220,28 +184,28 @@ title: CV
     <h2>Public Scholarship</h2>
   </div>
   <div class="col-print-9">
-    <h2>Op-Eds</h2>
+    <h3>Op-Eds</h3>
     {% for pub in site.data.cv.public_scholarship.opeds %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Conversations</h2>
+    <h3>Conversations</h3>
     {% for pub in site.data.cv.public_scholarship.conversations %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.authors %}<span class="paper-authors">{{pub.authors}}</span>.{% endif %} {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Data Journalism</h2>
+    <h3>Data Journalism</h3>
     {% for pub in site.data.cv.public_scholarship.datajourn %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Policy Engagement</h2>
+    <h3>Policy Engagement</h3>
     {% for pub in site.data.cv.public_scholarship.policy %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. <span class="paper-authors">{{pub.authors}}</span>. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
@@ -259,10 +223,10 @@ title: CV
       {% assign year = entry[0] %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{year}}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             {% for pub in site.data.cv.exhibitions[year] %}
               <div>{% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}</div>
             {% endfor %}
@@ -279,28 +243,22 @@ title: CV
     <h2>Collections</h2>
   </div>
   <div class="col-print-9">
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2018
-        </div>
-        <div class="col-print-10">
-          <h3>Van Alan Clark, Jr. Library, School of the Museum of Fine Arts, Tufts University</h3>
-          <div class="meta-text"><a href="https://tufts-primo.hosted.exlibrisgroup.com/permalink/f/bnf7qa/01TUN_ALMA21205187020003851">Everyone Should</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2016
-        </div>
-        <div class="col-print-10">
-          <h3>Graphic Arts Collection, Firestone Library, Princeton University</h3>
-          <div class="meta-text"><a href="https://graphicarts.princeton.edu/2016/05/20/nap-poems-published-by-the-letterpress-club/">Nap Poems</a></div>
+    {% for entry in site.data.cv.collections %}
+      {% assign year = entry[0] %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-3">
+            {{year}}
+          </div>
+          <div class="col-print-9">
+            {% for item in site.data.cv.collections[year] %}
+              <h3>{{item.institution}}</h3>
+              <div class="meta-text">{% if item.url %}<a href="{{item.url}}">{{item.title}}</a>{% else %}{{item.title}}{% endif %}</div>
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -309,43 +267,22 @@ title: CV
     <h2>Art Book Fairs</h2>
   </div>
   <div class="col-print-9">
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2019
-        </div>
-        <div class="col-print-10">
-          <h3>Tiny Tech Zines, Navel LA</h3>
-          <div class="meta-text">with Free Radicals</div>
-        </div>
-      </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2019
-        </div>
-        <div class="col-print-10">
-          <h3>Press Play, Pioneer Works</h3>
-          <div class="meta-text">with Tech Zine Fair</div>
+    {% for entry in site.data.cv.art_book_fairs %}
+      {% assign year = entry[0] %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-3">
+            {{year}}
+          </div>
+          <div class="col-print-9">
+            {% for item in site.data.cv.art_book_fairs[year] %}
+              <div class="paper-title">{{item.title}}</div>
+              {% if item.meta %}<div class="meta-text">{{item.meta}}</div>{% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="entry">
-      <div style="display:flex">
-        <div class="col-print-2">
-          2018
-        </div>
-        <div class="col-print-10">
-          <h3>Odds and Ends, Yale University</h3>
-          <h3>Zine Soup 3.0: Makers Market, Chinatown Soup</h3>
-          <h3>NY Tech Zine Fair, School for Poetic Computation</h3>
-          <h3>Boston Art Book Fair, Boston Center for the Arts</h3>
-        </div>
-      </div>
-    </div>
-
-
+    {% endfor %}
   </div>
 </section>
 
@@ -354,7 +291,7 @@ title: CV
     <h2>Teaching</h2>
   </div>
   <div class="col-print-9">
-    <h2>Instructor</h2>
+    <h3>Instructor</h3>
 
     {% for pub in site.data.cv.teaching.instructor %}
       <div class="entry">
@@ -363,7 +300,7 @@ title: CV
       </div>
     {% endfor %}
 
-    <h2>Guest Lecturer / Speaker</h2>
+    <h3>Guest Lecturer / Speaker</h3>
 
     {% for pub in site.data.cv.teaching.guest %}
       <div class="entry">
@@ -372,7 +309,7 @@ title: CV
       </div>
     {% endfor %}
 
-    <h2>Guest Critic</h2>
+    <h3>Guest Critic</h3>
 
     {% for pub in site.data.cv.teaching.critic %}
       <div class="entry">
@@ -386,60 +323,46 @@ title: CV
 
 <section>
   <div class="col-print-3">
-    <h2>Advisees</h2>
+    <h2>Mentoring &amp; Advising</h2>
   </div>
   <div class="col-print-9">
-    <h2>M.S. Students</h2>
+    <h3>M.S. Advisees</h3>
     {% for name in site.data.cv.mentorship.advisees.ms %}
       <div>{{name}}</div>
     {% endfor %}
-  </div>
-</section>
 
-<section>
-  <div class="col-print-3">
-    <h2>Committees</h2>
-  </div>
-  <div class="col-print-9">
-    <h2>Ph.D. Student Dissertation Committees</h2>
+    <h3>Ph.D. Dissertation Committees</h3>
+    {% for name in site.data.cv.mentorship.committees.dissertation %}
+      <div>{{name}}</div>
+    {% endfor %}
+
+    <h3>Ph.D. Preliminary Exam &amp; Proposal Committees</h3>
     {% for name in site.data.cv.mentorship.committees.prelimOrProposal %}
       <div>{{name}}</div>
     {% endfor %}
 
-    <h2>Ph.D. Student Preliminary Exam & Proposal Committees</h2>
-    {% for name in site.data.cv.mentorship.committees.prelimOrProposal %}
-      <div>{{name}}</div>
-    {% endfor %}
-  </div>
-</section>
-
-<section>
-  <div class="col-print-3">
-    <h2>Mentoring as a PhD student</h2>
-  </div>
-  <div class="col-print-9">
-    <h2>M.Eng. Students</h2>
+    <h3>M.Eng. Students <span class="meta-text">(mentored as a Ph.D. student)</span></h3>
     {% for pub in site.data.cv.mentorship.asPhdStudent.meng %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{pub.year}}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>{{pub.names}}</div>
           </div>
         </div>
       </div>
     {% endfor %}
 
-    <h2>Undergraduate Students</h2>
+    <h3>Undergraduate Students <span class="meta-text">(mentored as a Ph.D. student)</span></h3>
     {% for pub in site.data.cv.mentorship.asPhdStudent.undergrad %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{pub.year}}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>{{pub.names}}</div>
           </div>
         </div>
@@ -453,28 +376,28 @@ title: CV
     <h2>Service</h2>
   </div>
   <div class="col-print-9">
-    <h2>University Service</h2>
+    <h3>University Service</h3>
     {% for item in site.data.cv.service.university %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{ item.years }}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>{{ item.activity }}</div>
           </div>
         </div>
       </div>
     {% endfor %}
 
-    <h2>Peer Reviewing</h2>
+    <h3>Peer Reviewing</h3>
     {% for item in site.data.cv.service.peer_reviewing %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{ item.year }}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>
               {% for venue in item.venues %}
                 {% if venue.name %}
@@ -489,42 +412,42 @@ title: CV
       </div>
     {% endfor %}
 
-    <h2>Other Academic Service</h2>
+    <h3>Other Academic Service</h3>
     {% for item in site.data.cv.service.academic %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{ item.year }}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>{{ item.activities | join: ", " }}</div>
           </div>
         </div>
       </div>
     {% endfor %}
 
-    <h2>Event Organizing</h2>
+    <h3>Event Organizing</h3>
     {% for item in site.data.cv.service.event_organizing %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{ item.year }}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>{{ item.events | join: ", " }}</div>
           </div>
         </div>
       </div>
     {% endfor %}
 
-    <h2>Community Building & Activism</h2>
+    <h3>Community Building & Activism</h3>
     {% for item in site.data.cv.service.community %}
       <div class="entry">
         <div style="display:flex">
-          <div class="col-print-2">
+          <div class="col-print-3">
             {{ item.year }}
           </div>
-          <div class="col-print-10">
+          <div class="col-print-9">
             <div>{{ item.organizations | join: ", " }}</div>
           </div>
         </div>
@@ -539,14 +462,14 @@ title: CV
     <h2>Selected Press</h2>
   </div>
   <div class="col-print-9">
-    <h2>Featured</h2>
+    <h3>Featured</h3>
     {% for pub in site.data.cv.press.featured %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}
       </div>
     {% endfor %}
 
-    <h2>Quoted</h2>
+    <h3>Quoted</h3>
     {% for pub in site.data.cv.press.quoted %}
       <div class="entry">
         {{pub.year}}. {% if pub.url %}<a class="paper-title" href="{{pub.url}}">{{pub.title}}</a>{% else %}<span class="paper-title">{{pub.title}}</span>{% endif %}. {% if pub.venue %}<span class="paper-venue">{{pub.venue}}</span>.{% endif %}

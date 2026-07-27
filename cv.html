@@ -151,7 +151,7 @@ title: CV
       <div class="entry">
         {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
         {% for instance in talk.instances %}
-          <div class="paper-venue--list">{{instance.year}}. {{instance.venue}}</div>
+          <div class="paper-venue--list">{{instance.year}}. {% if instance.role %}{{instance.role}}, {% endif %}{{instance.venue}}</div>
         {% endfor %}
       </div>
     {% endfor %}
@@ -161,7 +161,7 @@ title: CV
       <div class="entry">
         {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
         {% for instance in talk.instances %}
-          <div class="paper-venue--list">{{instance.year}}. {{instance.venue}}</div>
+          <div class="paper-venue--list">{{instance.year}}. {% if instance.role %}{{instance.role}}, {% endif %}{{instance.venue}}</div>
         {% endfor %}
       </div>
     {% endfor %}
@@ -171,7 +171,7 @@ title: CV
       <div class="entry">
         {% if talk.url %}<a class="paper-title" href="{{talk.url}}">{{talk.title}}</a>{% else %}<span class="paper-title">{{talk.title}}</span>{% endif %}
         {% for instance in talk.instances %}
-          <div class="paper-venue--list">{{instance.year}}. {{instance.venue}}</div>
+          <div class="paper-venue--list">{{instance.year}}. {% if instance.role %}{{instance.role}}, {% endif %}{{instance.venue}}</div>
         {% endfor %}
       </div>
     {% endfor %}
@@ -385,6 +385,22 @@ title: CV
           </div>
           <div class="col-print-9">
             <div>{{ item.activity }}</div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    <h3>Conference Service</h3>
+    {% for item in site.data.cv.service.conference %}
+      <div class="entry">
+        <div style="display:flex">
+          <div class="col-print-3">
+            {{ item.year }}
+          </div>
+          <div class="col-print-9">
+            {% for activity in item.activities %}
+              <div>{{ activity }}</div>
+            {% endfor %}
           </div>
         </div>
       </div>

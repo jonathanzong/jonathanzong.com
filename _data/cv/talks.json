@@ -13,6 +13,18 @@
   ],
   "invited": [
     {
+      "title": "The Web Is Being Made Accessible for AI, Not People",
+      "url": "https://www.techpolicy.press/the-web-is-being-made-accessible-for-ai-not-people/",
+      "instances": [
+        {
+          "year": "2026",
+          "role": "Closing Keynote",
+          "venue": "Symposium on AI and Cognitive Sciences in Education (AICSED)"
+        }
+      ],
+      "tag": "access"
+    },
+    {
       "title": "Data Refusal in Conversation with <em>List Projects 31: Kite</em>",
       "url": "/blog/2025/03/31/refusal-kite",
       "instances": [

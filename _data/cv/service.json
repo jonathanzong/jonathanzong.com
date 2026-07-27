@@ -1,8 +1,14 @@
 {
   "university": [
     {
-      "years": "2025–2026",
+      "years": "2025–2027",
       "activity": "Graduate Committee, CU Boulder Department of Information Science"
+    }
+  ],
+  "conference": [
+    {
+      "year": "2026",
+      "activities": ["Inclusivity Co-Chair, IEEE VIS", "Program Committee, ACM ASSETS"]
     }
   ],
   "peer_reviewing": [

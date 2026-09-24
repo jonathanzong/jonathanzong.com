@@ -1,6 +1,14 @@
 {
   "pubs": [
     {
+      "year": "2026",
+      "title": "Pointing at Data Together: Establishing Common Ground with Multi-modal Data Representations in Blind/Sighted Collaboration",
+      "url": "https://data-and-design.org/publications/pointing-at-data-together.pdf",
+      "authors": "Jonathan Zong, Arvind Satyanarayan",
+      "venue": "IEEE Transactions on Visualization and Computer Graphics (IEEE VIS)",
+      "tag": "access"
+    },
+    {
       "year": "2025",
       "title": "Benthic: Perceptually Congruent Structures for Accessible Charts and Diagrams",
       "url": "https://data-and-design.org/publications/benthic.pdf",
@@ -117,6 +125,14 @@
     }
   ],
   "wopodemo": [
+    {
+      "year": "2026",
+      "url": "https://data-and-design.org/publications/olli-with-hypergraphs.pdf",
+      "title": "Olli with Hypergraphs: An Extensible Architecture for Accessible Charts and Diagrams",
+      "authors": "Jonathan Zong",
+      "venue": "IEEE VIS Accessibility Workshop",
+      "tag": "access"
+    },
     {
       "year": "2026",
       "url": "https://data-and-design.org/publications/semantic-scaffolding.pdf",

@@ -21,6 +21,11 @@
   ],
   "guest": [
     {
+      "year": "2026",
+      "title": "NLP for Cultural Analytics",
+      "institution": "CU Boulder"
+    },
+    {
       "year": "2026, 2025",
       "url": "https://cs.brown.edu/courses/info/csci1302/",
       "title": "Intro to Sociotechnical Systems and HCI",
